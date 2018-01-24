@@ -11,6 +11,7 @@
 @interface HomeDetailTableViewCell : UITableViewCell
 @property (strong, nonatomic) IBOutlet UIView *backTopview;
 @property (strong, nonatomic) IBOutlet UIImageView *pic;
+@property (strong, nonatomic) IBOutlet UILabel *likeStatusLable;
 
 @property (strong, nonatomic) IBOutlet UIView *popupView;
 @property (strong, nonatomic) IBOutlet UIButton *reportBtn;

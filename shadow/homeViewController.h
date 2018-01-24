@@ -7,12 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CHTCollectionViewWaterfallLayout.h"
 
-@interface homeViewController : UIViewController
+@interface homeViewController : UIViewController<UICollectionViewDataSource, CHTCollectionViewDelegateWaterfallLayout>
 {
-    IBOutlet UIImageView *pofilePic;
     IBOutlet UIButton *allBtn;
-    IBOutlet UICollectionView *postCollectionView;
+  //  IBOutlet UICollectionView *postCollectionView;
     
     IBOutlet UICollectionView *sliderCollectionView;
     IBOutlet UILabel *allLine;
@@ -21,4 +21,6 @@
     IBOutlet UIButton *fanBtn;
     IBOutlet UILabel *fanLine;
 }
+@property (nonatomic, strong) IBOutlet UICollectionView *collectionView;
+
 @end

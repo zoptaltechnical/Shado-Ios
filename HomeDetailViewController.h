@@ -16,6 +16,7 @@
     IBOutlet UIButton *fanBtn;
     IBOutlet UILabel *fanLineLabel;
    
+    IBOutlet UIButton *profileBtn;
     IBOutlet UIButton *allBtn;
     
     IBOutlet UILabel *allLineLabel;

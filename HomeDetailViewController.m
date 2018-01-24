@@ -12,7 +12,7 @@
 {
     NSArray*profilePicImages,*PostAllImages,*nameArray;
     HomeDetailTableViewCell *cell;
-    NSString *editString;
+    NSString *editString,*likePressed;
 }
 @end
 
@@ -21,6 +21,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
      editString=@"Editstring";
+    likePressed=@"1";
+    [cell.likeStatusLable setHidden:YES];
      [cell.backTopview setHidden:YES];
  cell.descriptionBackgroundView.backgroundColor=[[UIColor blackColor]colorWithAlphaComponent:0.9];
   cell.backTopview.backgroundColor=[[UIColor blackColor]colorWithAlphaComponent:0.4];
@@ -32,8 +34,9 @@
 
     PostAllImages=[[NSArray alloc]init];
     profilePicImages=@[@"img_team_logo",@"img_team_logo5",@"img_team_logo"];
-    PostAllImages=@[@"img_post",@"img_post0",@"img_post"];
+    PostAllImages=@[@"img_post0",@"img_post0",@"img_post0"];
     nameArray=@[@"Arkansas Football",@"Football Arkansas",@"Arkansas Football"];
+    [self gradientcolor];
 }
 
 - (void)didReceiveMemoryWarning
@@ -43,6 +46,14 @@
 - (IBAction)backBtnpPressed:(id)sender
 {
     [self.navigationController popViewControllerAnimated:YES];
+}
+-(void)gradientcolor
+{
+    CAGradientLayer *gradientMask = [CAGradientLayer layer];
+    gradientMask.frame = cell.descriptionBackgroundView.bounds;
+    gradientMask.colors = @[(id)[UIColor whiteColor].CGColor,
+                            (id)[UIColor clearColor].CGColor];
+    cell.descriptionBackgroundView.layer.mask = gradientMask;
 }
 #pragma mark
 #pragma mark- UIButton action ALL,Team,fan
@@ -96,16 +107,14 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section;
 
 {
-    
         return [PostAllImages count];
-        
-    
-    
+     
 }
 - (UITableViewCell *)tableView:(UITableView *)TableView cellForRowAtIndexPath:(NSIndexPath *)indexPath;
 {
     
-  
+    [cell.likeStatusLable setHidden:YES];
+
         static NSString *MyIdentifier = @"homeDetailCellID";
       cell = [TableView dequeueReusableCellWithIdentifier:MyIdentifier];
         
@@ -126,28 +135,54 @@
     
     UITapGestureRecognizer *tapRecognizer1 = [[UITapGestureRecognizer alloc] init];
     [tapRecognizer1 addTarget:self action:@selector(commentSelected:)];
-//    UITapGestureRecognizer *tapRecognizer2 = [[UITapGestureRecognizer alloc] init];
-//    [tapRecognizer2 addTarget:self action:@selector(moreSelected:)];
+
     cell.moreBtn.tag=indexPath.row;
     [cell.moreBtn addTarget:self action:@selector(moreSelected:) forControlEvents:UIControlEventTouchUpInside];
-//     [cell.moreBtn addGestureRecognizer:tapRecognizer2];
+    [self gradientcolor];
     [cell.shareBtn addGestureRecognizer:tapRecognizer];
     [cell.commentBtn addGestureRecognizer:tapRecognizer1];
     [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
 cell.reportBtn.tag=indexPath.row;
     [cell.reportBtn addTarget:self action:@selector(reportSelected:) forControlEvents:UIControlEventTouchUpInside];
     cell.donateBtn.tag=indexPath.row;
-    [cell.reportBtn addTarget:self action:@selector(donateSelected:) forControlEvents:UIControlEventTouchUpInside];
-
+    [cell.donateBtn addTarget:self action:@selector(donateSelected:) forControlEvents:UIControlEventTouchUpInside];
+    cell.likeBtn.tag=indexPath.row;
+     cell.likeBtn.tag =1;
+ [cell.likeBtn addTarget:self action:@selector(likeSelected:) forControlEvents:UIControlEventTouchUpInside];
+    
     return cell;
     
     
 }
--(void)moreSelected:(UIButton*)sender
+-(void)likeSelected:(id)sender
+{
+    
+     NSLog(@"like index> %ld",(long)[sender tag]);
+    if ([sender tag] == 1)
+    {
+        likePressed =@"0";
+
+        [cell.likeBtn setImage:[UIImage imageNamed:@"ic_like_red"] forState:UIControlStateNormal ];
+        [cell.likeStatusLable setHidden:NO];
+    }
+   
+    
+    else if ([likePressed isEqualToString:@"0"])
+    {
+        likePressed =@"1";
+        [cell.likeBtn setImage:[UIImage imageNamed:@"ic_like"] forState:UIControlStateNormal];
+        [cell.likeStatusLable setHidden:YES];
+    }
+
+}
+-(void)moreSelected:(id)sender
 {
     if ([editString isEqualToString:@"Editstring"])
     {
         editString = @"nonediting";
+        
+        
+
         [cell.backTopview setHidden:NO];
         [cell.popupView setHidden:NO];
 
@@ -220,15 +255,19 @@ cell.reportBtn.tag=indexPath.row;
     [cell.backTopview setHidden:YES];
     
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)profilebtnPressed:(id)sender
+{
+    
+    
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"PersonalProfile" bundle:[NSBundle mainBundle]];
+            personalProfileViewController *loginViewController = [storyboard instantiateViewControllerWithIdentifier:@"personalProfileViewController"];
+    
+            UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:loginViewController];
+            [navController setNavigationBarHidden:YES animated:YES];
+    
+            [self presentViewController:navController animated:YES completion:nil];
 }
-*/
+
+
 
 @end

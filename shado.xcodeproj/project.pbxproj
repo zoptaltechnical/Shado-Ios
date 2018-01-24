@@ -7,8 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EA33FC702015E34F009F7D2B /* GiftMerchandiseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA33FC6F2015E34F009F7D2B /* GiftMerchandiseViewController.m */; };
+		EA33FC732015E6C8009F7D2B /* GiftMerchandiseCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA33FC722015E6C8009F7D2B /* GiftMerchandiseCollectionViewCell.m */; };
 		EA5659191FECEF2D0056F537 /* HomeDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5659181FECEF2D0056F537 /* HomeDetailViewController.m */; };
 		EA56591E1FED075B0056F537 /* HomeDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA56591D1FED075B0056F537 /* HomeDetailTableViewCell.m */; };
+		EA5A33E120075F8E006E765C /* giftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5A33E020075F8E006E765C /* giftViewController.m */; };
+		EA5A33E620076E33006E765C /* GiftTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5A33E520076E33006E765C /* GiftTableViewCell.m */; };
+		EA5A33E920076EA4006E765C /* GiftSliderCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5A33E820076EA4006E765C /* GiftSliderCollectionViewCell.m */; };
+		EA5A33EC200791C0006E765C /* GiftDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5A33EB200791C0006E765C /* GiftDetailViewController.m */; };
 		EA5C5C201FE0E7DD009879D8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5C5C1F1FE0E7DD009879D8 /* main.m */; };
 		EA5C5C231FE0E7DD009879D8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5C5C221FE0E7DD009879D8 /* AppDelegate.m */; };
 		EA5C5C261FE0E7DD009879D8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5C5C251FE0E7DD009879D8 /* ViewController.m */; };
@@ -17,6 +23,17 @@
 		EA5C5C2E1FE0E7DD009879D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA5C5C2C1FE0E7DD009879D8 /* LaunchScreen.storyboard */; };
 		EA5C5C391FE0E7DD009879D8 /* shadowTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5C5C381FE0E7DD009879D8 /* shadowTests.m */; };
 		EA5C5C441FE0E7DE009879D8 /* shadowUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5C5C431FE0E7DE009879D8 /* shadowUITests.m */; };
+		EA7860B120173C0200D62B01 /* GiftMerchandiseDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7860B020173C0200D62B01 /* GiftMerchandiseDetailViewController.m */; };
+		EA7860C720174E2A00D62B01 /* BKCardExpiryField.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7860B720174E2A00D62B01 /* BKCardExpiryField.m */; };
+		EA7860C820174E2A00D62B01 /* BKCardNumberField.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7860B920174E2A00D62B01 /* BKCardNumberField.m */; };
+		EA7860C920174E2A00D62B01 /* BKCardNumberFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7860BB20174E2A00D62B01 /* BKCardNumberFormatter.m */; };
+		EA7860CA20174E2A00D62B01 /* BKCardNumberLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7860BD20174E2A00D62B01 /* BKCardNumberLabel.m */; };
+		EA7860CB20174E2A00D62B01 /* BKCardPatternInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7860BF20174E2A00D62B01 /* BKCardPatternInfo.m */; };
+		EA7860CC20174E2A00D62B01 /* BKCurrencyTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7860C120174E2A00D62B01 /* BKCurrencyTextField.m */; };
+		EA7860CD20174E2A00D62B01 /* BKForwardingTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7860C320174E2A00D62B01 /* BKForwardingTextField.m */; };
+		EA7860CE20174E2A00D62B01 /* BKMoneyKit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EA7860C420174E2A00D62B01 /* BKMoneyKit.bundle */; };
+		EA7860CF20174E2A00D62B01 /* BKMoneyUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7860C620174E2A00D62B01 /* BKMoneyUtils.m */; };
+		EA7860D22017677200D62B01 /* GiftCreditCardPaymentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7860D12017677200D62B01 /* GiftCreditCardPaymentViewController.m */; };
 		EA992E9C1FE3EFCF00A47BE4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA992E9B1FE3EFCF00A47BE4 /* UIKit.framework */; };
 		EA992EA71FE3F0FA00A47BE4 /* MainTabController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA992EA21FE3F0FA00A47BE4 /* MainTabController.m */; };
 		EA992EA81FE3F0FA00A47BE4 /* SYTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = EA992EA41FE3F0FA00A47BE4 /* SYTabBar.m */; };
@@ -24,6 +41,17 @@
 		EAA0798A1FE3B3F0008132F0 /* homeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA079891FE3B3F0008132F0 /* homeViewController.m */; };
 		EAA079901FE3DC43008132F0 /* HomeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA0798F1FE3DC43008132F0 /* HomeCollectionViewCell.m */; };
 		EAA079931FE3E3A6008132F0 /* HomePostCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA079921FE3E3A6008132F0 /* HomePostCollectionViewCell.m */; };
+		EAB278652010977200EE460E /* PersonalProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAB278642010977200EE460E /* PersonalProfile.storyboard */; };
+		EAB2786B2010A05C00EE460E /* personalProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB2786A2010A05C00EE460E /* personalProfileViewController.m */; };
+		EAB2786F2010A6C500EE460E /* CreateCampaignViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB2786E2010A6C500EE460E /* CreateCampaignViewController.m */; };
+		EAB278722010B69100EE460E /* campaignUploadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB278712010B69100EE460E /* campaignUploadViewController.m */; };
+		EAB2788F2010BB2E00EE460E /* AbstractActionSheetPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB278882010BB2E00EE460E /* AbstractActionSheetPicker.m */; };
+		EAB278902010BB2E00EE460E /* ActionSheetDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB2788A2010BB2E00EE460E /* ActionSheetDatePicker.m */; };
+		EAB278912010BB2E00EE460E /* NSDate+TCUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB2788C2010BB2E00EE460E /* NSDate+TCUtils.m */; };
+		EAB278922010BB2E00EE460E /* SWActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB2788E2010BB2E00EE460E /* SWActionSheet.m */; };
+		EAB278952010BD8300EE460E /* PersonalProfileCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB278942010BD8300EE460E /* PersonalProfileCollectionViewCell.m */; };
+		EAB278982010CCD200EE460E /* CreateCampaignTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB278972010CCD200EE460E /* CreateCampaignTableViewCell.m */; };
+		EAB2789B2010CDEF00EE460E /* NewCreateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB2789A2010CDEF00EE460E /* NewCreateViewController.m */; };
 		EABDD16F1FE2460600E0EB32 /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EABDD16E1FE2460600E0EB32 /* SignInViewController.m */; };
 		EABDD1731FE2588100E0EB32 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EABDD1721FE2588100E0EB32 /* SignUpViewController.m */; };
 		EAD664E91FE262010038CA24 /* TPKeyboardAvoidingCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = EAD664E21FE262010038CA24 /* TPKeyboardAvoidingCollectionView.m */; };
@@ -32,6 +60,20 @@
 		EAD664EC1FE262010038CA24 /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = EAD664E81FE262010038CA24 /* UIScrollView+TPKeyboardAvoidingAdditions.m */; };
 		EAD664FD1FE27E9C0038CA24 /* Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = EAD664FC1FE27E9C0038CA24 /* Utility.m */; };
 		EAD665001FE291400038CA24 /* forgotPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAD664FF1FE291400038CA24 /* forgotPasswordViewController.m */; };
+		EADE291C2018481600796AC2 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EADE291B2018481600796AC2 /* SearchViewController.m */; };
+		EADE291F20184BFF00796AC2 /* SearchDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EADE291E20184BFF00796AC2 /* SearchDetailViewController.m */; };
+		EADE2922201851A200796AC2 /* SearchDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EADE2921201851A200796AC2 /* SearchDetailTableViewCell.m */; };
+		EADE2925201864D700796AC2 /* NotificationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EADE2924201864D700796AC2 /* NotificationTableViewCell.m */; };
+		EADE2928201864ED00796AC2 /* NotificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EADE2927201864ED00796AC2 /* NotificationViewController.m */; };
+		EADE292D201866DB00796AC2 /* SearchDetailFollowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EADE292C201866DB00796AC2 /* SearchDetailFollowViewController.m */; };
+		EADE29312018739B00796AC2 /* CHTCollectionViewWaterfallCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EADE29302018739B00796AC2 /* CHTCollectionViewWaterfallCell.m */; };
+		EADE293A201873E700796AC2 /* CHTCollectionViewWaterfallLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = EADE2939201873E700796AC2 /* CHTCollectionViewWaterfallLayout.m */; };
+		EADE293F2018741700796AC2 /* CHTCollectionViewWaterfallFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = EADE293C2018741700796AC2 /* CHTCollectionViewWaterfallFooter.m */; };
+		EADE29402018741700796AC2 /* CHTCollectionViewWaterfallHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = EADE293E2018741700796AC2 /* CHTCollectionViewWaterfallHeader.m */; };
+		EADE29452018878100796AC2 /* cat1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EADE29412018878100796AC2 /* cat1.jpg */; };
+		EADE29462018878100796AC2 /* cat2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EADE29422018878100796AC2 /* cat2.jpg */; };
+		EADE29472018878100796AC2 /* cat3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EADE29432018878100796AC2 /* cat3.jpg */; };
+		EADE29482018878100796AC2 /* cat4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EADE29442018878100796AC2 /* cat4.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,10 +94,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EA33FC6E2015E34F009F7D2B /* GiftMerchandiseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GiftMerchandiseViewController.h; sourceTree = "<group>"; };
+		EA33FC6F2015E34F009F7D2B /* GiftMerchandiseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GiftMerchandiseViewController.m; sourceTree = "<group>"; };
+		EA33FC712015E6C8009F7D2B /* GiftMerchandiseCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GiftMerchandiseCollectionViewCell.h; sourceTree = "<group>"; };
+		EA33FC722015E6C8009F7D2B /* GiftMerchandiseCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GiftMerchandiseCollectionViewCell.m; sourceTree = "<group>"; };
 		EA5659171FECEF2D0056F537 /* HomeDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeDetailViewController.h; path = ../HomeDetailViewController.h; sourceTree = "<group>"; };
 		EA5659181FECEF2D0056F537 /* HomeDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeDetailViewController.m; path = ../HomeDetailViewController.m; sourceTree = "<group>"; };
 		EA56591C1FED075B0056F537 /* HomeDetailTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeDetailTableViewCell.h; sourceTree = "<group>"; };
 		EA56591D1FED075B0056F537 /* HomeDetailTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeDetailTableViewCell.m; sourceTree = "<group>"; };
+		EA5A33DF20075F8E006E765C /* giftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = giftViewController.h; sourceTree = "<group>"; };
+		EA5A33E020075F8E006E765C /* giftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = giftViewController.m; sourceTree = "<group>"; };
+		EA5A33E420076E33006E765C /* GiftTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GiftTableViewCell.h; sourceTree = "<group>"; };
+		EA5A33E520076E33006E765C /* GiftTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GiftTableViewCell.m; sourceTree = "<group>"; };
+		EA5A33E720076EA4006E765C /* GiftSliderCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GiftSliderCollectionViewCell.h; path = ../GiftSliderCollectionViewCell.h; sourceTree = "<group>"; };
+		EA5A33E820076EA4006E765C /* GiftSliderCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GiftSliderCollectionViewCell.m; path = ../GiftSliderCollectionViewCell.m; sourceTree = "<group>"; };
+		EA5A33EA200791C0006E765C /* GiftDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GiftDetailViewController.h; sourceTree = "<group>"; };
+		EA5A33EB200791C0006E765C /* GiftDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GiftDetailViewController.m; sourceTree = "<group>"; };
 		EA5C5C1B1FE0E7DD009879D8 /* shado.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = shado.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA5C5C1F1FE0E7DD009879D8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		EA5C5C211FE0E7DD009879D8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -72,6 +126,27 @@
 		EA5C5C3F1FE0E7DE009879D8 /* shadoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = shadoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA5C5C431FE0E7DE009879D8 /* shadowUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = shadowUITests.m; sourceTree = "<group>"; };
 		EA5C5C451FE0E7DE009879D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA7860AF20173C0200D62B01 /* GiftMerchandiseDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GiftMerchandiseDetailViewController.h; sourceTree = "<group>"; };
+		EA7860B020173C0200D62B01 /* GiftMerchandiseDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GiftMerchandiseDetailViewController.m; sourceTree = "<group>"; };
+		EA7860B620174E2A00D62B01 /* BKCardExpiryField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKCardExpiryField.h; sourceTree = "<group>"; };
+		EA7860B720174E2A00D62B01 /* BKCardExpiryField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKCardExpiryField.m; sourceTree = "<group>"; };
+		EA7860B820174E2A00D62B01 /* BKCardNumberField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKCardNumberField.h; sourceTree = "<group>"; };
+		EA7860B920174E2A00D62B01 /* BKCardNumberField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKCardNumberField.m; sourceTree = "<group>"; };
+		EA7860BA20174E2A00D62B01 /* BKCardNumberFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKCardNumberFormatter.h; sourceTree = "<group>"; };
+		EA7860BB20174E2A00D62B01 /* BKCardNumberFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKCardNumberFormatter.m; sourceTree = "<group>"; };
+		EA7860BC20174E2A00D62B01 /* BKCardNumberLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKCardNumberLabel.h; sourceTree = "<group>"; };
+		EA7860BD20174E2A00D62B01 /* BKCardNumberLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKCardNumberLabel.m; sourceTree = "<group>"; };
+		EA7860BE20174E2A00D62B01 /* BKCardPatternInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKCardPatternInfo.h; sourceTree = "<group>"; };
+		EA7860BF20174E2A00D62B01 /* BKCardPatternInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKCardPatternInfo.m; sourceTree = "<group>"; };
+		EA7860C020174E2A00D62B01 /* BKCurrencyTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKCurrencyTextField.h; sourceTree = "<group>"; };
+		EA7860C120174E2A00D62B01 /* BKCurrencyTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKCurrencyTextField.m; sourceTree = "<group>"; };
+		EA7860C220174E2A00D62B01 /* BKForwardingTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKForwardingTextField.h; sourceTree = "<group>"; };
+		EA7860C320174E2A00D62B01 /* BKForwardingTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKForwardingTextField.m; sourceTree = "<group>"; };
+		EA7860C420174E2A00D62B01 /* BKMoneyKit.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = BKMoneyKit.bundle; sourceTree = "<group>"; };
+		EA7860C520174E2A00D62B01 /* BKMoneyUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKMoneyUtils.h; sourceTree = "<group>"; };
+		EA7860C620174E2A00D62B01 /* BKMoneyUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKMoneyUtils.m; sourceTree = "<group>"; };
+		EA7860D02017677100D62B01 /* GiftCreditCardPaymentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GiftCreditCardPaymentViewController.h; path = ../GiftCreditCardPaymentViewController.h; sourceTree = "<group>"; };
+		EA7860D12017677200D62B01 /* GiftCreditCardPaymentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GiftCreditCardPaymentViewController.m; path = ../GiftCreditCardPaymentViewController.m; sourceTree = "<group>"; };
 		EA992E9B1FE3EFCF00A47BE4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		EA992EA11FE3F0FA00A47BE4 /* MainTabController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabController.h; sourceTree = "<group>"; };
 		EA992EA21FE3F0FA00A47BE4 /* MainTabController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabController.m; sourceTree = "<group>"; };
@@ -85,6 +160,27 @@
 		EAA0798F1FE3DC43008132F0 /* HomeCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeCollectionViewCell.m; path = ../HomeCollectionViewCell.m; sourceTree = "<group>"; };
 		EAA079911FE3E3A6008132F0 /* HomePostCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomePostCollectionViewCell.h; path = ../HomePostCollectionViewCell.h; sourceTree = "<group>"; };
 		EAA079921FE3E3A6008132F0 /* HomePostCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomePostCollectionViewCell.m; path = ../HomePostCollectionViewCell.m; sourceTree = "<group>"; };
+		EAB278642010977200EE460E /* PersonalProfile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PersonalProfile.storyboard; sourceTree = "<group>"; };
+		EAB278692010A05C00EE460E /* personalProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = personalProfileViewController.h; sourceTree = "<group>"; };
+		EAB2786A2010A05C00EE460E /* personalProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = personalProfileViewController.m; sourceTree = "<group>"; };
+		EAB2786D2010A6C500EE460E /* CreateCampaignViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateCampaignViewController.h; sourceTree = "<group>"; };
+		EAB2786E2010A6C500EE460E /* CreateCampaignViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateCampaignViewController.m; sourceTree = "<group>"; };
+		EAB278702010B69100EE460E /* campaignUploadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = campaignUploadViewController.h; sourceTree = "<group>"; };
+		EAB278712010B69100EE460E /* campaignUploadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = campaignUploadViewController.m; sourceTree = "<group>"; };
+		EAB278872010BB2E00EE460E /* AbstractActionSheetPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractActionSheetPicker.h; sourceTree = "<group>"; };
+		EAB278882010BB2E00EE460E /* AbstractActionSheetPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbstractActionSheetPicker.m; sourceTree = "<group>"; };
+		EAB278892010BB2E00EE460E /* ActionSheetDatePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionSheetDatePicker.h; sourceTree = "<group>"; };
+		EAB2788A2010BB2E00EE460E /* ActionSheetDatePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionSheetDatePicker.m; sourceTree = "<group>"; };
+		EAB2788B2010BB2E00EE460E /* NSDate+TCUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+TCUtils.h"; sourceTree = "<group>"; };
+		EAB2788C2010BB2E00EE460E /* NSDate+TCUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+TCUtils.m"; sourceTree = "<group>"; };
+		EAB2788D2010BB2E00EE460E /* SWActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWActionSheet.h; sourceTree = "<group>"; };
+		EAB2788E2010BB2E00EE460E /* SWActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWActionSheet.m; sourceTree = "<group>"; };
+		EAB278932010BD8300EE460E /* PersonalProfileCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonalProfileCollectionViewCell.h; sourceTree = "<group>"; };
+		EAB278942010BD8300EE460E /* PersonalProfileCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonalProfileCollectionViewCell.m; sourceTree = "<group>"; };
+		EAB278962010CCD200EE460E /* CreateCampaignTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateCampaignTableViewCell.h; sourceTree = "<group>"; };
+		EAB278972010CCD200EE460E /* CreateCampaignTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateCampaignTableViewCell.m; sourceTree = "<group>"; };
+		EAB278992010CDEF00EE460E /* NewCreateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewCreateViewController.h; sourceTree = "<group>"; };
+		EAB2789A2010CDEF00EE460E /* NewCreateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewCreateViewController.m; sourceTree = "<group>"; };
 		EABDD16D1FE2460600E0EB32 /* SignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignInViewController.h; sourceTree = "<group>"; };
 		EABDD16E1FE2460600E0EB32 /* SignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInViewController.m; sourceTree = "<group>"; };
 		EABDD1711FE2588100E0EB32 /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
@@ -103,6 +199,30 @@
 		EAD664FC1FE27E9C0038CA24 /* Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utility.m; sourceTree = "<group>"; };
 		EAD664FE1FE291400038CA24 /* forgotPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = forgotPasswordViewController.h; sourceTree = "<group>"; };
 		EAD664FF1FE291400038CA24 /* forgotPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = forgotPasswordViewController.m; sourceTree = "<group>"; };
+		EADE291A2018481600796AC2 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		EADE291B2018481600796AC2 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+		EADE291D20184BFF00796AC2 /* SearchDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchDetailViewController.h; sourceTree = "<group>"; };
+		EADE291E20184BFF00796AC2 /* SearchDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchDetailViewController.m; sourceTree = "<group>"; };
+		EADE2920201851A200796AC2 /* SearchDetailTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchDetailTableViewCell.h; sourceTree = "<group>"; };
+		EADE2921201851A200796AC2 /* SearchDetailTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchDetailTableViewCell.m; sourceTree = "<group>"; };
+		EADE2923201864D700796AC2 /* NotificationTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationTableViewCell.h; sourceTree = "<group>"; };
+		EADE2924201864D700796AC2 /* NotificationTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationTableViewCell.m; sourceTree = "<group>"; };
+		EADE2926201864ED00796AC2 /* NotificationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationViewController.h; sourceTree = "<group>"; };
+		EADE2927201864ED00796AC2 /* NotificationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationViewController.m; sourceTree = "<group>"; };
+		EADE292B201866DB00796AC2 /* SearchDetailFollowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchDetailFollowViewController.h; sourceTree = "<group>"; };
+		EADE292C201866DB00796AC2 /* SearchDetailFollowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchDetailFollowViewController.m; sourceTree = "<group>"; };
+		EADE292F2018739B00796AC2 /* CHTCollectionViewWaterfallCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHTCollectionViewWaterfallCell.h; sourceTree = "<group>"; };
+		EADE29302018739B00796AC2 /* CHTCollectionViewWaterfallCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHTCollectionViewWaterfallCell.m; sourceTree = "<group>"; };
+		EADE2938201873E700796AC2 /* CHTCollectionViewWaterfallLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHTCollectionViewWaterfallLayout.h; sourceTree = "<group>"; };
+		EADE2939201873E700796AC2 /* CHTCollectionViewWaterfallLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHTCollectionViewWaterfallLayout.m; sourceTree = "<group>"; };
+		EADE293B2018741700796AC2 /* CHTCollectionViewWaterfallFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHTCollectionViewWaterfallFooter.h; sourceTree = "<group>"; };
+		EADE293C2018741700796AC2 /* CHTCollectionViewWaterfallFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHTCollectionViewWaterfallFooter.m; sourceTree = "<group>"; };
+		EADE293D2018741700796AC2 /* CHTCollectionViewWaterfallHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHTCollectionViewWaterfallHeader.h; sourceTree = "<group>"; };
+		EADE293E2018741700796AC2 /* CHTCollectionViewWaterfallHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHTCollectionViewWaterfallHeader.m; sourceTree = "<group>"; };
+		EADE29412018878100796AC2 /* cat1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cat1.jpg; sourceTree = "<group>"; };
+		EADE29422018878100796AC2 /* cat2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cat2.jpg; sourceTree = "<group>"; };
+		EADE29432018878100796AC2 /* cat3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cat3.jpg; sourceTree = "<group>"; };
+		EADE29442018878100796AC2 /* cat4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cat4.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +265,10 @@
 		EA56591B1FECF2A70056F537 /* Home View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				EADE29412018878100796AC2 /* cat1.jpg */,
+				EADE29422018878100796AC2 /* cat2.jpg */,
+				EADE29432018878100796AC2 /* cat3.jpg */,
+				EADE29442018878100796AC2 /* cat4.jpg */,
 				EAA079881FE3B3F0008132F0 /* homeViewController.h */,
 				EAA079891FE3B3F0008132F0 /* homeViewController.m */,
 				EAA0798E1FE3DC43008132F0 /* HomeCollectionViewCell.h */,
@@ -155,11 +279,47 @@
 			name = "Home View Controller";
 			sourceTree = "<group>";
 		};
+		EA5A33E220075FAC006E765C /* SignIn Section */ = {
+			isa = PBXGroup;
+			children = (
+				EAD664FE1FE291400038CA24 /* forgotPasswordViewController.h */,
+				EAD664FF1FE291400038CA24 /* forgotPasswordViewController.m */,
+				EABDD16D1FE2460600E0EB32 /* SignInViewController.h */,
+				EABDD16E1FE2460600E0EB32 /* SignInViewController.m */,
+				EABDD1711FE2588100E0EB32 /* SignUpViewController.h */,
+				EABDD1721FE2588100E0EB32 /* SignUpViewController.m */,
+			);
+			name = "SignIn Section";
+			sourceTree = "<group>";
+		};
+		EA5A33E320075FC1006E765C /* Gift Section */ = {
+			isa = PBXGroup;
+			children = (
+				EA5A33DF20075F8E006E765C /* giftViewController.h */,
+				EA5A33E020075F8E006E765C /* giftViewController.m */,
+				EA5A33E420076E33006E765C /* GiftTableViewCell.h */,
+				EA5A33E520076E33006E765C /* GiftTableViewCell.m */,
+				EA5A33E720076EA4006E765C /* GiftSliderCollectionViewCell.h */,
+				EA5A33E820076EA4006E765C /* GiftSliderCollectionViewCell.m */,
+				EA5A33EA200791C0006E765C /* GiftDetailViewController.h */,
+				EA5A33EB200791C0006E765C /* GiftDetailViewController.m */,
+				EA33FC6E2015E34F009F7D2B /* GiftMerchandiseViewController.h */,
+				EA33FC6F2015E34F009F7D2B /* GiftMerchandiseViewController.m */,
+				EA33FC712015E6C8009F7D2B /* GiftMerchandiseCollectionViewCell.h */,
+				EA33FC722015E6C8009F7D2B /* GiftMerchandiseCollectionViewCell.m */,
+				EA7860AF20173C0200D62B01 /* GiftMerchandiseDetailViewController.h */,
+				EA7860B020173C0200D62B01 /* GiftMerchandiseDetailViewController.m */,
+				EA7860D02017677100D62B01 /* GiftCreditCardPaymentViewController.h */,
+				EA7860D12017677200D62B01 /* GiftCreditCardPaymentViewController.m */,
+			);
+			name = "Gift Section";
+			sourceTree = "<group>";
+		};
 		EA5C5C121FE0E7DD009879D8 = {
 			isa = PBXGroup;
 			children = (
 				EABDD1741FE25F4A00E0EB32 /* PrefixHeader.pch */,
-				EA5C5C1D1FE0E7DD009879D8 /* shadow */,
+				EA5C5C1D1FE0E7DD009879D8 /* shado */,
 				EA5C5C371FE0E7DD009879D8 /* shadowTests */,
 				EA5C5C421FE0E7DE009879D8 /* shadowUITests */,
 				EA5C5C1C1FE0E7DD009879D8 /* Products */,
@@ -177,7 +337,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		EA5C5C1D1FE0E7DD009879D8 /* shadow */ = {
+		EA5C5C1D1FE0E7DD009879D8 /* shado */ = {
 			isa = PBXGroup;
 			children = (
 				EAD664DF1FE262010038CA24 /* Extra Files */,
@@ -186,19 +346,19 @@
 				EA5C5C241FE0E7DD009879D8 /* ViewController.h */,
 				EA5C5C251FE0E7DD009879D8 /* ViewController.m */,
 				EA5C5C271FE0E7DD009879D8 /* Main.storyboard */,
+				EAB2786C2010A06200EE460E /* Personal Profile */,
+				EA5A33E220075FAC006E765C /* SignIn Section */,
 				EA56591B1FECF2A70056F537 /* Home View Controller */,
 				EA56591A1FECF2850056F537 /* Home Detail View controller */,
-				EAD664FE1FE291400038CA24 /* forgotPasswordViewController.h */,
-				EAD664FF1FE291400038CA24 /* forgotPasswordViewController.m */,
-				EABDD16D1FE2460600E0EB32 /* SignInViewController.h */,
-				EABDD16E1FE2460600E0EB32 /* SignInViewController.m */,
-				EABDD1711FE2588100E0EB32 /* SignUpViewController.h */,
-				EABDD1721FE2588100E0EB32 /* SignUpViewController.m */,
+				EA5A33E320075FC1006E765C /* Gift Section */,
+				EADE29192018474300796AC2 /* Search View Controller */,
+				EADE2929201864F600796AC2 /* Notification View Controller */,
 				EA5C5C2A1FE0E7DD009879D8 /* Assets.xcassets */,
 				EA5C5C2C1FE0E7DD009879D8 /* LaunchScreen.storyboard */,
 				EA5C5C2F1FE0E7DD009879D8 /* Info.plist */,
 				EA5C5C1E1FE0E7DD009879D8 /* Supporting Files */,
 			);
+			name = shado;
 			path = shadow;
 			sourceTree = "<group>";
 		};
@@ -228,6 +388,31 @@
 			path = shadowUITests;
 			sourceTree = "<group>";
 		};
+		EA7860B520174E2A00D62B01 /* BKMoneyKit */ = {
+			isa = PBXGroup;
+			children = (
+				EA7860B620174E2A00D62B01 /* BKCardExpiryField.h */,
+				EA7860B720174E2A00D62B01 /* BKCardExpiryField.m */,
+				EA7860B820174E2A00D62B01 /* BKCardNumberField.h */,
+				EA7860B920174E2A00D62B01 /* BKCardNumberField.m */,
+				EA7860BA20174E2A00D62B01 /* BKCardNumberFormatter.h */,
+				EA7860BB20174E2A00D62B01 /* BKCardNumberFormatter.m */,
+				EA7860BC20174E2A00D62B01 /* BKCardNumberLabel.h */,
+				EA7860BD20174E2A00D62B01 /* BKCardNumberLabel.m */,
+				EA7860BE20174E2A00D62B01 /* BKCardPatternInfo.h */,
+				EA7860BF20174E2A00D62B01 /* BKCardPatternInfo.m */,
+				EA7860C020174E2A00D62B01 /* BKCurrencyTextField.h */,
+				EA7860C120174E2A00D62B01 /* BKCurrencyTextField.m */,
+				EA7860C220174E2A00D62B01 /* BKForwardingTextField.h */,
+				EA7860C320174E2A00D62B01 /* BKForwardingTextField.m */,
+				EA7860C420174E2A00D62B01 /* BKMoneyKit.bundle */,
+				EA7860C520174E2A00D62B01 /* BKMoneyUtils.h */,
+				EA7860C620174E2A00D62B01 /* BKMoneyUtils.m */,
+			);
+			name = BKMoneyKit;
+			path = ../../extraClasses/BKMoneyKit;
+			sourceTree = "<group>";
+		};
 		EA992E9A1FE3EFCF00A47BE4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -249,13 +434,37 @@
 			path = TabbarController;
 			sourceTree = "<group>";
 		};
+		EAB2786C2010A06200EE460E /* Personal Profile */ = {
+			isa = PBXGroup;
+			children = (
+				EAB278992010CDEF00EE460E /* NewCreateViewController.h */,
+				EAB2789A2010CDEF00EE460E /* NewCreateViewController.m */,
+				EAB278642010977200EE460E /* PersonalProfile.storyboard */,
+				EAB278962010CCD200EE460E /* CreateCampaignTableViewCell.h */,
+				EAB278972010CCD200EE460E /* CreateCampaignTableViewCell.m */,
+				EAB278692010A05C00EE460E /* personalProfileViewController.h */,
+				EAB2786A2010A05C00EE460E /* personalProfileViewController.m */,
+				EAB278932010BD8300EE460E /* PersonalProfileCollectionViewCell.h */,
+				EAB278942010BD8300EE460E /* PersonalProfileCollectionViewCell.m */,
+				EAB2786D2010A6C500EE460E /* CreateCampaignViewController.h */,
+				EAB2786E2010A6C500EE460E /* CreateCampaignViewController.m */,
+				EAB278702010B69100EE460E /* campaignUploadViewController.h */,
+				EAB278712010B69100EE460E /* campaignUploadViewController.m */,
+			);
+			name = "Personal Profile";
+			path = ..;
+			sourceTree = "<group>";
+		};
 		EAD664DF1FE262010038CA24 /* Extra Files */ = {
 			isa = PBXGroup;
 			children = (
+				EADE292E2018739B00796AC2 /* CHT CollectionView */,
+				EA7860B520174E2A00D62B01 /* BKMoneyKit */,
 				EA992EA01FE3F0FA00A47BE4 /* TabbarController */,
 				EAD664FA1FE27E9C0038CA24 /* Constants.h */,
 				EAD664FB1FE27E9C0038CA24 /* Utility.h */,
 				EAD664FC1FE27E9C0038CA24 /* Utility.m */,
+				EADE292A2018652400796AC2 /* Action sheet Date Picker View */,
 				EAD664E01FE262010038CA24 /* TP ScrollView */,
 			);
 			path = "Extra Files";
@@ -274,6 +483,64 @@
 				EAD664E81FE262010038CA24 /* UIScrollView+TPKeyboardAvoidingAdditions.m */,
 			);
 			path = "TP ScrollView";
+			sourceTree = "<group>";
+		};
+		EADE29192018474300796AC2 /* Search View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EADE291A2018481600796AC2 /* SearchViewController.h */,
+				EADE291B2018481600796AC2 /* SearchViewController.m */,
+				EADE291D20184BFF00796AC2 /* SearchDetailViewController.h */,
+				EADE291E20184BFF00796AC2 /* SearchDetailViewController.m */,
+				EADE2920201851A200796AC2 /* SearchDetailTableViewCell.h */,
+				EADE2921201851A200796AC2 /* SearchDetailTableViewCell.m */,
+				EADE292B201866DB00796AC2 /* SearchDetailFollowViewController.h */,
+				EADE292C201866DB00796AC2 /* SearchDetailFollowViewController.m */,
+			);
+			name = "Search View Controller";
+			path = ..;
+			sourceTree = "<group>";
+		};
+		EADE2929201864F600796AC2 /* Notification View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EADE2926201864ED00796AC2 /* NotificationViewController.h */,
+				EADE2927201864ED00796AC2 /* NotificationViewController.m */,
+				EADE2923201864D700796AC2 /* NotificationTableViewCell.h */,
+				EADE2924201864D700796AC2 /* NotificationTableViewCell.m */,
+			);
+			name = "Notification View Controller";
+			path = ..;
+			sourceTree = "<group>";
+		};
+		EADE292A2018652400796AC2 /* Action sheet Date Picker View */ = {
+			isa = PBXGroup;
+			children = (
+				EAB278872010BB2E00EE460E /* AbstractActionSheetPicker.h */,
+				EAB278882010BB2E00EE460E /* AbstractActionSheetPicker.m */,
+				EAB278892010BB2E00EE460E /* ActionSheetDatePicker.h */,
+				EAB2788A2010BB2E00EE460E /* ActionSheetDatePicker.m */,
+				EAB2788B2010BB2E00EE460E /* NSDate+TCUtils.h */,
+				EAB2788C2010BB2E00EE460E /* NSDate+TCUtils.m */,
+				EAB2788D2010BB2E00EE460E /* SWActionSheet.h */,
+				EAB2788E2010BB2E00EE460E /* SWActionSheet.m */,
+			);
+			name = "Action sheet Date Picker View";
+			sourceTree = "<group>";
+		};
+		EADE292E2018739B00796AC2 /* CHT CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				EADE293B2018741700796AC2 /* CHTCollectionViewWaterfallFooter.h */,
+				EADE293C2018741700796AC2 /* CHTCollectionViewWaterfallFooter.m */,
+				EADE293D2018741700796AC2 /* CHTCollectionViewWaterfallHeader.h */,
+				EADE293E2018741700796AC2 /* CHTCollectionViewWaterfallHeader.m */,
+				EADE2938201873E700796AC2 /* CHTCollectionViewWaterfallLayout.h */,
+				EADE2939201873E700796AC2 /* CHTCollectionViewWaterfallLayout.m */,
+				EADE292F2018739B00796AC2 /* CHTCollectionViewWaterfallCell.h */,
+				EADE29302018739B00796AC2 /* CHTCollectionViewWaterfallCell.m */,
+			);
+			path = "CHT CollectionView";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -343,7 +610,7 @@
 				TargetAttributes = {
 					EA5C5C1A1FE0E7DD009879D8 = {
 						CreatedOnToolsVersion = 8.3.1;
-						DevelopmentTeam = 8X24DVQM5V;
+						DevelopmentTeam = TQ2L8PNXPU;
 						ProvisioningStyle = Manual;
 					};
 					EA5C5C331FE0E7DD009879D8 = {
@@ -383,9 +650,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EADE29462018878100796AC2 /* cat2.jpg in Resources */,
 				EA5C5C2E1FE0E7DD009879D8 /* LaunchScreen.storyboard in Resources */,
+				EADE29472018878100796AC2 /* cat3.jpg in Resources */,
 				EA5C5C2B1FE0E7DD009879D8 /* Assets.xcassets in Resources */,
+				EADE29482018878100796AC2 /* cat4.jpg in Resources */,
+				EAB278652010977200EE460E /* PersonalProfile.storyboard in Resources */,
 				EA5C5C291FE0E7DD009879D8 /* Main.storyboard in Resources */,
+				EADE29452018878100796AC2 /* cat1.jpg in Resources */,
+				EA7860CE20174E2A00D62B01 /* BKMoneyKit.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,25 +683,61 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA5A33E120075F8E006E765C /* giftViewController.m in Sources */,
 				EAD664EA1FE262010038CA24 /* TPKeyboardAvoidingScrollView.m in Sources */,
+				EADE293F2018741700796AC2 /* CHTCollectionViewWaterfallFooter.m in Sources */,
+				EADE2922201851A200796AC2 /* SearchDetailTableViewCell.m in Sources */,
+				EA7860CC20174E2A00D62B01 /* BKCurrencyTextField.m in Sources */,
 				EAD664EB1FE262010038CA24 /* TPKeyboardAvoidingTableView.m in Sources */,
+				EADE292D201866DB00796AC2 /* SearchDetailFollowViewController.m in Sources */,
+				EADE291F20184BFF00796AC2 /* SearchDetailViewController.m in Sources */,
 				EAD664FD1FE27E9C0038CA24 /* Utility.m in Sources */,
 				EABDD16F1FE2460600E0EB32 /* SignInViewController.m in Sources */,
 				EA992EA81FE3F0FA00A47BE4 /* SYTabBar.m in Sources */,
+				EA5A33EC200791C0006E765C /* GiftDetailViewController.m in Sources */,
 				EABDD1731FE2588100E0EB32 /* SignUpViewController.m in Sources */,
+				EA7860C720174E2A00D62B01 /* BKCardExpiryField.m in Sources */,
 				EA5659191FECEF2D0056F537 /* HomeDetailViewController.m in Sources */,
+				EAB2786B2010A05C00EE460E /* personalProfileViewController.m in Sources */,
+				EAB278952010BD8300EE460E /* PersonalProfileCollectionViewCell.m in Sources */,
 				EAD665001FE291400038CA24 /* forgotPasswordViewController.m in Sources */,
+				EADE2925201864D700796AC2 /* NotificationTableViewCell.m in Sources */,
+				EA5A33E920076EA4006E765C /* GiftSliderCollectionViewCell.m in Sources */,
 				EAD664EC1FE262010038CA24 /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
+				EAB2789B2010CDEF00EE460E /* NewCreateViewController.m in Sources */,
+				EA7860B120173C0200D62B01 /* GiftMerchandiseDetailViewController.m in Sources */,
+				EA7860CA20174E2A00D62B01 /* BKCardNumberLabel.m in Sources */,
 				EAA0798A1FE3B3F0008132F0 /* homeViewController.m in Sources */,
+				EAB278982010CCD200EE460E /* CreateCampaignTableViewCell.m in Sources */,
+				EAB2786F2010A6C500EE460E /* CreateCampaignViewController.m in Sources */,
+				EADE291C2018481600796AC2 /* SearchViewController.m in Sources */,
+				EA7860CF20174E2A00D62B01 /* BKMoneyUtils.m in Sources */,
+				EA33FC732015E6C8009F7D2B /* GiftMerchandiseCollectionViewCell.m in Sources */,
+				EA7860CD20174E2A00D62B01 /* BKForwardingTextField.m in Sources */,
+				EAB2788F2010BB2E00EE460E /* AbstractActionSheetPicker.m in Sources */,
 				EAA079931FE3E3A6008132F0 /* HomePostCollectionViewCell.m in Sources */,
+				EAB278912010BB2E00EE460E /* NSDate+TCUtils.m in Sources */,
 				EA56591E1FED075B0056F537 /* HomeDetailTableViewCell.m in Sources */,
+				EADE29402018741700796AC2 /* CHTCollectionViewWaterfallHeader.m in Sources */,
+				EA33FC702015E34F009F7D2B /* GiftMerchandiseViewController.m in Sources */,
 				EA5C5C261FE0E7DD009879D8 /* ViewController.m in Sources */,
 				EA992EA91FE3F0FA00A47BE4 /* SYTabBarController.m in Sources */,
+				EAB278922010BB2E00EE460E /* SWActionSheet.m in Sources */,
+				EADE29312018739B00796AC2 /* CHTCollectionViewWaterfallCell.m in Sources */,
+				EA5A33E620076E33006E765C /* GiftTableViewCell.m in Sources */,
+				EA7860C920174E2A00D62B01 /* BKCardNumberFormatter.m in Sources */,
+				EAB278902010BB2E00EE460E /* ActionSheetDatePicker.m in Sources */,
 				EA5C5C231FE0E7DD009879D8 /* AppDelegate.m in Sources */,
 				EAD664E91FE262010038CA24 /* TPKeyboardAvoidingCollectionView.m in Sources */,
+				EA7860C820174E2A00D62B01 /* BKCardNumberField.m in Sources */,
+				EADE2928201864ED00796AC2 /* NotificationViewController.m in Sources */,
+				EA7860D22017677200D62B01 /* GiftCreditCardPaymentViewController.m in Sources */,
 				EA5C5C201FE0E7DD009879D8 /* main.m in Sources */,
+				EADE293A201873E700796AC2 /* CHTCollectionViewWaterfallLayout.m in Sources */,
+				EAB278722010B69100EE460E /* campaignUploadViewController.m in Sources */,
 				EA992EA71FE3F0FA00A47BE4 /* MainTabController.m in Sources */,
 				EAA079901FE3DC43008132F0 /* HomeCollectionViewCell.m in Sources */,
+				EA7860CB20174E2A00D62B01 /* BKCardPatternInfo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -579,16 +888,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Dimitri Vrousgos (P4ELLB7MVE)";
-				DEVELOPMENT_TEAM = 8X24DVQM5V;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Anthony Han (YJLHM63AYW)";
+				DEVELOPMENT_TEAM = TQ2L8PNXPU;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = PrefixHeader.pch;
 				INFOPLIST_FILE = shadow/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.zoptal.SendayoCustomer;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zoptal.songBook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "41f32c75-b03d-48c6-b80d-b0afdfb05894";
-				PROVISIONING_PROFILE_SPECIFIER = SendayoCustomerDevelopment2;
+				PROVISIONING_PROFILE = "c16bd2fa-b76a-43b2-be61-ae1c842b2886";
+				PROVISIONING_PROFILE_SPECIFIER = SongBookDeveloper1;
 			};
 			name = Debug;
 		};
@@ -596,16 +905,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Dimitri Vrousgos (P4ELLB7MVE)";
-				DEVELOPMENT_TEAM = 8X24DVQM5V;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Anthony Han (YJLHM63AYW)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Anthony Han (YJLHM63AYW)";
+				DEVELOPMENT_TEAM = TQ2L8PNXPU;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = PrefixHeader.pch;
 				INFOPLIST_FILE = shadow/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.zoptal.SendayoCustomer;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zoptal.songBook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "41f32c75-b03d-48c6-b80d-b0afdfb05894";
-				PROVISIONING_PROFILE_SPECIFIER = SendayoCustomerDevelopment2;
+				PROVISIONING_PROFILE = "c16bd2fa-b76a-43b2-be61-ae1c842b2886";
+				PROVISIONING_PROFILE_SPECIFIER = SongBookDeveloper1;
 			};
 			name = Release;
 		};
