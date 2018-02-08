@@ -601,7 +601,7 @@
                                                         
                                                         [alert showAlertInView:self
                                                                      withTitle:@"Shado Sport"
-                                                                  withSubtitle:[dict valueForKey:@"message"]
+                                                                  withSubtitle:@"Profile updated successfully."
                                                                withCustomImage:[UIImage imageNamed:@"AppIcon"]
                                                            withDoneButtonTitle:nil
                                                                     andButtons:nil];
