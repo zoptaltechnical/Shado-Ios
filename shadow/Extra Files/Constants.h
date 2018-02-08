@@ -92,7 +92,7 @@
 #define requestedPakage @"requestedPakage"
 #define notifcationText @"notificationText"
 
-#define WebURl @"https://zoptal.com/demo/sendayo/home/"
+#define WebURl @"https://zoptal.com/demo/shado/api/"
 
 #define mywebURL @"https://zoptal.com/demo/sendayo/cc_payment/save_credit_card"
 

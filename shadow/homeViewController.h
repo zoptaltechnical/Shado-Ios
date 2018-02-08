@@ -14,6 +14,7 @@
     IBOutlet UIButton *allBtn;
   //  IBOutlet UICollectionView *postCollectionView;
     
+    IBOutlet UIButton *persoanlProfileBtn;
     IBOutlet UICollectionView *sliderCollectionView;
     IBOutlet UILabel *allLine;
     IBOutlet UIButton *teambtn;

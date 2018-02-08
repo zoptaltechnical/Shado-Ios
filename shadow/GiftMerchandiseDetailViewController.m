@@ -25,6 +25,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 - (IBAction)backBtnPressed:(id)sender
 {
     [self.navigationController popToRootViewControllerAnimated:NO];
@@ -35,6 +36,19 @@
     
     [self.navigationController pushViewController:secondView animated:YES];
 }
+- (IBAction)profilebtnPressed:(id)sender
+{
+    
+    
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"PersonalProfile" bundle:[NSBundle mainBundle]];
+    personalProfileViewController *loginViewController = [storyboard instantiateViewControllerWithIdentifier:@"personalProfileViewController"];
+    
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:loginViewController];
+    [navController setNavigationBarHidden:YES animated:YES];
+    
+    [self presentViewController:navController animated:YES completion:nil];
+}
+
 /*
 #pragma mark - Navigation
 

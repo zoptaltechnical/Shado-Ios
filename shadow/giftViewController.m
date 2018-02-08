@@ -105,6 +105,17 @@ sliderAllImages=@[@"img_team_logo",@"img_team_logo1",@"img_team_logo2",@"img_tea
    }
 
 - (IBAction)persoanlProfileBtnPressed:(id)sender {
+    
+
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"PersonalProfile" bundle:[NSBundle mainBundle]];
+        personalProfileViewController *loginViewController = [storyboard instantiateViewControllerWithIdentifier:@"personalProfileViewController"];
+        
+        UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:loginViewController];
+        [navController setNavigationBarHidden:YES animated:YES];
+        
+        [self presentViewController:navController animated:YES completion:nil];
+    
+
 }
 
 

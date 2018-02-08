@@ -11,6 +11,7 @@
 @interface GiftMerchandiseDetailViewController : UIViewController
 {
     
+    IBOutlet UIButton *personalProfileBtn;
     IBOutlet UIButton *buyNowBtn;
 }
 @end

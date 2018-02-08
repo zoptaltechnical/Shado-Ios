@@ -7,8 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0DE8B8358EB5B8EA14D23CA9 /* libPods-shadoUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E3A037012FD7014F49538E7F /* libPods-shadoUITests.a */; };
+		11356622341FD8A218CE10F5 /* libPods-shado.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 985FFB9BE13887992946AF4D /* libPods-shado.a */; };
+		629F8BA03B4F0C8DDB2E2E36 /* libPods-shadoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BD5252AD3F3DE081CD0F004 /* libPods-shadoTests.a */; };
 		EA33FC702015E34F009F7D2B /* GiftMerchandiseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA33FC6F2015E34F009F7D2B /* GiftMerchandiseViewController.m */; };
 		EA33FC732015E6C8009F7D2B /* GiftMerchandiseCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA33FC722015E6C8009F7D2B /* GiftMerchandiseCollectionViewCell.m */; };
+		EA4E135A202C810300F03B7D /* FCAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA4E1359202C810300F03B7D /* FCAlertView.m */; };
+		EA50F0E72020421D005F041B /* NewcreateDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA50F0E62020421D005F041B /* NewcreateDetailViewController.m */; };
+		EA50F0EA2020523A005F041B /* CreateMerchandiseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA50F0E92020523A005F041B /* CreateMerchandiseViewController.m */; };
+		EA50F0F020205C6B005F041B /* CreateMerchandiseListingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA50F0EF20205C6B005F041B /* CreateMerchandiseListingViewController.m */; };
 		EA5659191FECEF2D0056F537 /* HomeDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5659181FECEF2D0056F537 /* HomeDetailViewController.m */; };
 		EA56591E1FED075B0056F537 /* HomeDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA56591D1FED075B0056F537 /* HomeDetailTableViewCell.m */; };
 		EA5A33E120075F8E006E765C /* giftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5A33E020075F8E006E765C /* giftViewController.m */; };
@@ -23,6 +30,18 @@
 		EA5C5C2E1FE0E7DD009879D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA5C5C2C1FE0E7DD009879D8 /* LaunchScreen.storyboard */; };
 		EA5C5C391FE0E7DD009879D8 /* shadowTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5C5C381FE0E7DD009879D8 /* shadowTests.m */; };
 		EA5C5C441FE0E7DE009879D8 /* shadowUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5C5C431FE0E7DE009879D8 /* shadowUITests.m */; };
+		EA6F0D7B202185D9002FAA52 /* ApiMaster.m in Sources */ = {isa = PBXBuildFile; fileRef = EA6F0D7A202185D9002FAA52 /* ApiMaster.m */; };
+		EA6F0D7E20218B82002FAA52 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = EA6F0D7D20218B82002FAA52 /* MBProgressHUD.m */; };
+		EA6F0D8220218BAB002FAA52 /* RunOnMainThread.m in Sources */ = {isa = PBXBuildFile; fileRef = EA6F0D8120218BAB002FAA52 /* RunOnMainThread.m */; };
+		EA6F0D8C20218CB7002FAA52 /* FSActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = EA6F0D8520218CB7002FAA52 /* FSActionSheet.m */; };
+		EA6F0D8D20218CB7002FAA52 /* FSActionSheetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA6F0D8720218CB7002FAA52 /* FSActionSheetCell.m */; };
+		EA6F0D8E20218CB7002FAA52 /* FSActionSheetConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = EA6F0D8920218CB7002FAA52 /* FSActionSheetConfig.m */; };
+		EA6F0D8F20218CB7002FAA52 /* FSActionSheetItem.m in Sources */ = {isa = PBXBuildFile; fileRef = EA6F0D8B20218CB7002FAA52 /* FSActionSheetItem.m */; };
+		EA6F0D9320218CE3002FAA52 /* FSActionSheet_cancel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EA6F0D9120218CE3002FAA52 /* FSActionSheet_cancel@2x.png */; };
+		EA6F0D9420218CE3002FAA52 /* FSActionSheet_cancel@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EA6F0D9220218CE3002FAA52 /* FSActionSheet_cancel@3x.png */; };
+		EA6F0D9D2021A990002FAA52 /* profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA6F0D9C2021A990002FAA52 /* profile.storyboard */; };
+		EA6F0DA12021AB4A002FAA52 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA6F0DA02021AB4A002FAA52 /* ProfileViewController.m */; };
+		EA6F0DA42021BCEB002FAA52 /* changePasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA6F0DA32021BCEB002FAA52 /* changePasswordViewController.m */; };
 		EA7860B120173C0200D62B01 /* GiftMerchandiseDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7860B020173C0200D62B01 /* GiftMerchandiseDetailViewController.m */; };
 		EA7860C720174E2A00D62B01 /* BKCardExpiryField.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7860B720174E2A00D62B01 /* BKCardExpiryField.m */; };
 		EA7860C820174E2A00D62B01 /* BKCardNumberField.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7860B920174E2A00D62B01 /* BKCardNumberField.m */; };
@@ -94,10 +113,27 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2323151AF4572A18368ABEE4 /* Pods-shado.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-shado.release.xcconfig"; path = "Pods/Target Support Files/Pods-shado/Pods-shado.release.xcconfig"; sourceTree = "<group>"; };
+		2F9E2381CD1A6107A5F62286 /* Pods-shado.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-shado.debug.xcconfig"; path = "Pods/Target Support Files/Pods-shado/Pods-shado.debug.xcconfig"; sourceTree = "<group>"; };
+		3744DCBD4FA6BE7656A4DBA0 /* Pods-shadoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-shadoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-shadoTests/Pods-shadoTests.release.xcconfig"; sourceTree = "<group>"; };
+		7D6BA0ADE490B7C7E89B3C07 /* Pods-shadoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-shadoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-shadoTests/Pods-shadoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		96BE495AC6781F2EBB936A4A /* Pods-shadoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-shadoUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-shadoUITests/Pods-shadoUITests.release.xcconfig"; sourceTree = "<group>"; };
+		985FFB9BE13887992946AF4D /* libPods-shado.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-shado.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BD5252AD3F3DE081CD0F004 /* libPods-shadoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-shadoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A31B4BCA70EF3C1B1CC6FCC3 /* Pods-shadoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-shadoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-shadoUITests/Pods-shadoUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		E3A037012FD7014F49538E7F /* libPods-shadoUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-shadoUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA33FC6E2015E34F009F7D2B /* GiftMerchandiseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GiftMerchandiseViewController.h; sourceTree = "<group>"; };
 		EA33FC6F2015E34F009F7D2B /* GiftMerchandiseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GiftMerchandiseViewController.m; sourceTree = "<group>"; };
 		EA33FC712015E6C8009F7D2B /* GiftMerchandiseCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GiftMerchandiseCollectionViewCell.h; sourceTree = "<group>"; };
 		EA33FC722015E6C8009F7D2B /* GiftMerchandiseCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GiftMerchandiseCollectionViewCell.m; sourceTree = "<group>"; };
+		EA4E1358202C810300F03B7D /* FCAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCAlertView.h; sourceTree = "<group>"; };
+		EA4E1359202C810300F03B7D /* FCAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCAlertView.m; sourceTree = "<group>"; };
+		EA50F0E52020421D005F041B /* NewcreateDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewcreateDetailViewController.h; sourceTree = "<group>"; };
+		EA50F0E62020421D005F041B /* NewcreateDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewcreateDetailViewController.m; sourceTree = "<group>"; };
+		EA50F0E82020523A005F041B /* CreateMerchandiseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreateMerchandiseViewController.h; path = ../CreateMerchandiseViewController.h; sourceTree = "<group>"; };
+		EA50F0E92020523A005F041B /* CreateMerchandiseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreateMerchandiseViewController.m; path = ../CreateMerchandiseViewController.m; sourceTree = "<group>"; };
+		EA50F0EE20205C6B005F041B /* CreateMerchandiseListingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateMerchandiseListingViewController.h; sourceTree = "<group>"; };
+		EA50F0EF20205C6B005F041B /* CreateMerchandiseListingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateMerchandiseListingViewController.m; sourceTree = "<group>"; };
 		EA5659171FECEF2D0056F537 /* HomeDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeDetailViewController.h; path = ../HomeDetailViewController.h; sourceTree = "<group>"; };
 		EA5659181FECEF2D0056F537 /* HomeDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeDetailViewController.m; path = ../HomeDetailViewController.m; sourceTree = "<group>"; };
 		EA56591C1FED075B0056F537 /* HomeDetailTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeDetailTableViewCell.h; sourceTree = "<group>"; };
@@ -126,6 +162,27 @@
 		EA5C5C3F1FE0E7DE009879D8 /* shadoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = shadoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA5C5C431FE0E7DE009879D8 /* shadowUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = shadowUITests.m; sourceTree = "<group>"; };
 		EA5C5C451FE0E7DE009879D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA6F0D79202185D9002FAA52 /* ApiMaster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApiMaster.h; sourceTree = "<group>"; };
+		EA6F0D7A202185D9002FAA52 /* ApiMaster.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApiMaster.m; sourceTree = "<group>"; };
+		EA6F0D7C20218B82002FAA52 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		EA6F0D7D20218B82002FAA52 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		EA6F0D8020218BAB002FAA52 /* RunOnMainThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RunOnMainThread.h; sourceTree = "<group>"; };
+		EA6F0D8120218BAB002FAA52 /* RunOnMainThread.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RunOnMainThread.m; sourceTree = "<group>"; };
+		EA6F0D8420218CB7002FAA52 /* FSActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSActionSheet.h; sourceTree = "<group>"; };
+		EA6F0D8520218CB7002FAA52 /* FSActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSActionSheet.m; sourceTree = "<group>"; };
+		EA6F0D8620218CB7002FAA52 /* FSActionSheetCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSActionSheetCell.h; sourceTree = "<group>"; };
+		EA6F0D8720218CB7002FAA52 /* FSActionSheetCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSActionSheetCell.m; sourceTree = "<group>"; };
+		EA6F0D8820218CB7002FAA52 /* FSActionSheetConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSActionSheetConfig.h; sourceTree = "<group>"; };
+		EA6F0D8920218CB7002FAA52 /* FSActionSheetConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSActionSheetConfig.m; sourceTree = "<group>"; };
+		EA6F0D8A20218CB7002FAA52 /* FSActionSheetItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSActionSheetItem.h; sourceTree = "<group>"; };
+		EA6F0D8B20218CB7002FAA52 /* FSActionSheetItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSActionSheetItem.m; sourceTree = "<group>"; };
+		EA6F0D9120218CE3002FAA52 /* FSActionSheet_cancel@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FSActionSheet_cancel@2x.png"; sourceTree = "<group>"; };
+		EA6F0D9220218CE3002FAA52 /* FSActionSheet_cancel@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FSActionSheet_cancel@3x.png"; sourceTree = "<group>"; };
+		EA6F0D9C2021A990002FAA52 /* profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = profile.storyboard; path = ../profile.storyboard; sourceTree = "<group>"; };
+		EA6F0D9F2021AB4A002FAA52 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		EA6F0DA02021AB4A002FAA52 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
+		EA6F0DA22021BCEB002FAA52 /* changePasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = changePasswordViewController.h; sourceTree = "<group>"; };
+		EA6F0DA32021BCEB002FAA52 /* changePasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = changePasswordViewController.m; sourceTree = "<group>"; };
 		EA7860AF20173C0200D62B01 /* GiftMerchandiseDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GiftMerchandiseDetailViewController.h; sourceTree = "<group>"; };
 		EA7860B020173C0200D62B01 /* GiftMerchandiseDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GiftMerchandiseDetailViewController.m; sourceTree = "<group>"; };
 		EA7860B620174E2A00D62B01 /* BKCardExpiryField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKCardExpiryField.h; sourceTree = "<group>"; };
@@ -231,6 +288,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA992E9C1FE3EFCF00A47BE4 /* UIKit.framework in Frameworks */,
+				11356622341FD8A218CE10F5 /* libPods-shado.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,6 +296,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				629F8BA03B4F0C8DDB2E2E36 /* libPods-shadoTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,12 +304,66 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DE8B8358EB5B8EA14D23CA9 /* libPods-shadoUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		98523E3FE26BA6D26FA5FC82 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2F9E2381CD1A6107A5F62286 /* Pods-shado.debug.xcconfig */,
+				2323151AF4572A18368ABEE4 /* Pods-shado.release.xcconfig */,
+				7D6BA0ADE490B7C7E89B3C07 /* Pods-shadoTests.debug.xcconfig */,
+				3744DCBD4FA6BE7656A4DBA0 /* Pods-shadoTests.release.xcconfig */,
+				A31B4BCA70EF3C1B1CC6FCC3 /* Pods-shadoUITests.debug.xcconfig */,
+				96BE495AC6781F2EBB936A4A /* Pods-shadoUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		EA50F0EB20205244005F041B /* MY Merchandise */ = {
+			isa = PBXGroup;
+			children = (
+				EA50F0E82020523A005F041B /* CreateMerchandiseViewController.h */,
+				EA50F0E92020523A005F041B /* CreateMerchandiseViewController.m */,
+				EA50F0EE20205C6B005F041B /* CreateMerchandiseListingViewController.h */,
+				EA50F0EF20205C6B005F041B /* CreateMerchandiseListingViewController.m */,
+			);
+			name = "MY Merchandise";
+			path = shadow;
+			sourceTree = "<group>";
+		};
+		EA50F0EC20205253005F041B /* personal Profile Info */ = {
+			isa = PBXGroup;
+			children = (
+				EAB278692010A05C00EE460E /* personalProfileViewController.h */,
+				EAB2786A2010A05C00EE460E /* personalProfileViewController.m */,
+				EAB278962010CCD200EE460E /* CreateCampaignTableViewCell.h */,
+				EAB278972010CCD200EE460E /* CreateCampaignTableViewCell.m */,
+				EAB278932010BD8300EE460E /* PersonalProfileCollectionViewCell.h */,
+				EAB278942010BD8300EE460E /* PersonalProfileCollectionViewCell.m */,
+			);
+			name = "personal Profile Info";
+			sourceTree = "<group>";
+		};
+		EA50F0ED20205269005F041B /* My Campaign */ = {
+			isa = PBXGroup;
+			children = (
+				EAB2786D2010A6C500EE460E /* CreateCampaignViewController.h */,
+				EAB2786E2010A6C500EE460E /* CreateCampaignViewController.m */,
+				EAB278702010B69100EE460E /* campaignUploadViewController.h */,
+				EAB278712010B69100EE460E /* campaignUploadViewController.m */,
+				EAB278992010CDEF00EE460E /* NewCreateViewController.h */,
+				EAB2789A2010CDEF00EE460E /* NewCreateViewController.m */,
+				EA50F0E52020421D005F041B /* NewcreateDetailViewController.h */,
+				EA50F0E62020421D005F041B /* NewcreateDetailViewController.m */,
+			);
+			name = "My Campaign";
+			sourceTree = "<group>";
+		};
 		EA56591A1FECF2850056F537 /* Home Detail View controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -318,12 +431,15 @@
 		EA5C5C121FE0E7DD009879D8 = {
 			isa = PBXGroup;
 			children = (
+				EA6F0D79202185D9002FAA52 /* ApiMaster.h */,
+				EA6F0D7A202185D9002FAA52 /* ApiMaster.m */,
 				EABDD1741FE25F4A00E0EB32 /* PrefixHeader.pch */,
 				EA5C5C1D1FE0E7DD009879D8 /* shado */,
 				EA5C5C371FE0E7DD009879D8 /* shadowTests */,
 				EA5C5C421FE0E7DE009879D8 /* shadowUITests */,
 				EA5C5C1C1FE0E7DD009879D8 /* Products */,
 				EA992E9A1FE3EFCF00A47BE4 /* Frameworks */,
+				98523E3FE26BA6D26FA5FC82 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -346,6 +462,7 @@
 				EA5C5C241FE0E7DD009879D8 /* ViewController.h */,
 				EA5C5C251FE0E7DD009879D8 /* ViewController.m */,
 				EA5C5C271FE0E7DD009879D8 /* Main.storyboard */,
+				EA6F0D9E2021A999002FAA52 /* profile view controller */,
 				EAB2786C2010A06200EE460E /* Personal Profile */,
 				EA5A33E220075FAC006E765C /* SignIn Section */,
 				EA56591B1FECF2A70056F537 /* Home View Controller */,
@@ -388,6 +505,67 @@
 			path = shadowUITests;
 			sourceTree = "<group>";
 		};
+		EA6F0D7F20218B86002FAA52 /* MBProgressHub */ = {
+			isa = PBXGroup;
+			children = (
+				EA6F0D7C20218B82002FAA52 /* MBProgressHUD.h */,
+				EA6F0D7D20218B82002FAA52 /* MBProgressHUD.m */,
+			);
+			name = MBProgressHub;
+			sourceTree = "<group>";
+		};
+		EA6F0D8320218BAF002FAA52 /* RunThread  */ = {
+			isa = PBXGroup;
+			children = (
+				EA6F0D8020218BAB002FAA52 /* RunOnMainThread.h */,
+				EA6F0D8120218BAB002FAA52 /* RunOnMainThread.m */,
+			);
+			name = "RunThread ";
+			sourceTree = "<group>";
+		};
+		EA6F0D9020218CC5002FAA52 /* FS Action Sheet */ = {
+			isa = PBXGroup;
+			children = (
+				EA6F0D8420218CB7002FAA52 /* FSActionSheet.h */,
+				EA6F0D8520218CB7002FAA52 /* FSActionSheet.m */,
+				EA6F0D8620218CB7002FAA52 /* FSActionSheetCell.h */,
+				EA6F0D8720218CB7002FAA52 /* FSActionSheetCell.m */,
+				EA6F0D8820218CB7002FAA52 /* FSActionSheetConfig.h */,
+				EA6F0D8920218CB7002FAA52 /* FSActionSheetConfig.m */,
+				EA6F0D8A20218CB7002FAA52 /* FSActionSheetItem.h */,
+				EA6F0D8B20218CB7002FAA52 /* FSActionSheetItem.m */,
+			);
+			name = "FS Action Sheet";
+			sourceTree = "<group>";
+		};
+		EA6F0D9520218CEB002FAA52 /* FS Action sheet Images */ = {
+			isa = PBXGroup;
+			children = (
+				EA6F0D9120218CE3002FAA52 /* FSActionSheet_cancel@2x.png */,
+				EA6F0D9220218CE3002FAA52 /* FSActionSheet_cancel@3x.png */,
+			);
+			name = "FS Action sheet Images";
+			sourceTree = "<group>";
+		};
+		EA6F0D9920218EB9002FAA52 /* Alert View  */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Alert View ";
+			sourceTree = "<group>";
+		};
+		EA6F0D9E2021A999002FAA52 /* profile view controller */ = {
+			isa = PBXGroup;
+			children = (
+				EA6F0D9C2021A990002FAA52 /* profile.storyboard */,
+				EA6F0D9F2021AB4A002FAA52 /* ProfileViewController.h */,
+				EA6F0DA02021AB4A002FAA52 /* ProfileViewController.m */,
+				EA6F0DA22021BCEB002FAA52 /* changePasswordViewController.h */,
+				EA6F0DA32021BCEB002FAA52 /* changePasswordViewController.m */,
+			);
+			name = "profile view controller";
+			sourceTree = "<group>";
+		};
 		EA7860B520174E2A00D62B01 /* BKMoneyKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -417,6 +595,9 @@
 			isa = PBXGroup;
 			children = (
 				EA992E9B1FE3EFCF00A47BE4 /* UIKit.framework */,
+				985FFB9BE13887992946AF4D /* libPods-shado.a */,
+				9BD5252AD3F3DE081CD0F004 /* libPods-shadoTests.a */,
+				E3A037012FD7014F49538E7F /* libPods-shadoUITests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -437,19 +618,10 @@
 		EAB2786C2010A06200EE460E /* Personal Profile */ = {
 			isa = PBXGroup;
 			children = (
-				EAB278992010CDEF00EE460E /* NewCreateViewController.h */,
-				EAB2789A2010CDEF00EE460E /* NewCreateViewController.m */,
 				EAB278642010977200EE460E /* PersonalProfile.storyboard */,
-				EAB278962010CCD200EE460E /* CreateCampaignTableViewCell.h */,
-				EAB278972010CCD200EE460E /* CreateCampaignTableViewCell.m */,
-				EAB278692010A05C00EE460E /* personalProfileViewController.h */,
-				EAB2786A2010A05C00EE460E /* personalProfileViewController.m */,
-				EAB278932010BD8300EE460E /* PersonalProfileCollectionViewCell.h */,
-				EAB278942010BD8300EE460E /* PersonalProfileCollectionViewCell.m */,
-				EAB2786D2010A6C500EE460E /* CreateCampaignViewController.h */,
-				EAB2786E2010A6C500EE460E /* CreateCampaignViewController.m */,
-				EAB278702010B69100EE460E /* campaignUploadViewController.h */,
-				EAB278712010B69100EE460E /* campaignUploadViewController.m */,
+				EA50F0EC20205253005F041B /* personal Profile Info */,
+				EA50F0ED20205269005F041B /* My Campaign */,
+				EA50F0EB20205244005F041B /* MY Merchandise */,
 			);
 			name = "Personal Profile";
 			path = ..;
@@ -458,13 +630,20 @@
 		EAD664DF1FE262010038CA24 /* Extra Files */ = {
 			isa = PBXGroup;
 			children = (
+				EA4E1358202C810300F03B7D /* FCAlertView.h */,
+				EA4E1359202C810300F03B7D /* FCAlertView.m */,
+				EA6F0D7F20218B86002FAA52 /* MBProgressHub */,
+				EA6F0D8320218BAF002FAA52 /* RunThread  */,
 				EADE292E2018739B00796AC2 /* CHT CollectionView */,
 				EA7860B520174E2A00D62B01 /* BKMoneyKit */,
+				EA6F0D9920218EB9002FAA52 /* Alert View  */,
 				EA992EA01FE3F0FA00A47BE4 /* TabbarController */,
 				EAD664FA1FE27E9C0038CA24 /* Constants.h */,
 				EAD664FB1FE27E9C0038CA24 /* Utility.h */,
 				EAD664FC1FE27E9C0038CA24 /* Utility.m */,
 				EADE292A2018652400796AC2 /* Action sheet Date Picker View */,
+				EA6F0D9520218CEB002FAA52 /* FS Action sheet Images */,
+				EA6F0D9020218CC5002FAA52 /* FS Action Sheet */,
 				EAD664E01FE262010038CA24 /* TP ScrollView */,
 			);
 			path = "Extra Files";
@@ -550,9 +729,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EA5C5C481FE0E7DE009879D8 /* Build configuration list for PBXNativeTarget "shado" */;
 			buildPhases = (
+				1C5454458A6C2244735CDEC2 /* [CP] Check Pods Manifest.lock */,
 				EA5C5C171FE0E7DD009879D8 /* Sources */,
 				EA5C5C181FE0E7DD009879D8 /* Frameworks */,
 				EA5C5C191FE0E7DD009879D8 /* Resources */,
+				AF5735759CBB01E094CBDCF3 /* [CP] Embed Pods Frameworks */,
+				2CC2F2472CB363E5A2F3B80C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -567,9 +749,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EA5C5C4B1FE0E7DE009879D8 /* Build configuration list for PBXNativeTarget "shadoTests" */;
 			buildPhases = (
+				99BFDD77BB46AB1FABE32F8B /* [CP] Check Pods Manifest.lock */,
 				EA5C5C301FE0E7DD009879D8 /* Sources */,
 				EA5C5C311FE0E7DD009879D8 /* Frameworks */,
 				EA5C5C321FE0E7DD009879D8 /* Resources */,
+				4CDFFEF2FF4E245FEDEC2D5F /* [CP] Embed Pods Frameworks */,
+				DD3ABA9803BB980DF83C8DA4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -585,9 +770,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EA5C5C4E1FE0E7DE009879D8 /* Build configuration list for PBXNativeTarget "shadoUITests" */;
 			buildPhases = (
+				C2DB8928047CD4EF7036A045 /* [CP] Check Pods Manifest.lock */,
 				EA5C5C3B1FE0E7DE009879D8 /* Sources */,
 				EA5C5C3C1FE0E7DE009879D8 /* Frameworks */,
 				EA5C5C3D1FE0E7DE009879D8 /* Resources */,
+				AB80ED033108BCAE6FE67E68 /* [CP] Embed Pods Frameworks */,
+				EE83F9035760054D2D41F3B7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -611,7 +799,7 @@
 					EA5C5C1A1FE0E7DD009879D8 = {
 						CreatedOnToolsVersion = 8.3.1;
 						DevelopmentTeam = TQ2L8PNXPU;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 					};
 					EA5C5C331FE0E7DD009879D8 = {
 						CreatedOnToolsVersion = 8.3.1;
@@ -650,15 +838,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA6F0D9420218CE3002FAA52 /* FSActionSheet_cancel@3x.png in Resources */,
 				EADE29462018878100796AC2 /* cat2.jpg in Resources */,
 				EA5C5C2E1FE0E7DD009879D8 /* LaunchScreen.storyboard in Resources */,
 				EADE29472018878100796AC2 /* cat3.jpg in Resources */,
 				EA5C5C2B1FE0E7DD009879D8 /* Assets.xcassets in Resources */,
 				EADE29482018878100796AC2 /* cat4.jpg in Resources */,
+				EA6F0D9D2021A990002FAA52 /* profile.storyboard in Resources */,
 				EAB278652010977200EE460E /* PersonalProfile.storyboard in Resources */,
 				EA5C5C291FE0E7DD009879D8 /* Main.storyboard in Resources */,
 				EADE29452018878100796AC2 /* cat1.jpg in Resources */,
 				EA7860CE20174E2A00D62B01 /* BKMoneyKit.bundle in Resources */,
+				EA6F0D9320218CE3002FAA52 /* FSActionSheet_cancel@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -678,6 +869,153 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1C5454458A6C2244735CDEC2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-shado-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2CC2F2472CB363E5A2F3B80C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-shado/Pods-shado-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4CDFFEF2FF4E245FEDEC2D5F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-shadoTests/Pods-shadoTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		99BFDD77BB46AB1FABE32F8B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-shadoTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AB80ED033108BCAE6FE67E68 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-shadoUITests/Pods-shadoUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AF5735759CBB01E094CBDCF3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-shado/Pods-shado-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C2DB8928047CD4EF7036A045 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-shadoUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DD3ABA9803BB980DF83C8DA4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-shadoTests/Pods-shadoTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EE83F9035760054D2D41F3B7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-shadoUITests/Pods-shadoUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		EA5C5C171FE0E7DD009879D8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -688,10 +1026,14 @@
 				EADE293F2018741700796AC2 /* CHTCollectionViewWaterfallFooter.m in Sources */,
 				EADE2922201851A200796AC2 /* SearchDetailTableViewCell.m in Sources */,
 				EA7860CC20174E2A00D62B01 /* BKCurrencyTextField.m in Sources */,
+				EA50F0F020205C6B005F041B /* CreateMerchandiseListingViewController.m in Sources */,
 				EAD664EB1FE262010038CA24 /* TPKeyboardAvoidingTableView.m in Sources */,
+				EA6F0D7E20218B82002FAA52 /* MBProgressHUD.m in Sources */,
 				EADE292D201866DB00796AC2 /* SearchDetailFollowViewController.m in Sources */,
+				EA6F0DA42021BCEB002FAA52 /* changePasswordViewController.m in Sources */,
 				EADE291F20184BFF00796AC2 /* SearchDetailViewController.m in Sources */,
 				EAD664FD1FE27E9C0038CA24 /* Utility.m in Sources */,
+				EA6F0D8220218BAB002FAA52 /* RunOnMainThread.m in Sources */,
 				EABDD16F1FE2460600E0EB32 /* SignInViewController.m in Sources */,
 				EA992EA81FE3F0FA00A47BE4 /* SYTabBar.m in Sources */,
 				EA5A33EC200791C0006E765C /* GiftDetailViewController.m in Sources */,
@@ -704,11 +1046,13 @@
 				EADE2925201864D700796AC2 /* NotificationTableViewCell.m in Sources */,
 				EA5A33E920076EA4006E765C /* GiftSliderCollectionViewCell.m in Sources */,
 				EAD664EC1FE262010038CA24 /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
+				EA6F0D7B202185D9002FAA52 /* ApiMaster.m in Sources */,
 				EAB2789B2010CDEF00EE460E /* NewCreateViewController.m in Sources */,
 				EA7860B120173C0200D62B01 /* GiftMerchandiseDetailViewController.m in Sources */,
 				EA7860CA20174E2A00D62B01 /* BKCardNumberLabel.m in Sources */,
 				EAA0798A1FE3B3F0008132F0 /* homeViewController.m in Sources */,
 				EAB278982010CCD200EE460E /* CreateCampaignTableViewCell.m in Sources */,
+				EA50F0E72020421D005F041B /* NewcreateDetailViewController.m in Sources */,
 				EAB2786F2010A6C500EE460E /* CreateCampaignViewController.m in Sources */,
 				EADE291C2018481600796AC2 /* SearchViewController.m in Sources */,
 				EA7860CF20174E2A00D62B01 /* BKMoneyUtils.m in Sources */,
@@ -723,15 +1067,22 @@
 				EA5C5C261FE0E7DD009879D8 /* ViewController.m in Sources */,
 				EA992EA91FE3F0FA00A47BE4 /* SYTabBarController.m in Sources */,
 				EAB278922010BB2E00EE460E /* SWActionSheet.m in Sources */,
+				EA6F0D8F20218CB7002FAA52 /* FSActionSheetItem.m in Sources */,
 				EADE29312018739B00796AC2 /* CHTCollectionViewWaterfallCell.m in Sources */,
+				EA4E135A202C810300F03B7D /* FCAlertView.m in Sources */,
+				EA6F0D8C20218CB7002FAA52 /* FSActionSheet.m in Sources */,
 				EA5A33E620076E33006E765C /* GiftTableViewCell.m in Sources */,
 				EA7860C920174E2A00D62B01 /* BKCardNumberFormatter.m in Sources */,
 				EAB278902010BB2E00EE460E /* ActionSheetDatePicker.m in Sources */,
 				EA5C5C231FE0E7DD009879D8 /* AppDelegate.m in Sources */,
 				EAD664E91FE262010038CA24 /* TPKeyboardAvoidingCollectionView.m in Sources */,
+				EA6F0DA12021AB4A002FAA52 /* ProfileViewController.m in Sources */,
 				EA7860C820174E2A00D62B01 /* BKCardNumberField.m in Sources */,
+				EA50F0EA2020523A005F041B /* CreateMerchandiseViewController.m in Sources */,
+				EA6F0D8E20218CB7002FAA52 /* FSActionSheetConfig.m in Sources */,
 				EADE2928201864ED00796AC2 /* NotificationViewController.m in Sources */,
 				EA7860D22017677200D62B01 /* GiftCreditCardPaymentViewController.m in Sources */,
+				EA6F0D8D20218CB7002FAA52 /* FSActionSheetCell.m in Sources */,
 				EA5C5C201FE0E7DD009879D8 /* main.m in Sources */,
 				EADE293A201873E700796AC2 /* CHTCollectionViewWaterfallLayout.m in Sources */,
 				EAB278722010B69100EE460E /* campaignUploadViewController.m in Sources */,
@@ -886,41 +1237,45 @@
 		};
 		EA5C5C491FE0E7DE009879D8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2F9E2381CD1A6107A5F62286 /* Pods-shado.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Anthony Han (YJLHM63AYW)";
-				DEVELOPMENT_TEAM = TQ2L8PNXPU;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = PrefixHeader.pch;
 				INFOPLIST_FILE = shadow/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zoptal.songBook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "c16bd2fa-b76a-43b2-be61-ae1c842b2886";
-				PROVISIONING_PROFILE_SPECIFIER = SongBookDeveloper1;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
 		EA5C5C4A1FE0E7DE009879D8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2323151AF4572A18368ABEE4 /* Pods-shado.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Anthony Han (YJLHM63AYW)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Anthony Han (YJLHM63AYW)";
-				DEVELOPMENT_TEAM = TQ2L8PNXPU;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = PrefixHeader.pch;
 				INFOPLIST_FILE = shadow/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zoptal.songBook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "c16bd2fa-b76a-43b2-be61-ae1c842b2886";
-				PROVISIONING_PROFILE_SPECIFIER = SongBookDeveloper1;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};
 		EA5C5C4C1FE0E7DE009879D8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7D6BA0ADE490B7C7E89B3C07 /* Pods-shadoTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = shadowTests/Info.plist;
@@ -933,6 +1288,7 @@
 		};
 		EA5C5C4D1FE0E7DE009879D8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3744DCBD4FA6BE7656A4DBA0 /* Pods-shadoTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = shadowTests/Info.plist;
@@ -945,6 +1301,7 @@
 		};
 		EA5C5C4F1FE0E7DE009879D8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A31B4BCA70EF3C1B1CC6FCC3 /* Pods-shadoUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = shadowUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -956,6 +1313,7 @@
 		};
 		EA5C5C501FE0E7DE009879D8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 96BE495AC6781F2EBB936A4A /* Pods-shadoUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = shadowUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

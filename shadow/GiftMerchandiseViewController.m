@@ -43,7 +43,7 @@
     _merchandiseBtn.backgroundColor=[UIColor colorWithRed:233.0f/255.0f green:238/255.0f blue:239/255.0f alpha:1.0];
     [_merchandiseBtn setTitleColor:[UIColor colorWithRed:143.0f/255.0f green:144/255.0f blue:146.0f/255.0f alpha:1.0] forState:UIControlStateNormal];
     
-    [self.navigationController popViewControllerAnimated:YES];
+    [self.navigationController dismissViewControllerAnimated:YES completion:nil];
     
     
 }
@@ -53,6 +53,19 @@
     _campaignBtn.backgroundColor=[UIColor colorWithRed:233.0f/255.0f green:238/255.0f blue:239/255.0f alpha:1.0];
     [_campaignBtn setTitleColor:[UIColor colorWithRed:143.0f/255.0f green:144.0f/255.0f blue:146.0f/255.0f alpha:1.0] forState:UIControlStateNormal];
 }
+- (IBAction)profilebtnPressed:(id)sender
+{
+    
+    
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"PersonalProfile" bundle:[NSBundle mainBundle]];
+    personalProfileViewController *loginViewController = [storyboard instantiateViewControllerWithIdentifier:@"personalProfileViewController"];
+    
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:loginViewController];
+    [navController setNavigationBarHidden:YES animated:YES];
+    
+    [self presentViewController:navController animated:YES completion:nil];
+}
+
 
 #pragma mark
 #pragma mark- CollectionView

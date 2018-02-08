@@ -18,6 +18,18 @@
     [super viewDidLoad];
     createCompaignBtn.layer.cornerRadius=20.0f;
     createCompaignBtn.clipsToBounds=YES;
+    
+    if ([_buttonString isEqualToString:@"myCanpaign"])
+    {
+          [createCompaignBtn setTitle:@"Create Campaign" forState:UIControlStateNormal];
+        labelName.text=@"No Campaign Yet";
+    }
+    else if ([_buttonString isEqualToString:@"myMerchandise"]){
+    
+    
+     [createCompaignBtn setTitle:@"Create Merchandise" forState:UIControlStateNormal];
+        labelName.text=@"No Merchandise Yet";
+    }
 
 }
 
@@ -31,14 +43,24 @@
 }
 - (IBAction)createCompaignBtnPressed:(id)sender
 {
+    if ([_buttonString isEqualToString:@"myCanpaign"])
+    {
+    
+
     
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"PersonalProfile" bundle:[NSBundle mainBundle]];
     campaignUploadViewController *loginViewController = [storyboard instantiateViewControllerWithIdentifier:@"campaignUploadViewController"];
     
-    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:loginViewController];
-    [navController setNavigationBarHidden:YES animated:YES];
-    
-    [self presentViewController:navController animated:YES completion:nil];
+    [self presentViewController:loginViewController animated:YES completion:nil];
+    }
+    else if ([_buttonString isEqualToString:@"myMerchandise"])
+    {
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"PersonalProfile" bundle:[NSBundle mainBundle]];
+        CreateMerchandiseViewController *loginViewController = [storyboard instantiateViewControllerWithIdentifier:@"CreateMerchandiseViewController"];
+        
+        [self presentViewController:loginViewController animated:YES completion:nil];
+
+    }
 
 }
 @end

@@ -13,5 +13,6 @@
 @property (strong, nonatomic) IBOutlet UIButton *merchandiseBtn;
 @property (strong, nonatomic) IBOutlet UICollectionView *sliderCollectionView;
 @property (strong, nonatomic) IBOutlet UICollectionView *merchandiseCollectionView;
+@property (strong, nonatomic) IBOutlet UIButton *persoanlProfileBtn;
 
 @end

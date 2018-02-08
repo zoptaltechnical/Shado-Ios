@@ -11,7 +11,9 @@
 @interface CreateCampaignViewController : UIViewController
 {
     
+    IBOutlet UILabel *labelName;
     IBOutlet UIButton *createCompaignBtn;
 }
 - (IBAction)createCompaignBtnPressed:(id)sender;
+@property (nonatomic,strong) NSString *buttonString;
 @end

@@ -10,6 +10,20 @@
 #define PrefixHeader_pch
 #import "AppDelegate.h"
 #import "Utility.h"
+#import "ApiMaster.h"
+#import "MBProgressHUD.h"
+#import "RunOnMainThread.h"
+#import "AbstractActionSheetPicker.h"
+#import "ActionSheetDatePicker.h"
+#import "SWActionSheet.h"
+#import "FSActionSheet.h"
+#import "FSActionSheetCell.h"
+#import "FCAlertView.h"
+#import "UIImageView+WebCache.h"
+#import "SDWebImageCompat.h"
+#import "SDImageCache.h"
+
+
 #import "SignInViewController.h"
 #import "SignUpViewController.h"
 #import "forgotPasswordViewController.h"
@@ -23,6 +37,14 @@
 #import "CreateCampaignViewController.h"
 #import "CreateCampaignTableViewCell.h"
 #import "campaignUploadViewController.h"
+#import "NewCreateViewController.h"
+#import "NewcreateDetailViewController.h"
+
+
+#import "CreateMerchandiseViewController.h"
+#import "CreateMerchandiseListingViewController.h"
+#import "ProfileViewController.h"
+#import "changePasswordViewController.h"
 #import "giftViewController.h"
 #import "GiftTableViewCell.h"
 #import "GiftSliderCollectionViewCell.h"

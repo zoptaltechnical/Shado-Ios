@@ -54,11 +54,24 @@
         return CGSizeMake(173.f, 130.f);
     }
 }
+- (IBAction)personalProfileView:(id)sender
+{
+    
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"profile" bundle:[NSBundle mainBundle]];
+    ProfileViewController *loginViewController = [storyboard instantiateViewControllerWithIdentifier:@"ProfileViewController"];
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:loginViewController];
+    [navController setNavigationBarHidden:YES animated:YES];
+    
+    [self presentViewController:navController animated:YES completion:nil];
+
+    
+}
+
 - (IBAction)myCanpaignBtnPressed:(id)sender
 {
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"PersonalProfile" bundle:[NSBundle mainBundle]];
     CreateCampaignViewController *loginViewController = [storyboard instantiateViewControllerWithIdentifier:@"CreateCampaignViewController"];
-    
+     loginViewController.buttonString=@"myCanpaign";
     UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:loginViewController];
     [navController setNavigationBarHidden:YES animated:YES];
     
@@ -67,6 +80,16 @@
     
 }
 - (IBAction)myMerchandiseBtnPressed:(id)sender {
+    
+    
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"PersonalProfile" bundle:[NSBundle mainBundle]];
+    CreateCampaignViewController *loginViewController = [storyboard instantiateViewControllerWithIdentifier:@"CreateCampaignViewController"];
+  loginViewController.buttonString=@"myMerchandise";
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:loginViewController];
+    [navController setNavigationBarHidden:YES animated:YES];
+    
+    [self presentViewController:navController animated:YES completion:nil];
+
 }
 - (IBAction)myTeamBtnPressed:(id)sender {
 }

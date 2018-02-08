@@ -17,6 +17,7 @@
     IBOutlet UIView *backgroundView;
     IBOutlet UIButton *doanteBtn;
     
+    IBOutlet UIButton *persoanlProfielBtn;
     
     
     IBOutlet UIButton *priceAmtBtnone;

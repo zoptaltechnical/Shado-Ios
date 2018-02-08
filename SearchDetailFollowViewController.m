@@ -19,12 +19,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     PostAllImages=[[NSArray alloc]init];
+    followBtn.layer.cornerRadius=15.0f;
+    followBtn.clipsToBounds=YES;
     PostAllImages=@[@"img_post",@"img_post0",@"img_post",@"img_post0",@"img_post",@"img_post0" ,@"img_post"];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (IBAction)backBtnPressed:(id)sender
+{
+    [self.navigationController dismissViewControllerAnimated:YES completion:nil];
 }
 #pragma mark
 #pragma mark- CollectionView

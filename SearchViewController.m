@@ -30,7 +30,17 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)personalProfileBtnPressed:(id)sender {
+- (IBAction)personalProfileBtnPressed:(id)sender
+{
+    
+    
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"PersonalProfile" bundle:[NSBundle mainBundle]];
+    personalProfileViewController *loginViewController = [storyboard instantiateViewControllerWithIdentifier:@"personalProfileViewController"];
+    
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:loginViewController];
+    [navController setNavigationBarHidden:YES animated:YES];
+    
+    [self presentViewController:navController animated:YES completion:nil];
 }
 #pragma mark SearchButton Method
 - (void)searchBarCancelButtonClicked:(UISearchBar *) SearchBar

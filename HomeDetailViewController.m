@@ -45,7 +45,8 @@
 }
 - (IBAction)backBtnpPressed:(id)sender
 {
-    [self.navigationController popViewControllerAnimated:YES];
+    [self.navigationController dismissViewControllerAnimated:YES completion:nil];
+
 }
 -(void)gradientcolor
 {
@@ -55,48 +56,8 @@
                             (id)[UIColor clearColor].CGColor];
     cell.descriptionBackgroundView.layer.mask = gradientMask;
 }
-#pragma mark
-#pragma mark- UIButton action ALL,Team,fan
-#pragma mark
 
 
--(IBAction)allBtnPressed:(id)sender
-{
-    [allLineLabel setHidden:NO];
-    allLineLabel.backgroundColor=[UIColor colorWithRed:234.0/255.0f green:33.0/255.0f blue:66.0/255.0f alpha:1];
-    [allBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    teamLineLabel.backgroundColor=[UIColor whiteColor];
-    [teamBtn setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
-    fanLineLabel.backgroundColor=[UIColor whiteColor];
-    [fanBtn setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
-    
-    
-}
-
--(IBAction)teamBtnPressed:(id)sender
-{
-    [teamLineLabel setHidden:NO];
-    teamLineLabel.backgroundColor=[UIColor colorWithRed:234.0/255.0f green:33.0/255.0f blue:66.0/255.0f alpha:1];
-    [teamBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    
-    [allLineLabel setHidden:YES];
-    [allBtn setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
-    [fanLineLabel setHidden:YES];
-    [fanBtn setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
-}
-
--(IBAction)fanbtnPressed:(id)sender
-{
-    [fanLineLabel setHidden:NO];
-    fanLineLabel.backgroundColor=[UIColor colorWithRed:234.0/255.0f green:33.0/255.0f blue:66.0/255.0f alpha:1];
-    [fanBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    
-    [teamLineLabel setHidden:YES];
-    [teamBtn setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
-    [allLineLabel setHidden:YES];
-    [allBtn setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
-    
-}
 
 
 #pragma mark
