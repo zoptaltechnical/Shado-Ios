@@ -97,5 +97,10 @@
 }
 - (IBAction)alertFansBtnPressed:(id)sender {
 }
+- (IBAction)logoutBtnPressed:(id)sender
+{
+    UIViewController *popUpController = ViewControllerIdentifier(@"SignInViewController");
+    [self.view.window setRootViewController:popUpController];
+}
 
 @end

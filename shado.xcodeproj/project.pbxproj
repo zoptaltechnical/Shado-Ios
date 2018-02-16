@@ -73,6 +73,21 @@
 		EAB2789B2010CDEF00EE460E /* NewCreateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB2789A2010CDEF00EE460E /* NewCreateViewController.m */; };
 		EABDD16F1FE2460600E0EB32 /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EABDD16E1FE2460600E0EB32 /* SignInViewController.m */; };
 		EABDD1731FE2588100E0EB32 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EABDD1721FE2588100E0EB32 /* SignUpViewController.m */; };
+		EAD29F052036AA32000467F9 /* CameraVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAD29F042036AA32000467F9 /* CameraVideoViewController.m */; };
+		EAD29F0C2036D472000467F9 /* UIImage+FixOrientation.m in Sources */ = {isa = PBXBuildFile; fileRef = EAD29F072036D472000467F9 /* UIImage+FixOrientation.m */; };
+		EAD29F0D2036D472000467F9 /* LLSimpleCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = EAD29F092036D472000467F9 /* LLSimpleCamera.m */; };
+		EAD29F0E2036D472000467F9 /* LLSimpleCamera+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = EAD29F0B2036D472000467F9 /* LLSimpleCamera+Helper.m */; };
+		EAD29F162036D489000467F9 /* camera-switch.png in Resources */ = {isa = PBXBuildFile; fileRef = EAD29F0F2036D489000467F9 /* camera-switch.png */; };
+		EAD29F172036D489000467F9 /* camera-switch@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EAD29F102036D489000467F9 /* camera-switch@2x.png */; };
+		EAD29F182036D489000467F9 /* camera-flash.png in Resources */ = {isa = PBXBuildFile; fileRef = EAD29F112036D489000467F9 /* camera-flash.png */; };
+		EAD29F192036D489000467F9 /* camera-flash@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EAD29F122036D489000467F9 /* camera-flash@2x.png */; };
+		EAD29F1A2036D489000467F9 /* cancel.png in Resources */ = {isa = PBXBuildFile; fileRef = EAD29F132036D489000467F9 /* cancel.png */; };
+		EAD29F1B2036D489000467F9 /* cancel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EAD29F142036D489000467F9 /* cancel@2x.png */; };
+		EAD29F1C2036D489000467F9 /* cancel@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EAD29F152036D489000467F9 /* cancel@3x.png */; };
+		EAD29F232036D675000467F9 /* ViewUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = EAD29F1E2036D675000467F9 /* ViewUtils.m */; };
+		EAD29F242036D675000467F9 /* UIImage+Crop.m in Sources */ = {isa = PBXBuildFile; fileRef = EAD29F202036D675000467F9 /* UIImage+Crop.m */; };
+		EAD29F252036D675000467F9 /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = EAD29F222036D675000467F9 /* UIImage+Resize.m */; };
+		EAD29F282036FE54000467F9 /* VideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAD29F272036FE54000467F9 /* VideoViewController.m */; };
 		EAD664E91FE262010038CA24 /* TPKeyboardAvoidingCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = EAD664E21FE262010038CA24 /* TPKeyboardAvoidingCollectionView.m */; };
 		EAD664EA1FE262010038CA24 /* TPKeyboardAvoidingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = EAD664E41FE262010038CA24 /* TPKeyboardAvoidingScrollView.m */; };
 		EAD664EB1FE262010038CA24 /* TPKeyboardAvoidingTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = EAD664E61FE262010038CA24 /* TPKeyboardAvoidingTableView.m */; };
@@ -243,6 +258,29 @@
 		EABDD1711FE2588100E0EB32 /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
 		EABDD1721FE2588100E0EB32 /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
 		EABDD1741FE25F4A00E0EB32 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		EAD29F032036AA32000467F9 /* CameraVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraVideoViewController.h; sourceTree = "<group>"; };
+		EAD29F042036AA32000467F9 /* CameraVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraVideoViewController.m; sourceTree = "<group>"; };
+		EAD29F062036D472000467F9 /* UIImage+FixOrientation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+FixOrientation.h"; sourceTree = "<group>"; };
+		EAD29F072036D472000467F9 /* UIImage+FixOrientation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+FixOrientation.m"; sourceTree = "<group>"; };
+		EAD29F082036D472000467F9 /* LLSimpleCamera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLSimpleCamera.h; sourceTree = "<group>"; };
+		EAD29F092036D472000467F9 /* LLSimpleCamera.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLSimpleCamera.m; sourceTree = "<group>"; };
+		EAD29F0A2036D472000467F9 /* LLSimpleCamera+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LLSimpleCamera+Helper.h"; sourceTree = "<group>"; };
+		EAD29F0B2036D472000467F9 /* LLSimpleCamera+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "LLSimpleCamera+Helper.m"; sourceTree = "<group>"; };
+		EAD29F0F2036D489000467F9 /* camera-switch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera-switch.png"; sourceTree = "<group>"; };
+		EAD29F102036D489000467F9 /* camera-switch@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera-switch@2x.png"; sourceTree = "<group>"; };
+		EAD29F112036D489000467F9 /* camera-flash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera-flash.png"; sourceTree = "<group>"; };
+		EAD29F122036D489000467F9 /* camera-flash@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera-flash@2x.png"; sourceTree = "<group>"; };
+		EAD29F132036D489000467F9 /* cancel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cancel.png; sourceTree = "<group>"; };
+		EAD29F142036D489000467F9 /* cancel@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cancel@2x.png"; sourceTree = "<group>"; };
+		EAD29F152036D489000467F9 /* cancel@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cancel@3x.png"; sourceTree = "<group>"; };
+		EAD29F1D2036D675000467F9 /* ViewUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewUtils.h; sourceTree = "<group>"; };
+		EAD29F1E2036D675000467F9 /* ViewUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewUtils.m; sourceTree = "<group>"; };
+		EAD29F1F2036D675000467F9 /* UIImage+Crop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Crop.h"; sourceTree = "<group>"; };
+		EAD29F202036D675000467F9 /* UIImage+Crop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Crop.m"; sourceTree = "<group>"; };
+		EAD29F212036D675000467F9 /* UIImage+Resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Resize.h"; sourceTree = "<group>"; };
+		EAD29F222036D675000467F9 /* UIImage+Resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Resize.m"; sourceTree = "<group>"; };
+		EAD29F262036FE54000467F9 /* VideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoViewController.h; sourceTree = "<group>"; };
+		EAD29F272036FE54000467F9 /* VideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoViewController.m; sourceTree = "<group>"; };
 		EAD664E11FE262010038CA24 /* TPKeyboardAvoidingCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingCollectionView.h; sourceTree = "<group>"; };
 		EAD664E21FE262010038CA24 /* TPKeyboardAvoidingCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingCollectionView.m; sourceTree = "<group>"; };
 		EAD664E31FE262010038CA24 /* TPKeyboardAvoidingScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingScrollView.h; sourceTree = "<group>"; };
@@ -458,10 +496,18 @@
 			children = (
 				EAD664DF1FE262010038CA24 /* Extra Files */,
 				EA5C5C211FE0E7DD009879D8 /* AppDelegate.h */,
+				EAD29F062036D472000467F9 /* UIImage+FixOrientation.h */,
+				EAD29F072036D472000467F9 /* UIImage+FixOrientation.m */,
+				EAD29F082036D472000467F9 /* LLSimpleCamera.h */,
+				EAD29F092036D472000467F9 /* LLSimpleCamera.m */,
+				EAD29F0A2036D472000467F9 /* LLSimpleCamera+Helper.h */,
+				EAD29F0B2036D472000467F9 /* LLSimpleCamera+Helper.m */,
 				EA5C5C221FE0E7DD009879D8 /* AppDelegate.m */,
 				EA5C5C241FE0E7DD009879D8 /* ViewController.h */,
 				EA5C5C251FE0E7DD009879D8 /* ViewController.m */,
 				EA5C5C271FE0E7DD009879D8 /* Main.storyboard */,
+				EAD29F032036AA32000467F9 /* CameraVideoViewController.h */,
+				EAD29F042036AA32000467F9 /* CameraVideoViewController.m */,
 				EA6F0D9E2021A999002FAA52 /* profile view controller */,
 				EAB2786C2010A06200EE460E /* Personal Profile */,
 				EA5A33E220075FAC006E765C /* SignIn Section */,
@@ -630,6 +676,21 @@
 		EAD664DF1FE262010038CA24 /* Extra Files */ = {
 			isa = PBXGroup;
 			children = (
+				EAD29F262036FE54000467F9 /* VideoViewController.h */,
+				EAD29F272036FE54000467F9 /* VideoViewController.m */,
+				EAD29F1D2036D675000467F9 /* ViewUtils.h */,
+				EAD29F1E2036D675000467F9 /* ViewUtils.m */,
+				EAD29F1F2036D675000467F9 /* UIImage+Crop.h */,
+				EAD29F202036D675000467F9 /* UIImage+Crop.m */,
+				EAD29F212036D675000467F9 /* UIImage+Resize.h */,
+				EAD29F222036D675000467F9 /* UIImage+Resize.m */,
+				EAD29F0F2036D489000467F9 /* camera-switch.png */,
+				EAD29F102036D489000467F9 /* camera-switch@2x.png */,
+				EAD29F112036D489000467F9 /* camera-flash.png */,
+				EAD29F122036D489000467F9 /* camera-flash@2x.png */,
+				EAD29F132036D489000467F9 /* cancel.png */,
+				EAD29F142036D489000467F9 /* cancel@2x.png */,
+				EAD29F152036D489000467F9 /* cancel@3x.png */,
 				EA4E1358202C810300F03B7D /* FCAlertView.h */,
 				EA4E1359202C810300F03B7D /* FCAlertView.m */,
 				EA6F0D7F20218B86002FAA52 /* MBProgressHub */,
@@ -842,12 +903,19 @@
 				EADE29462018878100796AC2 /* cat2.jpg in Resources */,
 				EA5C5C2E1FE0E7DD009879D8 /* LaunchScreen.storyboard in Resources */,
 				EADE29472018878100796AC2 /* cat3.jpg in Resources */,
+				EAD29F192036D489000467F9 /* camera-flash@2x.png in Resources */,
+				EAD29F162036D489000467F9 /* camera-switch.png in Resources */,
 				EA5C5C2B1FE0E7DD009879D8 /* Assets.xcassets in Resources */,
+				EAD29F1A2036D489000467F9 /* cancel.png in Resources */,
 				EADE29482018878100796AC2 /* cat4.jpg in Resources */,
 				EA6F0D9D2021A990002FAA52 /* profile.storyboard in Resources */,
+				EAD29F1B2036D489000467F9 /* cancel@2x.png in Resources */,
 				EAB278652010977200EE460E /* PersonalProfile.storyboard in Resources */,
+				EAD29F182036D489000467F9 /* camera-flash.png in Resources */,
 				EA5C5C291FE0E7DD009879D8 /* Main.storyboard in Resources */,
 				EADE29452018878100796AC2 /* cat1.jpg in Resources */,
+				EAD29F172036D489000467F9 /* camera-switch@2x.png in Resources */,
+				EAD29F1C2036D489000467F9 /* cancel@3x.png in Resources */,
 				EA7860CE20174E2A00D62B01 /* BKMoneyKit.bundle in Resources */,
 				EA6F0D9320218CE3002FAA52 /* FSActionSheet_cancel@2x.png in Resources */,
 			);
@@ -1043,21 +1111,25 @@
 				EAB2786B2010A05C00EE460E /* personalProfileViewController.m in Sources */,
 				EAB278952010BD8300EE460E /* PersonalProfileCollectionViewCell.m in Sources */,
 				EAD665001FE291400038CA24 /* forgotPasswordViewController.m in Sources */,
+				EAD29F282036FE54000467F9 /* VideoViewController.m in Sources */,
 				EADE2925201864D700796AC2 /* NotificationTableViewCell.m in Sources */,
 				EA5A33E920076EA4006E765C /* GiftSliderCollectionViewCell.m in Sources */,
 				EAD664EC1FE262010038CA24 /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
 				EA6F0D7B202185D9002FAA52 /* ApiMaster.m in Sources */,
 				EAB2789B2010CDEF00EE460E /* NewCreateViewController.m in Sources */,
 				EA7860B120173C0200D62B01 /* GiftMerchandiseDetailViewController.m in Sources */,
+				EAD29F232036D675000467F9 /* ViewUtils.m in Sources */,
 				EA7860CA20174E2A00D62B01 /* BKCardNumberLabel.m in Sources */,
 				EAA0798A1FE3B3F0008132F0 /* homeViewController.m in Sources */,
 				EAB278982010CCD200EE460E /* CreateCampaignTableViewCell.m in Sources */,
 				EA50F0E72020421D005F041B /* NewcreateDetailViewController.m in Sources */,
+				EAD29F052036AA32000467F9 /* CameraVideoViewController.m in Sources */,
 				EAB2786F2010A6C500EE460E /* CreateCampaignViewController.m in Sources */,
 				EADE291C2018481600796AC2 /* SearchViewController.m in Sources */,
 				EA7860CF20174E2A00D62B01 /* BKMoneyUtils.m in Sources */,
 				EA33FC732015E6C8009F7D2B /* GiftMerchandiseCollectionViewCell.m in Sources */,
 				EA7860CD20174E2A00D62B01 /* BKForwardingTextField.m in Sources */,
+				EAD29F0C2036D472000467F9 /* UIImage+FixOrientation.m in Sources */,
 				EAB2788F2010BB2E00EE460E /* AbstractActionSheetPicker.m in Sources */,
 				EAA079931FE3E3A6008132F0 /* HomePostCollectionViewCell.m in Sources */,
 				EAB278912010BB2E00EE460E /* NSDate+TCUtils.m in Sources */,
@@ -1067,8 +1139,10 @@
 				EA5C5C261FE0E7DD009879D8 /* ViewController.m in Sources */,
 				EA992EA91FE3F0FA00A47BE4 /* SYTabBarController.m in Sources */,
 				EAB278922010BB2E00EE460E /* SWActionSheet.m in Sources */,
+				EAD29F0E2036D472000467F9 /* LLSimpleCamera+Helper.m in Sources */,
 				EA6F0D8F20218CB7002FAA52 /* FSActionSheetItem.m in Sources */,
 				EADE29312018739B00796AC2 /* CHTCollectionViewWaterfallCell.m in Sources */,
+				EAD29F0D2036D472000467F9 /* LLSimpleCamera.m in Sources */,
 				EA4E135A202C810300F03B7D /* FCAlertView.m in Sources */,
 				EA6F0D8C20218CB7002FAA52 /* FSActionSheet.m in Sources */,
 				EA5A33E620076E33006E765C /* GiftTableViewCell.m in Sources */,
@@ -1089,6 +1163,8 @@
 				EA992EA71FE3F0FA00A47BE4 /* MainTabController.m in Sources */,
 				EAA079901FE3DC43008132F0 /* HomeCollectionViewCell.m in Sources */,
 				EA7860CB20174E2A00D62B01 /* BKCardPatternInfo.m in Sources */,
+				EAD29F242036D675000467F9 /* UIImage+Crop.m in Sources */,
+				EAD29F252036D675000467F9 /* UIImage+Resize.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

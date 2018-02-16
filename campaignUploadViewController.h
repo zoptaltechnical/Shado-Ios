@@ -12,6 +12,10 @@
 {
     IBOutlet UIButton *uploadButton;
     
+    __weak IBOutlet UITextField *campaignDurationTF;
+    __weak IBOutlet UITextField *targetamtTF;
+    __weak IBOutlet UITextView *descriptionTextview;
+    __weak IBOutlet UITextField *campaignNameTF;
     IBOutlet UIButton *createcampaignBtn;
     IBOutlet UIView *uploadImageUiview;
     IBOutlet UIButton *backBtn;

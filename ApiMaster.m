@@ -165,6 +165,22 @@ static ApiMaster* singleton = nil;
     
 }
 
+-(void)ChangePasswordWithInfo:(NSMutableDictionary*)userInfo completionHandler:(APICompletionHandler)handler
+{
+    
+    
+    
+    NSString* infoStr = [NSString stringWithFormat:@"access_token=%@&old_password=%@&password=%@",userInfo[@"access_token"],userInfo[@"old_password"],userInfo[@"password"]];
+    NSLog(@"%@",infoStr);
+    NSString *url=[[NSString stringWithFormat:@"%@change_password",WebURl] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    NSMutableURLRequest* request =[NSMutableURLRequest requestWithURL:[NSURL URLWithString:url]];
+    [request setHTTPBody:[infoStr dataUsingEncoding:NSUTF8StringEncoding]];
+    NSLog(@"Request At profile %@",request);
+    [request setTimeoutInterval:540];
+    [self forwardRequest1:request showActivity:YES completionHandler:handler];
+    
+    
+}
 
 
 

@@ -21,6 +21,7 @@ typedef void (^APICompletionHandler)(NSDictionary* responseDict,NSError *error);
 
 -(void)myProfileWithInfo:(NSMutableDictionary*)userInfo completionHandler:(APICompletionHandler)handler;
 -(void)UpdateProfileWithInfo:(NSMutableDictionary*)userInfo completionHandler:(APICompletionHandler)handler;
+-(void)ChangePasswordWithInfo:(NSMutableDictionary*)userInfo completionHandler:(APICompletionHandler)handler;
 
 
 -(void)signUpUserWithInfo:(NSMutableDictionary*)userInfo completionHandler:(APICompletionHandler)handler;

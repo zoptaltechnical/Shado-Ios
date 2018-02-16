@@ -1041,7 +1041,7 @@
                                 </connections>
                             </collectionView>
                             <collectionView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="k7z-ol-BGH">
-                                <rect key="frame" x="15" y="195" width="345" height="423"/>
+                                <rect key="frame" x="15" y="187" width="345" height="431"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="5" id="URQ-wm-4O4">
                                     <size key="itemSize" width="150" height="213"/>
@@ -1073,7 +1073,7 @@
                             <constraint firstItem="EOC-XV-FQh" firstAttribute="leading" secondItem="wlX-eX-DKq" secondAttribute="leading" id="80K-Vg-aqb"/>
                             <constraint firstAttribute="trailing" secondItem="EOC-XV-FQh" secondAttribute="trailing" id="Hci-ch-aRc"/>
                             <constraint firstItem="As1-qs-BMI" firstAttribute="top" secondItem="k7z-ol-BGH" secondAttribute="bottom" id="KX5-f1-3Yz"/>
-                            <constraint firstItem="k7z-ol-BGH" firstAttribute="top" secondItem="By9-OM-CDo" secondAttribute="bottom" id="V6r-tN-b7M"/>
+                            <constraint firstItem="k7z-ol-BGH" firstAttribute="top" secondItem="By9-OM-CDo" secondAttribute="bottom" constant="-8" id="V6r-tN-b7M"/>
                             <constraint firstItem="By9-OM-CDo" firstAttribute="leading" secondItem="wlX-eX-DKq" secondAttribute="leading" id="eRY-4S-0eu"/>
                             <constraint firstAttribute="trailing" secondItem="By9-OM-CDo" secondAttribute="trailing" id="iAh-4n-TZn"/>
                             <constraint firstItem="By9-OM-CDo" firstAttribute="top" secondItem="EOC-XV-FQh" secondAttribute="bottom" id="uMu-Vm-at2"/>
@@ -1094,7 +1094,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PhM-aF-JpX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2757.5999999999999" y="2456.2218890554723"/>
+            <point key="canvasLocation" x="2876" y="2467"/>
         </scene>
         <!--Gift View Controller-->
         <scene sceneID="odf-I1-pIb">
@@ -1861,10 +1861,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
+                    <connections>
+                        <segue destination="oUv-Bm-ZCs" kind="relationship" relationship="rootViewController" id="xbG-Jl-MaV"/>
+                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RKY-XY-0No" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4158" y="1733"/>
+            <point key="canvasLocation" x="4982" y="1728"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Fgu-Fp-fXk">
@@ -1885,7 +1888,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LZe-V9-8BX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5068" y="1733"/>
+            <point key="canvasLocation" x="5692" y="1719"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="4xA-93-rUG">
@@ -1904,7 +1907,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8e7-oD-lbX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5818" y="1733"/>
+            <point key="canvasLocation" x="6542" y="1719"/>
         </scene>
         <!--Gift Detail View Controller-->
         <scene sceneID="aOA-QA-cVH">
@@ -2711,6 +2714,102 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YuI-N3-t6c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4273" y="2455"/>
+        </scene>
+        <!--Camera Video View Controller-->
+        <scene sceneID="nMh-tu-44V">
+            <objects>
+                <viewController id="oUv-Bm-ZCs" customClass="CameraVideoViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lI5-A9-czn"/>
+                        <viewControllerLayoutGuide type="bottom" id="cAQ-TE-xgm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eJj-Z4-UFf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mTG-0l-A7R">
+                                <rect key="frame" x="0.0" y="558" width="375" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ir-Jb-NOP">
+                                        <rect key="frame" x="253.5" y="0.0" width="121.5" height="60"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                        <state key="normal" title="Video">
+                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="videoBtnPressed:" destination="oUv-Bm-ZCs" eventType="touchUpInside" id="l25-mQ-WWN"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OnU-ED-5T1">
+                                        <rect key="frame" x="126.5" y="0.0" width="122" height="60"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                        <state key="normal" title="Photo">
+                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="photoBtnPressed:" destination="oUv-Bm-ZCs" eventType="touchUpInside" id="2e6-8P-SWI"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gza-Fs-p8R">
+                                        <rect key="frame" x="0.0" y="0.0" width="121.5" height="60"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                        <state key="normal" title="Library">
+                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="libraryBtnPressed:" destination="oUv-Bm-ZCs" eventType="touchUpInside" id="LWE-oi-mVW"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a3n-Me-6dw">
+                                        <rect key="frame" x="0.0" y="59" width="375" height="1"/>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="yRq-s4-KTw"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.95284086469999996" green="0.95300060509999995" blue="0.95281845330000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="Gza-Fs-p8R" secondAttribute="bottom" id="70e-XI-MJz"/>
+                                    <constraint firstAttribute="trailing" secondItem="a3n-Me-6dw" secondAttribute="trailing" id="DOA-O1-q8q"/>
+                                    <constraint firstItem="OnU-ED-5T1" firstAttribute="top" secondItem="mTG-0l-A7R" secondAttribute="top" id="Hpw-3f-aoy"/>
+                                    <constraint firstItem="OnU-ED-5T1" firstAttribute="leading" secondItem="Gza-Fs-p8R" secondAttribute="trailing" constant="5" id="OEO-wu-mmy"/>
+                                    <constraint firstAttribute="bottom" secondItem="a3n-Me-6dw" secondAttribute="bottom" id="TLP-Pr-jBl"/>
+                                    <constraint firstItem="4ir-Jb-NOP" firstAttribute="top" secondItem="mTG-0l-A7R" secondAttribute="top" id="UfG-36-gg8"/>
+                                    <constraint firstAttribute="trailing" secondItem="4ir-Jb-NOP" secondAttribute="trailing" id="UyI-Q4-TFH"/>
+                                    <constraint firstAttribute="bottom" secondItem="OnU-ED-5T1" secondAttribute="bottom" id="Vr5-Cj-Ss6"/>
+                                    <constraint firstAttribute="bottom" secondItem="4ir-Jb-NOP" secondAttribute="bottom" id="X28-er-UQ3"/>
+                                    <constraint firstItem="a3n-Me-6dw" firstAttribute="leading" secondItem="mTG-0l-A7R" secondAttribute="leading" id="ZGp-Ve-1Ly"/>
+                                    <constraint firstItem="Gza-Fs-p8R" firstAttribute="leading" secondItem="mTG-0l-A7R" secondAttribute="leading" id="d62-nV-6xK"/>
+                                    <constraint firstItem="Gza-Fs-p8R" firstAttribute="top" secondItem="mTG-0l-A7R" secondAttribute="top" id="gav-Lf-rRf"/>
+                                    <constraint firstItem="4ir-Jb-NOP" firstAttribute="width" secondItem="Gza-Fs-p8R" secondAttribute="width" id="kOM-rw-q0U"/>
+                                    <constraint firstItem="4ir-Jb-NOP" firstAttribute="leading" secondItem="OnU-ED-5T1" secondAttribute="trailing" constant="5" id="w5E-XH-pcR"/>
+                                    <constraint firstAttribute="height" constant="60" id="xOB-Ky-CqS"/>
+                                    <constraint firstItem="OnU-ED-5T1" firstAttribute="width" secondItem="Gza-Fs-p8R" secondAttribute="width" id="xhR-Vn-8Ld"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mTG-0l-A7R" firstAttribute="leading" secondItem="eJj-Z4-UFf" secondAttribute="leading" id="bFh-6o-Dbp"/>
+                            <constraint firstItem="cAQ-TE-xgm" firstAttribute="top" secondItem="mTG-0l-A7R" secondAttribute="bottom" id="bFz-dX-Ztr"/>
+                            <constraint firstAttribute="trailing" secondItem="mTG-0l-A7R" secondAttribute="trailing" id="ewO-vT-XWV"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="jy2-Lw-Q8r"/>
+                    <connections>
+                        <outlet property="bottomView" destination="mTG-0l-A7R" id="uFW-mH-UJK"/>
+                        <outlet property="libraryBtn" destination="Gza-Fs-p8R" id="3bb-pR-lwu"/>
+                        <outlet property="photoBtn" destination="OnU-ED-5T1" id="vvb-xo-9GU"/>
+                        <outlet property="videoBtn" destination="4ir-Jb-NOP" id="F8l-Kf-ynl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RtU-Lx-0Wt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5068" y="2607"/>
         </scene>
         <!--Gift Merchandise Detail View Controller-->
         <scene sceneID="xdQ-w1-DoG">
@@ -3560,7 +3659,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eqM-8Q-xbc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5068" y="2456"/>
+            <point key="canvasLocation" x="5692" y="2436"/>
         </scene>
         <!--Search Detail View Controller-->
         <scene sceneID="dwH-sh-tDC">
@@ -4048,7 +4147,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7nT-FT-jkv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6942" y="2505"/>
+            <point key="canvasLocation" x="6526" y="2492"/>
         </scene>
     </scenes>
     <resources>

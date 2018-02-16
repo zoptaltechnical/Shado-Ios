@@ -63,4 +63,20 @@
     }
 
 }
+#pragma mark
+#pragma mark TextField delegate
+#pragma mark
+-(void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    NSLog(@"1");
+    [textField resignFirstResponder];
+   
+}
+
+-(void)textFieldDidEndEditing:(UITextField *)textField
+{
+    NSLog(@"2");
+    [textField resignFirstResponder];
+}
+
 @end

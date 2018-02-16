@@ -41,6 +41,42 @@
 {
 [self dismissViewControllerAnimated:YES completion:nil];
 }
+#pragma mark
+#pragma mark TextField delegate
+#pragma mark
+-(void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    NSLog(@"1");
+ 
+    
+}
+
+-(void)textFieldDidEndEditing:(UITextField *)textField
+{
+    NSLog(@"2");
+    [textField resignFirstResponder];
+}
+-(BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    NSLog(@"3");
+    if (textField == campaignNameTF)
+    {
+        [campaignDurationTF becomeFirstResponder];
+    }
+    else if (textField == campaignDurationTF)
+    {
+        [descriptionTextview becomeFirstResponder];
+    }
+    else if (textField == descriptionTextview)
+    {
+        [descriptionTextview resignFirstResponder];
+    }
+    
+    
+    [textField resignFirstResponder];
+    return YES;
+}
+
 
 
 - (IBAction)startDateBtn:(id)sender {

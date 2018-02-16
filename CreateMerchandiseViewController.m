@@ -26,8 +26,9 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-- (IBAction)backBtnPressed:(id)sender {
-    [self.navigationController dismissViewControllerAnimated:YES completion:nil];
+- (IBAction)backBtnPressed:(id)sender
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 - (IBAction)persoanlProfileBtnPressed:(id)sender
 {
@@ -49,6 +50,41 @@
     
     
     
+}
+#pragma mark
+#pragma mark TextField delegate
+#pragma mark
+-(void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    NSLog(@"1");
+    //[textField resignFirstResponder];
+    
+}
+
+-(void)textFieldDidEndEditing:(UITextField *)textField
+{
+    NSLog(@"2");
+    [textField resignFirstResponder];
+}
+-(BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    NSLog(@"3");
+    if (textField == productTitleTextField)
+    {
+        [priceTextfield becomeFirstResponder];
+    }
+    else if (textField == priceTextfield)
+    {
+        [descriptionTextview becomeFirstResponder];
+    }
+    else if (textField == descriptionTextview)
+    {
+        [descriptionTextview resignFirstResponder];
+    }
+    
+    
+    [textField resignFirstResponder];
+    return YES;
 }
 
 /*

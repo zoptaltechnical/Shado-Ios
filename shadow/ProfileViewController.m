@@ -30,6 +30,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    saveBtn.layer.cornerRadius=15.0f;
+    saveBtn.clipsToBounds=YES;
     [self DisableFields];
     myProfileArray=[[NSMutableArray alloc]init];
     [self callMyProfileAPi];
@@ -67,9 +69,10 @@
 }
 - (IBAction)saveBtn:(id)sender
 {
+    
     [saveBtn setHidden:YES];
     [self DisableFields];
-    [saveBtn setTitle:@"Save" forState:UIControlStateNormal];
+    
     [self callValidations];
 }
 
@@ -83,11 +86,10 @@
     locationTextfield.userInteractionEnabled=YES;
     addresstextfield.userInteractionEnabled=YES;
     
-   editBtn.hidden=YES;
+     editBtn.hidden=YES;
     [saveBtn setHidden:NO];
     [self.view endEditing:YES];
-//       [editBtn setImage:[UIImage imageNamed:@""] forState:UIControlStateNormal];
-    [editBtn setTitle:@"Save" forState:UIControlStateNormal];
+
  
     
     
@@ -97,7 +99,6 @@
 -(void)DisableFields
 {
     [saveBtn setHidden:YES];
-
     [self.view endEditing:YES];
     [profileBtn setHidden:YES];
     fullNameTextfield.userInteractionEnabled=NO;
@@ -132,7 +133,6 @@
                        withCustomImage:[UIImage imageNamed:@"AppIcon"]
                    withDoneButtonTitle:nil
                             andButtons:nil];
-        [self enableFields];
 
     }
   //    else if ([[addresstextfield.text stringByReplacingOccurrencesOfString:@" " withString:@""] length] == 0)
@@ -174,7 +174,6 @@
                        withCustomImage:[UIImage imageNamed:@"AppIcon"]
                    withDoneButtonTitle:nil
                             andButtons:nil];
-        [self enableFields];
 
         
     }
@@ -193,7 +192,6 @@
                withCustomImage:[UIImage imageNamed:@"AppIcon"]
            withDoneButtonTitle:nil
                     andButtons:nil];
-        [self enableFields];
 
         
        
@@ -214,7 +212,7 @@
            withDoneButtonTitle:nil
                     andButtons:nil];
         
-        [self enableFields];
+     
 
         
         
@@ -239,7 +237,6 @@
            withDoneButtonTitle:nil
                     andButtons:nil];
         
-        [self enableFields];
 
     }
    
@@ -247,7 +244,7 @@
     {
         [self callUpdateProfileApi];
         [self.view endEditing:YES];
-        [editBtn setTitle:@"Edit" forState:UIControlStateNormal];
+       
     }
 }
 
@@ -620,6 +617,9 @@
                                                             
                                                             NSLog(@"Key values%@",dic);
                                                             [MBProgressHUD hideHUDForView:self.view animated:YES];
+                                                            [editBtn setHidden:NO];
+                                                            [saveBtn setHidden:YES];
+                                                            [self DisableFields];
                                                             [self callMyProfileAPi];
                                                             [Utility setValue:@"1" forKey:callNotification];
                                                             FCAlertView *alert = [[FCAlertView alloc] init];
@@ -660,6 +660,48 @@
                                                 }];
     [dataTask resume];
     
+}
+
+#pragma mark
+#pragma mark TextField delegate
+#pragma mark
+-(void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    NSLog(@"1");
+    textField.autocorrectionType = UITextAutocorrectionTypeNo;
+}
+
+-(void)textFieldDidEndEditing:(UITextField *)textField
+{
+    NSLog(@"2");
+    [textField resignFirstResponder];
+}
+
+-(BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    NSLog(@"3");
+    if (textField == fullNameTextfield)
+    {
+        [emailtextfield becomeFirstResponder];
+    }
+//    else if (textField == addresstextfield)
+//    {
+//        [emailtextfield becomeFirstResponder];
+//    }
+    else if (textField == emailtextfield)
+    {
+        [phoneNumTextfield becomeFirstResponder];
+    }
+    else if (textField == phoneNumTextfield)
+    {
+        [locationTextfield becomeFirstResponder];
+    }
+    else if (textField == locationTextfield)
+    {
+        [locationTextfield resignFirstResponder];
+    }
+      [textField resignFirstResponder];
+    return YES;
 }
 
 
