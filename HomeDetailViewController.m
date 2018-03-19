@@ -10,9 +10,13 @@
 #import "HomeDetailTableViewCell.h"
 @interface HomeDetailViewController ()
 {
-    NSArray*profilePicImages,*PostAllImages,*nameArray;
+    CZPickerView *CVVCZPicker1;
+    NSMutableArray * gethomeListingArray,
+   * myHomePosts,
+    *myHomeTeam,*postCmomment,*getReportListing;
     HomeDetailTableViewCell *cell;
-    NSString *editString,*likePressed;
+    NSString *editString,*likePressed,*PostIdStrg,*idString;
+    int selectedIndx;
 }
 @end
 
@@ -20,23 +24,25 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
      editString=@"Editstring";
-    likePressed=@"1";
+  //  likePressed=@"1";
     [cell.likeStatusLable setHidden:YES];
      [cell.backTopview setHidden:YES];
  cell.descriptionBackgroundView.backgroundColor=[[UIColor blackColor]colorWithAlphaComponent:0.9];
   cell.backTopview.backgroundColor=[[UIColor blackColor]colorWithAlphaComponent:0.4];
-    
-    [teamBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    teamLineLabel.backgroundColor=[UIColor colorWithRed:234.0/255.0f green:33.0/255.0f blue:66.0/255.0f alpha:1];
-    profilePicImages=[[NSArray alloc]init];
-    nameArray=[[NSArray alloc]init];
-
-    PostAllImages=[[NSArray alloc]init];
-    profilePicImages=@[@"img_team_logo",@"img_team_logo5",@"img_team_logo"];
-    PostAllImages=@[@"img_post0",@"img_post0",@"img_post0"];
-    nameArray=@[@"Arkansas Football",@"Football Arkansas",@"Arkansas Football"];
+    gethomeListingArray=[[NSMutableArray alloc]init];
+    myHomePosts=[[NSMutableArray alloc]init];
+        myHomeTeam=[[NSMutableArray alloc]init];
+    postCmomment=[[NSMutableArray alloc]init];
+getReportListing=[[NSMutableArray alloc]init];
+    selectedIndx = 1000000000;
+    cell.reportBtn.layer.cornerRadius=30.0f;
+    cell.reportBtn.clipsToBounds=YES;
+      cell.donateBtn.layer.cornerRadius=30.0f;
+     cell.donateBtn.clipsToBounds=YES;
     [self gradientcolor];
+    [self getHomeListing];
 }
 
 - (void)didReceiveMemoryWarning
@@ -56,10 +62,6 @@
                             (id)[UIColor clearColor].CGColor];
     cell.descriptionBackgroundView.layer.mask = gradientMask;
 }
-
-
-
-
 #pragma mark
 #pragma mark- UITableView
 #pragma mark
@@ -68,13 +70,13 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section;
 
 {
-        return [PostAllImages count];
+        return [myHomePosts count];
      
 }
 - (UITableViewCell *)tableView:(UITableView *)TableView cellForRowAtIndexPath:(NSIndexPath *)indexPath;
 {
     
-    [cell.likeStatusLable setHidden:YES];
+ 
 
         static NSString *MyIdentifier = @"homeDetailCellID";
       cell = [TableView dequeueReusableCellWithIdentifier:MyIdentifier];
@@ -84,82 +86,349 @@
             cell = [[HomeDetailTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:MyIdentifier];
         }
  
-
-    [cell.profilePic setImage:[UIImage imageNamed:[profilePicImages objectAtIndex:indexPath.row]]];
-   
+    NSDictionary *dicData = [myHomePosts  objectAtIndex:indexPath.row];
+    [cell.profilePic sd_setImageWithURL:[NSURL URLWithString:[[myHomePosts  objectAtIndex:indexPath.row]valueForKey:@"team_icon"] ] placeholderImage:[UIImage imageNamed:@""] options:SDWebImageRefreshCached];
+     [cell.pic sd_setImageWithURL:[NSURL URLWithString:[[myHomePosts  objectAtIndex:indexPath.row]valueForKey:@"media_url"] ] placeholderImage:[UIImage imageNamed:@""] options:SDWebImageRefreshCached];
     cell.profilePic.layer.cornerRadius = cell.profilePic.frame.size.height/2;
     cell.profilePic.clipsToBounds = YES;
-     [cell.pic setImage:[UIImage imageNamed:[PostAllImages objectAtIndex:indexPath.row]]];
-     cell.nameLabel.text = [nameArray objectAtIndex:indexPath.row];
+     cell.nameLabel.text = [NSString stringWithFormat:@"%@",[[myHomePosts  objectAtIndex:indexPath.row]valueForKey:@"team_name"]];
+    cell.descriptionLabel.text = [NSString stringWithFormat:@"%@",[[myHomePosts  objectAtIndex:indexPath.row]valueForKey:@"description"]];
     UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] init];
     [tapRecognizer addTarget:self action:@selector(shareSelected:)];
     
-    UITapGestureRecognizer *tapRecognizer1 = [[UITapGestureRecognizer alloc] init];
-    [tapRecognizer1 addTarget:self action:@selector(commentSelected:)];
+   
 
     cell.moreBtn.tag=indexPath.row;
     [cell.moreBtn addTarget:self action:@selector(moreSelected:) forControlEvents:UIControlEventTouchUpInside];
     [self gradientcolor];
     [cell.shareBtn addGestureRecognizer:tapRecognizer];
-    [cell.commentBtn addGestureRecognizer:tapRecognizer1];
-    [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
-cell.reportBtn.tag=indexPath.row;
+    
+    cell.commentBtn.tag=indexPath.row;
+        [cell.commentBtn addTarget:self action:@selector(commentSelected:) forControlEvents:UIControlEventTouchUpInside];
+   
+    
+    cell.reportBtn.tag=indexPath.row;
     [cell.reportBtn addTarget:self action:@selector(reportSelected:) forControlEvents:UIControlEventTouchUpInside];
     cell.donateBtn.tag=indexPath.row;
     [cell.donateBtn addTarget:self action:@selector(donateSelected:) forControlEvents:UIControlEventTouchUpInside];
     cell.likeBtn.tag=indexPath.row;
      cell.likeBtn.tag =1;
+    
+    
+    NSString* likebyme = [dicData valueForKey:@"post_liked"] ;
+    if ([[likebyme lowercaseString] isEqualToString:@"yes"]) {
+        [cell.likeBtn setSelected:true];
+    }
+    else
+    {
+        [cell.likeBtn setSelected:false];
+
+    }
+    int totallike =[[dicData valueForKey:@"total_likes"] intValue];
+    if (totallike > 0)
+    {
+        cell.likeStatusLable.text = [NSString stringWithFormat:@"%D Likes",totallike];
+        cell.likeStatusLable.hidden = false;
+        
+    }
+    else
+    {
+        cell.likeStatusLable.hidden = true;
+
+        
+    }
+    
+    if (indexPath.row == selectedIndx) {
+        cell.backTopview.hidden = false;
+    }
+    else
+    {
+        cell.backTopview.hidden = true;
+    }
+    cell.likeBtn.tag = indexPath.row;
  [cell.likeBtn addTarget:self action:@selector(likeSelected:) forControlEvents:UIControlEventTouchUpInside];
     
+    [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
     return cell;
     
     
 }
+#pragma mark -Home Get listing Api
+-(void)getHomeListing
+{
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    NSDictionary* MyProfileInfo;
+    if (_idStrg ==0) {
+        MyProfileInfo= @{
+                         @"access_token":[Utility valueForKey:access_token],
+                         @"list_type":_teamStrg,
+                         @"filter_team_id":@"",
+                         };
+    }
+    else{
+    MyProfileInfo= @{
+                                    @"access_token":[Utility valueForKey:access_token],
+                                    @"list_type":_teamStrg,
+                                    @"filter_team_id":_idStrg,
+                                    };
+    }
+    
+    McomLOG(@"homeDetail%@",MyProfileInfo);
+    [API myHomeListingWithInfo:[MyProfileInfo mutableCopy] completionHandler:^(NSDictionary *responseDict,NSError *error)
+     {
+         [MBProgressHUD hideHUDForView:self.view animated:YES];
+         NSDictionary *dict_response = [[NSDictionary alloc]initWithDictionary:responseDict];
+         if ([dict_response[@"code"] isEqualToString:@"201"])
+         {
+             FCAlertView *alert = [[FCAlertView alloc] init];
+             alert.bounceAnimations = YES;
+             alert.animateAlertInFromTop = YES;
+             alert.avoidCustomImageTint = YES;
+             alert.detachButtons = YES;
+             alert.blurBackground = YES;
+             
+             [alert showAlertInView:self
+                          withTitle:@"Shado Sport"
+                       withSubtitle:[responseDict valueForKey:@"message"]
+                    withCustomImage:[UIImage imageNamed:@""]
+                withDoneButtonTitle:nil
+                         andButtons:nil];
+         }
+         
+         
+         else if ([dict_response[@"code"] isEqualToString:@"200"])
+         {
+                myHomePosts=[[responseDict valueForKey:@"home_listing"][@"posts"] mutableCopy];
+             [homeDetailTableview reloadData];
+             
+         }
+         
+         
+         else
+         {
+             FCAlertView *alert = [[FCAlertView alloc] init];
+             alert.bounceAnimations = YES;
+             alert.animateAlertInFromTop = YES;
+             alert.avoidCustomImageTint = YES;
+             alert.detachButtons = YES;
+             alert.blurBackground = YES;
+             
+             [alert showAlertInView:self
+                          withTitle:@"Shado Sport"
+                       withSubtitle:[responseDict valueForKey:@"message"]
+                    withCustomImage:[UIImage imageNamed:@""]
+                withDoneButtonTitle:nil
+                         andButtons:nil];
+             
+         }
+         
+         
+     }];
+    
+    
+}
+
+
 -(void)likeSelected:(id)sender
 {
     
      NSLog(@"like index> %ld",(long)[sender tag]);
-    if ([sender tag] == 1)
-    {
-        likePressed =@"0";
-
-        [cell.likeBtn setImage:[UIImage imageNamed:@"ic_like_red"] forState:UIControlStateNormal ];
-        [cell.likeStatusLable setHidden:NO];
-    }
    
-    
-    else if ([likePressed isEqualToString:@"0"])
-    {
-        likePressed =@"1";
-        [cell.likeBtn setImage:[UIImage imageNamed:@"ic_like"] forState:UIControlStateNormal];
-        [cell.likeStatusLable setHidden:YES];
-    }
+        
+         PostIdStrg =  [NSString stringWithFormat:@"%@",[[myHomePosts objectAtIndex:[sender tag]]valueForKey:@"id"] ] ;
+        [self getHomeLike:[sender tag]];
 
 }
+#pragma mark -Home Get listing Api
+-(void)getHomeLike:(int)selecteddindx
+{
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    NSDictionary* MyProfileInfo = @{
+                                    @"access_token":[Utility valueForKey:access_token],
+                                    @"post_id":PostIdStrg,
+                                    };
+    
+    McomLOG(@"%@",MyProfileInfo);
+    [API myHomeDetailLikeWithInfo:[MyProfileInfo mutableCopy] completionHandler:^(NSDictionary *responseDict,NSError *error)
+     {
+         [MBProgressHUD hideHUDForView:self.view animated:YES];
+         NSDictionary *dict_response = [[NSDictionary alloc]initWithDictionary:responseDict];
+         if ([dict_response[@"code"] isEqualToString:@"201"])
+         {
+             FCAlertView *alert = [[FCAlertView alloc] init];
+             alert.bounceAnimations = YES;
+             alert.animateAlertInFromTop = YES;
+             alert.avoidCustomImageTint = YES;
+             alert.detachButtons = YES;
+             alert.blurBackground = YES;
+             
+             [alert showAlertInView:self
+                          withTitle:@"Shado Sport"
+                       withSubtitle:[responseDict valueForKey:@"message"]
+                    withCustomImage:[UIImage imageNamed:@""]
+                withDoneButtonTitle:nil
+                         andButtons:nil];
+         }
+         
+         
+         else if ([dict_response[@"code"] isEqualToString:@"200"])
+         {
+             NSLog(@"like pressed %@",responseDict);
+             FCAlertView *alert = [[FCAlertView alloc] init];
+             alert.bounceAnimations = YES;
+             alert.animateAlertInFromTop = YES;
+             alert.avoidCustomImageTint = YES;
+             alert.detachButtons = YES;
+             alert.blurBackground = YES;
+             NSMutableDictionary *dic=[[NSMutableDictionary alloc] init];
+             dic = [[myHomePosts objectAtIndex:selecteddindx ] mutableCopy];
+             NSString* likebyme = [dic valueForKey:@"post_liked"] ;
+              int totallike =[[dic valueForKey:@"total_likes"] intValue];
+             if ([[likebyme lowercaseString] isEqualToString:@"yes"]) {
+                 [dic setValue:@"no" forKey:@"post_liked"];
+                 totallike=totallike-1;
+             }
+             else
+             {
+                 [dic setValue:@"yes" forKey:@"post_liked"];
+                   totallike=totallike+1;
+             }
+             
+             [dic setValue:[NSString stringWithFormat:@"%d",totallike]  forKey:@"total_likes"];
+             
+             [myHomePosts removeObjectAtIndex:selecteddindx];
+             [myHomePosts insertObject:dic atIndex:selecteddindx];
+             NSIndexPath *indexPath = [NSIndexPath indexPathForRow:selecteddindx inSection:0];
+
+             [homeDetailTableview beginUpdates];
+             [homeDetailTableview reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
+             [homeDetailTableview endUpdates];
+             [alert showAlertInView:self
+                          withTitle:@"Shado Sport"
+                       withSubtitle:[responseDict valueForKey:@"message"]
+                    withCustomImage:[UIImage imageNamed:@""]
+                withDoneButtonTitle:nil
+                         andButtons:nil];
+             [homeDetailTableview reloadData];
+             
+         }
+         
+         
+         else
+         {
+             FCAlertView *alert = [[FCAlertView alloc] init];
+             alert.bounceAnimations = YES;
+             alert.animateAlertInFromTop = YES;
+             alert.avoidCustomImageTint = YES;
+             alert.detachButtons = YES;
+             alert.blurBackground = YES;
+             
+             [alert showAlertInView:self
+                          withTitle:@"Shado Sport"
+                       withSubtitle:[responseDict valueForKey:@"message"]
+                    withCustomImage:[UIImage imageNamed:@""]
+                withDoneButtonTitle:nil
+                         andButtons:nil];
+             
+         }
+         
+         
+     }];
+    
+    
+}
+#pragma mark More Button
 -(void)moreSelected:(id)sender
 {
-    if ([editString isEqualToString:@"Editstring"])
-    {
-        editString = @"nonediting";
-        
-        
-
-        [cell.backTopview setHidden:NO];
-        [cell.popupView setHidden:NO];
-
-
+     NSLog(@"%ld",(long)[sender tag]);
+    if (selectedIndx == [sender tag]) {
+        selectedIndx = 100000000;
     }
+    else
+    {
+    selectedIndx = [sender tag];
+    }
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:[sender tag] inSection:0];
+    [homeDetailTableview beginUpdates];
+    [homeDetailTableview reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
+    [homeDetailTableview endUpdates];
     
-    else if ([editString isEqualToString:@"nonediting"])
-    {
-        editString = @"Editstring";
-        [cell.backTopview setHidden:YES];
-  [cell.popupView setHidden:YES];
-        
-    }
+    
 
-    NSLog(@"%ld",(long)[sender tag]);
+ 
 }
+#pragma mark
+#pragma mark - Get ReportListing Api
+#pragma mark
+-(void)getReportListing
+{
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    NSDictionary*Info = @{
+                                    @"access_token":[Utility valueForKey:access_token],
+                                    };
+    
+    McomLOG(@"%@",Info);
+    [API getReportWithInfo:[Info mutableCopy] completionHandler:^(NSDictionary *responseDict,NSError *error)
+     {
+         [MBProgressHUD hideHUDForView:self.view animated:YES];
+         NSDictionary *dict_response = [[NSDictionary alloc]initWithDictionary:responseDict];
+         if ([dict_response[@"code"] isEqualToString:@"201"])
+         {
+             FCAlertView *alert = [[FCAlertView alloc] init];
+             alert.bounceAnimations = YES;
+             alert.animateAlertInFromTop = YES;
+             alert.avoidCustomImageTint = YES;
+             alert.detachButtons = YES;
+             alert.blurBackground = YES;
+             
+             [alert showAlertInView:self
+                          withTitle:@"Shado Sport"
+                       withSubtitle:[responseDict valueForKey:@"message"]
+                    withCustomImage:[UIImage imageNamed:@""]
+                withDoneButtonTitle:nil
+                         andButtons:nil];
+         }
+         
+         
+         else if ([dict_response[@"code"] isEqualToString:@"200"])
+         {
+             NSLog(@"reportListing %@",responseDict);
+             
+             getReportListing=[responseDict valueForKey:@"report_reason_listing"];
+             CVVCZPicker1 = [[CZPickerView alloc] initWithHeaderTitle:@"Select" cancelButtonTitle:@"Cancel" confirmButtonTitle:@"Confirm"];
+             CVVCZPicker1.delegate = self;
+             CVVCZPicker1.dataSource = self;
+             CVVCZPicker1.needFooterView = YES;
+             [self.view endEditing:YES];
+             [CVVCZPicker1 show];
+             
+         }
+         
+         
+         else
+         {
+             FCAlertView *alert = [[FCAlertView alloc] init];
+             alert.bounceAnimations = YES;
+             alert.animateAlertInFromTop = YES;
+             alert.avoidCustomImageTint = YES;
+             alert.detachButtons = YES;
+             alert.blurBackground = YES;
+             
+             [alert showAlertInView:self
+                          withTitle:@"Shado Sport"
+                       withSubtitle:[responseDict valueForKey:@"message"]
+                    withCustomImage:[UIImage imageNamed:@""]
+                withDoneButtonTitle:nil
+                         andButtons:nil];
+             
+         }
+         
+         
+     }];
+    
+    
+}
+
 -(void)shareSelected :(UITapGestureRecognizer*)sender
 {
     NSString *theMessage = @"Hello";
@@ -171,10 +440,8 @@ cell.reportBtn.tag=indexPath.row;
     // and present it
     [self presentActivityController:controller];
 }
--(void)commentSelected :(UITapGestureRecognizer*)sender
+- (void)presentActivityController:(UIActivityViewController *)controller
 {
-}
-- (void)presentActivityController:(UIActivityViewController *)controller {
     
     // for iPad: make the presentation a Popover
     controller.modalPresentationStyle = UIModalPresentationPopover;
@@ -203,19 +470,169 @@ cell.reportBtn.tag=indexPath.row;
         }
     };
 }
-//#pragma mark 
-//#pragma mark UIButton Action :Report, Donate
-//#pragma mark
+#pragma mark Chat Button
+-(void)commentSelected :(UIButton *)sender
+{
+    NSLog(@"%ld",(long)[sender tag]);
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    chatViewController *myNewVC = (chatViewController *)[storyboard instantiateViewControllerWithIdentifier:@"chatViewController"];
+    
+    
+    myNewVC.dataArray=[[myHomePosts objectAtIndex:[sender tag]] valueForKey:@"post_comments"];
+   // myNewVC.iD=[_dicData objectForKey:@"id"];
+    myNewVC.modalPresentationStyle = UIModalPresentationOverCurrentContext;
+    [self presentViewController:myNewVC animated:YES completion:nil];
+
+    
+    
+}
+
+
+
+#pragma mark: Report Button
 -(void)reportSelected:(UIButton*)sender
 {
     NSLog(@"%ld",(long)[sender tag]);
     [ cell.backTopview setHidden:YES];
+    PostIdStrg =  [NSString stringWithFormat:@"%@",[[myHomePosts objectAtIndex:[sender tag]]valueForKey:@"id"] ] ;
+    [self  getReportListing];
+    
 }
+#pragma mark
+#pragma mark CzPickerView
+#pragma mark
+- (NSString *)czpickerView:(CZPickerView *)pickerView
+               titleForRow:(NSInteger)row
+{
+
+        //return [[listSaveCardsArray objectAtIndex:row] valueForKey:@"card_number"];
+      //  return [[ListSaveCardsIDArray objectAtIndex:row]valueForKey:@"id"];
+    return [[getReportListing objectAtIndex:row]valueForKey:@"reason_content"];
+}
+- (NSInteger)numberOfRowsInPickerView:(CZPickerView *)pickerView
+{
+    return getReportListing.count;
+}
+- (void)czpickerView:(CZPickerView *)pickerView didConfirmWithItemAtRow:(NSInteger)row {
+    NSLog(@"%@ is chosen!",getReportListing[row]);
+    idString=@"";
+  NSString *name=[NSString stringWithFormat:@"%@",[getReportListing[row]valueForKey:@"reason_content"] ];
+    idString=[idString stringByAppendingString:[NSString stringWithFormat:@"%@",[getReportListing[row] valueForKey:@"id"]]];
+    [self  callreportPostApi];
+}
+//
+//
+- (void)czpickerViewDidClickCancelButton:(CZPickerView *)pickerView
+{
+    [self.navigationController setNavigationBarHidden:YES];
+    NSLog(@"Canceled.");
+}
+
+- (void)czpickerViewWillDisplay:(CZPickerView *)pickerView
+{
+    NSLog(@"Picker will display.");
+}
+- (void)czpickerViewDidDisplay:(CZPickerView *)pickerView
+{
+    NSLog(@"Picker did display.");
+}
+
+- (void)czpickerViewWillDismiss:(CZPickerView *)pickerView
+{
+    NSLog(@"Picker will dismiss.");
+}
+
+- (void)czpickerViewDidDismiss:(CZPickerView *)pickerView
+{
+
+        [self.navigationController popViewControllerAnimated:YES];
+
+}
+#pragma mark:Call Report Post Api
+-(void)callreportPostApi
+{
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    NSDictionary*Info = @{
+                          @"access_token":[Utility valueForKey:access_token],
+                          @"post_id":PostIdStrg,
+                            @"reason_id":idString,
+                          };
+    
+    McomLOG(@"%@",Info);
+    [API sendReportReasonsWithInfo:[Info mutableCopy] completionHandler:^(NSDictionary *responseDict,NSError *error)
+     {
+         [MBProgressHUD hideHUDForView:self.view animated:YES];
+         NSDictionary *dict_response = [[NSDictionary alloc]initWithDictionary:responseDict];
+         if ([dict_response[@"code"] isEqualToString:@"201"])
+         {
+             FCAlertView *alert = [[FCAlertView alloc] init];
+             alert.bounceAnimations = YES;
+             alert.animateAlertInFromTop = YES;
+             alert.avoidCustomImageTint = YES;
+             alert.detachButtons = YES;
+             alert.blurBackground = YES;
+             
+             [alert showAlertInView:self
+                          withTitle:@"Shado Sport"
+                       withSubtitle:[responseDict valueForKey:@"message"]
+                    withCustomImage:[UIImage imageNamed:@""]
+                withDoneButtonTitle:nil
+                         andButtons:nil];
+         }
+         
+         
+         else if ([dict_response[@"code"] isEqualToString:@"200"])
+         {
+             NSLog(@"sendReport id %@",responseDict);
+             
+             FCAlertView *alert = [[FCAlertView alloc] init];
+             alert.bounceAnimations = YES;
+             alert.animateAlertInFromTop = YES;
+             alert.avoidCustomImageTint = YES;
+             alert.detachButtons = YES;
+             alert.blurBackground = YES;
+             
+             [alert showAlertInView:self
+                          withTitle:@"Shado Sport"
+                       withSubtitle:[responseDict valueForKey:@"message"]
+                    withCustomImage:[UIImage imageNamed:@""]
+                withDoneButtonTitle:nil
+                         andButtons:nil];
+             
+         }
+         
+         
+         else
+         {
+             FCAlertView *alert = [[FCAlertView alloc] init];
+             alert.bounceAnimations = YES;
+             alert.animateAlertInFromTop = YES;
+             alert.avoidCustomImageTint = YES;
+             alert.detachButtons = YES;
+             alert.blurBackground = YES;
+             
+             [alert showAlertInView:self
+                          withTitle:@"Shado Sport"
+                       withSubtitle:[responseDict valueForKey:@"message"]
+                    withCustomImage:[UIImage imageNamed:@""]
+                withDoneButtonTitle:nil
+                         andButtons:nil];
+             
+         }
+         
+         
+     }];
+    
+    
+}
+
+#pragma mark: Donate Button
 -(void)donateSelected:(UIButton*)sender
 { NSLog(@"%ld",(long)[sender tag]);
     [cell.backTopview setHidden:YES];
     
 }
+#pragma mark: personal Profile Button
 - (IBAction)profilebtnPressed:(id)sender
 {
     

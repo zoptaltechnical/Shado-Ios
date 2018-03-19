@@ -10,4 +10,5 @@
 
 @interface PersonalProfileCollectionViewCell : UICollectionViewCell
 
+@property (weak, nonatomic) IBOutlet UIImageView *imageview;
 @end

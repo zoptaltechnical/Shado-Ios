@@ -130,7 +130,7 @@
                 [alert showAlertInView:self
                              withTitle:@"Shado Sport"
                           withSubtitle:@"Please enter fullname."
-                       withCustomImage:[UIImage imageNamed:@"AppIcon"]
+                       withCustomImage:[UIImage imageNamed:@""]
                    withDoneButtonTitle:nil
                             andButtons:nil];
 
@@ -171,7 +171,7 @@
                 [alert showAlertInView:self
                              withTitle:@"Shado Sport"
                           withSubtitle:@"Please enter email."
-                       withCustomImage:[UIImage imageNamed:@"AppIcon"]
+                       withCustomImage:[UIImage imageNamed:@""]
                    withDoneButtonTitle:nil
                             andButtons:nil];
 
@@ -189,7 +189,7 @@
         [alert showAlertInView:self
                      withTitle:@"Shado Sport"
                   withSubtitle:@"Please enter valid email."
-               withCustomImage:[UIImage imageNamed:@"AppIcon"]
+               withCustomImage:[UIImage imageNamed:@""]
            withDoneButtonTitle:nil
                     andButtons:nil];
 
@@ -208,7 +208,7 @@
         [alert showAlertInView:self
                      withTitle:@"Shado Sport"
                   withSubtitle:@"Please enter phone number."
-               withCustomImage:[UIImage imageNamed:@"AppIcon"]
+               withCustomImage:[UIImage imageNamed:@""]
            withDoneButtonTitle:nil
                     andButtons:nil];
         
@@ -233,7 +233,7 @@
         [alert showAlertInView:self
                      withTitle:@"Shado Sport"
                   withSubtitle:@"Please enter a valid phone number"
-               withCustomImage:[UIImage imageNamed:@"AppIcon"]
+               withCustomImage:[UIImage imageNamed:@""]
            withDoneButtonTitle:nil
                     andButtons:nil];
         
@@ -287,7 +287,7 @@
              [alert showAlertInView:self
                           withTitle:@"Shado Sport"
                        withSubtitle:[responseDict valueForKey:@"message"]
-                    withCustomImage:[UIImage imageNamed:@"AppIcon"]
+                    withCustomImage:[UIImage imageNamed:@""]
                 withDoneButtonTitle:nil
                          andButtons:nil];
 
@@ -301,7 +301,7 @@
              
              myProfileArray = [responseDict valueForKey:@"profile_data"] ;
              
-             
+            
              
              if ([[responseDict[@"profile_data"]   valueForKey:@"fullname"]length]>0)
              {
@@ -399,7 +399,7 @@
              [alert showAlertInView:self
                           withTitle:@"Shado Sport"
                        withSubtitle:[responseDict valueForKey:@"message"]
-                    withCustomImage:[UIImage imageNamed:@"AppIcon"]
+                    withCustomImage:[UIImage imageNamed:@""]
                 withDoneButtonTitle:nil
                          andButtons:nil];
 
@@ -599,7 +599,7 @@
                                                         [alert showAlertInView:self
                                                                      withTitle:@"Shado Sport"
                                                                   withSubtitle:@"Profile updated successfully."
-                                                               withCustomImage:[UIImage imageNamed:@"AppIcon"]
+                                                               withCustomImage:[UIImage imageNamed:@""]
                                                            withDoneButtonTitle:nil
                                                                     andButtons:nil];
 
@@ -631,8 +631,8 @@
                                                             
                                                             [alert showAlertInView:self
                                                                          withTitle:@"Shado Sport"
-                                                                      withSubtitle:[dict valueForKey:@"message"]
-                                                                   withCustomImage:[UIImage imageNamed:@"AppIcon"]
+                                                                      withSubtitle:@"Profile updated succesfully"
+                                                                   withCustomImage:[UIImage imageNamed:@""]
                                                                withDoneButtonTitle:nil
                                                                         andButtons:nil];
                                                             
@@ -668,13 +668,82 @@
 -(void)textFieldDidBeginEditing:(UITextField *)textField
 {
     NSLog(@"1");
-    textField.autocorrectionType = UITextAutocorrectionTypeNo;
+    
+    if (textField == locationTextfield) {
+        
+        
+        GMSAutocompleteViewController *acController = [[GMSAutocompleteViewController alloc] init];
+        acController.delegate = self;
+        GMSAutocompleteFilter *filter = [[GMSAutocompleteFilter alloc] init];
+        filter.type = kGMSPlacesAutocompleteTypeFilterNoFilter;
+        acController.autocompleteFilter = filter;
+        [self presentViewController:acController animated:YES completion:nil];
+    }
 }
+- (void)viewController:(GMSAutocompleteViewController *)viewController
+didAutocompleteWithPlace:(GMSPlace *)place
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+    locationTextfield.text = place.formattedAddress;
+    CLLocation *loc =[[CLLocation alloc] initWithLatitude:place.coordinate.latitude longitude:place.coordinate.longitude];
+    [self getAddressFromLatLon:loc];
+    
+}
+- (void) getAddressFromLatLon:(CLLocation *)bestLocation
+{
+    NSLog(@"%f %f", bestLocation.coordinate.latitude, bestLocation.coordinate.longitude);
+    CLGeocoder *geocoder = [[CLGeocoder alloc] init] ;
+    [geocoder reverseGeocodeLocation:bestLocation
+                   completionHandler:^(NSArray *placemarks, NSError *error)
+     {
+         if (error){
+             NSLog(@"Geocode failed with error: %@", error);
+             return;
+         }
+         CLPlacemark *placemark = [placemarks objectAtIndex:0];
+         NSLog(@"placemark.streetname%@",placemark.administrativeArea);
+         // streetNameString   = placemark.administrativeArea;
+         NSLog(@"placemark.ISOcountryCode %@",placemark.ISOcountryCode);
+         NSLog(@"locality %@",placemark.locality); //city
+         NSLog(@"postalCode %@",placemark.postalCode);
+         
+     }];
+    
+}
+- (void)viewController:(GMSAutocompleteViewController *)viewController
+didFailAutocompleteWithError:(NSError *)error {
+    [self dismissViewControllerAnimated:YES completion:nil];
+    // TODO: handle the error.
+    NSLog(@"Error: %@", [error description]);
+}
+
+// User canceled the operation.
+- (void)wasCancelled:(GMSAutocompleteViewController *)viewController {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+// Turn the network activity indicator on and off again.
+- (void)didRequestAutocompletePredictions:(GMSAutocompleteViewController *)viewController {
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+}
+
+- (void)didUpdateAutocompletePredictions:(GMSAutocompleteViewController *)viewController {
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+}
+
+
+
+//-(void)textFieldDidBeginEditing:(UITextField *)textField
+//{
+//    [self.view endEditing:YES];
+//    NSLog(@"1");
+//    textField.autocorrectionType = UITextAutocorrectionTypeNo;
+//}
 
 -(void)textFieldDidEndEditing:(UITextField *)textField
 {
     NSLog(@"2");
-    [textField resignFirstResponder];
+//    [textField resignFirstResponder];
 }
 
 -(BOOL)textFieldShouldReturn:(UITextField *)textField

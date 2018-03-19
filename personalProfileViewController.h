@@ -10,7 +10,13 @@
 
 @interface personalProfileViewController : UIViewController
 {
+    __weak IBOutlet UILabel *addressLabel;
     
+    __weak IBOutlet UIImageView *profilePic;
+    __weak IBOutlet UILabel *descriptionLabel;
+    __weak IBOutlet UILabel *locationLabel;
+    __weak IBOutlet UILabel *fullNameLabel;
+    __weak IBOutlet UICollectionView *postCollectionView;
     IBOutlet UIButton *myCanpaignBtn;
     IBOutlet UIButton *myMerchandiseBtn;
     IBOutlet UIButton *myTeamBtn;

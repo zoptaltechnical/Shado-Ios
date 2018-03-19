@@ -197,20 +197,114 @@ static ApiMaster* singleton = nil;
     [self forwardRequest1:request showActivity:YES completionHandler:handler];
     
 }
+-(void)addPostWithInfo:(NSMutableDictionary*)userInfo completionHandler:(APICompletionHandler)handler;
+{
+    NSString* infoStr = [NSString stringWithFormat:@"access_token=%@&post_id=%@&title=%@&description=%@&media_type=%@&media_url=%@",userInfo[@"access_token"],userInfo[@"post_id"],userInfo[@"title"],userInfo[@"description"],userInfo[@"media_type"],userInfo[@"media_url"]];
+    NSLog(@"%@",infoStr);
+    NSString *url=[[NSString stringWithFormat:@"%@add_post",WebURl] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    NSMutableURLRequest* request =[NSMutableURLRequest requestWithURL:[NSURL URLWithString:url]];
+    [request setHTTPBody:[infoStr dataUsingEncoding:NSUTF8StringEncoding]];
+    NSLog(@"Request At profile %@",request);
+    [request setTimeoutInterval:540];
+    [self forwardRequest1:request showActivity:YES completionHandler:handler];
+}
+
+-(void)updatePostWithInfo:(NSMutableDictionary*)userInfo completionHandler:(APICompletionHandler)handler
+{
+    NSString* infoStr = [NSString stringWithFormat:@"access_token=%@&post_id=%@&title=%@&description=%@&media_type=%@&media_url=%@",userInfo[@"access_token"],userInfo[@"post_id"],userInfo[@"title"],userInfo[@"description"],userInfo[@"media_type"],userInfo[@"media_url"]];
+    NSLog(@"%@",infoStr);
+    NSString *url=[[NSString stringWithFormat:@"%@update_post",WebURl] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    NSMutableURLRequest* request =[NSMutableURLRequest requestWithURL:[NSURL URLWithString:url]];
+    [request setHTTPBody:[infoStr dataUsingEncoding:NSUTF8StringEncoding]];
+    NSLog(@"Request At profile %@",request);
+    [request setTimeoutInterval:540];
+    [self forwardRequest1:request showActivity:YES completionHandler:handler];
+}
+
+-(void)myHomeListingWithInfo:(NSMutableDictionary*)userInfo completionHandler:(APICompletionHandler)handler
+{
+    NSString* infoStr = [NSString stringWithFormat:@"access_token=%@&list_type=%@&filter_team_id=%@",userInfo[@"access_token"],userInfo[@"list_type"],userInfo[@"filter_team_id"]];
+    NSLog(@"%@",infoStr);
+    NSString *url=[[NSString stringWithFormat:@"%@get_home_listing",WebURl] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    NSMutableURLRequest* request =[NSMutableURLRequest requestWithURL:[NSURL URLWithString:url]];
+    [request setHTTPBody:[infoStr dataUsingEncoding:NSUTF8StringEncoding]];
+    NSLog(@"Request At profile %@",request);
+    [request setTimeoutInterval:540];
+    [self forwardRequest1:request showActivity:YES completionHandler:handler];
+}
+
+-(void)myHomeDetailLikeWithInfo:(NSMutableDictionary*)userInfo completionHandler:(APICompletionHandler)handler
+{
+    NSString* infoStr = [NSString stringWithFormat:@"access_token=%@&post_id=%@",userInfo[@"access_token"],userInfo[@"post_id"]];
+    NSLog(@"%@",infoStr);
+    NSString *url=[[NSString stringWithFormat:@"%@like_post",WebURl] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    NSMutableURLRequest* request =[NSMutableURLRequest requestWithURL:[NSURL URLWithString:url]];
+    [request setHTTPBody:[infoStr dataUsingEncoding:NSUTF8StringEncoding]];
+    NSLog(@"Request At profile %@",request);
+    [request setTimeoutInterval:540];
+    [self forwardRequest1:request showActivity:YES completionHandler:handler];
+}
 
 
 
+-(void)getReportWithInfo:(NSMutableDictionary*)userInfo completionHandler:(APICompletionHandler)handler;
+{
+    NSString* infoStr = [NSString stringWithFormat:@"access_token=%@",userInfo[@"access_token"]];
+    NSLog(@"%@",infoStr);
+    NSString *url=[[NSString stringWithFormat:@"%@get_report_reasons",WebURl] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    NSMutableURLRequest* request =[NSMutableURLRequest requestWithURL:[NSURL URLWithString:url]];
+    [request setHTTPBody:[infoStr dataUsingEncoding:NSUTF8StringEncoding]];
+    NSLog(@"Request At profile %@",request);
+    [request setTimeoutInterval:540];
+    [self forwardRequest1:request showActivity:YES completionHandler:handler];
+}
 
 
+-(void)sendReportReasonsWithInfo:(NSMutableDictionary*)userInfo completionHandler:(APICompletionHandler)handler;
+{
+    NSString* infoStr = [NSString stringWithFormat:@"access_token=%@&post_id=%@&reason_id=%@",userInfo[@"access_token"],userInfo[@"post_id"],userInfo[@"reason_id"]];
+    NSLog(@"%@",infoStr);
+    NSString *url=[[NSString stringWithFormat:@"%@report_post",WebURl] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    NSMutableURLRequest* request =[NSMutableURLRequest requestWithURL:[NSURL URLWithString:url]];
+    [request setHTTPBody:[infoStr dataUsingEncoding:NSUTF8StringEncoding]];
+    NSLog(@"Request At profile %@",request);
+    [request setTimeoutInterval:540];
+    [self forwardRequest1:request showActivity:YES completionHandler:handler];
+}
+-(void)getTeamWithInfo:(NSMutableDictionary*)userInfo completionHandler:(APICompletionHandler)handler;
+{
+    NSString* infoStr = [NSString stringWithFormat:@"access_token=%@",userInfo[@"access_token"]];
+    NSLog(@"%@",infoStr);
+    NSString *url=[[NSString stringWithFormat:@"%@get_teams",WebURl] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    NSMutableURLRequest* request =[NSMutableURLRequest requestWithURL:[NSURL URLWithString:url]];
+    [request setHTTPBody:[infoStr dataUsingEncoding:NSUTF8StringEncoding]];
+    NSLog(@"Request At profile %@",request);
+    [request setTimeoutInterval:540];
+    [self forwardRequest1:request showActivity:YES completionHandler:handler];
+}
+-(void)getCampaignListingWithInfo:(NSMutableDictionary*)userInfo completionHandler:(APICompletionHandler)handler;
+{
+    NSString* infoStr = [NSString stringWithFormat:@"access_token=%@&filter_team_id=%@",userInfo[@"access_token"],userInfo[@"filter_team_id"]];
+    NSLog(@"%@",infoStr);
+    NSString *url=[[NSString stringWithFormat:@"%@campaign_listing",WebURl] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    NSMutableURLRequest* request =[NSMutableURLRequest requestWithURL:[NSURL URLWithString:url]];
+    [request setHTTPBody:[infoStr dataUsingEncoding:NSUTF8StringEncoding]];
+    NSLog(@"Request At profile %@",request);
+    [request setTimeoutInterval:540];
+    [self forwardRequest1:request showActivity:YES completionHandler:handler];
+}
 
-
-
-
-
-
-
-
-
+-(void)getNotificationWithInfo:(NSMutableDictionary*)userInfo completionHandler:(APICompletionHandler)handler;
+{
+    NSString* infoStr = [NSString stringWithFormat:@"access_token=%@",userInfo[@"access_token"]];
+    NSLog(@"%@",infoStr);
+    NSString *url=[[NSString stringWithFormat:@"%@get_notifications",WebURl] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    NSMutableURLRequest* request =[NSMutableURLRequest requestWithURL:[NSURL URLWithString:url]];
+    [request setHTTPBody:[infoStr dataUsingEncoding:NSUTF8StringEncoding]];
+    NSLog(@"Request At profile %@",request);
+    [request setTimeoutInterval:540];
+    [self forwardRequest1:request showActivity:YES completionHandler:handler];
+}
 
 
 
@@ -244,6 +338,7 @@ static ApiMaster* singleton = nil;
          {
              
              [[[UIAlertView alloc] initWithTitle:@"Connection Error !" message:@"No Internet Connection" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil] show];
+        //     [MBProgressHUD hideHUDForView:self animated:YES];
              return;
          }
          McomLOG(@"Response String %@", NSStringFromNSData(data));
@@ -269,7 +364,7 @@ static ApiMaster* singleton = nil;
          {
              
              [[[UIAlertView alloc] initWithTitle:@"Connection Error !" message:@"No Internet Connection" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil] show];
-             
+            // [MBProgressHUD hideHUDForView:self.view animated:YES];
 //             [Appdelegate stopLoader:nil];
              
               return;

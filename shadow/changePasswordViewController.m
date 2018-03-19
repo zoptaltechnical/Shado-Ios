@@ -52,7 +52,7 @@
         [alert showAlertInView:self
                      withTitle:@"Shado Sport"
                   withSubtitle:@"Please enter old password."
-               withCustomImage:[UIImage imageNamed:@"AppIcon"]
+               withCustomImage:[UIImage imageNamed:@""]
            withDoneButtonTitle:nil
                     andButtons:nil];
         
@@ -71,7 +71,7 @@
         [alert showAlertInView:self
                      withTitle:@"Shado Sport"
                   withSubtitle:@"Please enter new password."
-               withCustomImage:[UIImage imageNamed:@"AppIcon"]
+               withCustomImage:[UIImage imageNamed:@""]
            withDoneButtonTitle:nil
                     andButtons:nil];
         
@@ -89,7 +89,7 @@
         [alert showAlertInView:self
                      withTitle:@"Shado Sport"
                   withSubtitle:@"Please enter confirm password."
-               withCustomImage:[UIImage imageNamed:@"AppIcon"]
+               withCustomImage:[UIImage imageNamed:@""]
            withDoneButtonTitle:nil
                     andButtons:nil];
         
@@ -100,7 +100,7 @@
         
         
     }
-        else if (newPasswordtextfield.text!=confirmPasswordtextfield.text)
+        else if (newPasswordtextfield.text=confirmPasswordtextfield.text)
         {
             FCAlertView *alert = [[FCAlertView alloc] init];
             alert.bounceAnimations = YES;
@@ -112,7 +112,7 @@
             [alert showAlertInView:self
                          withTitle:@"Shado Sport"
                       withSubtitle:@"Password do not match."
-                   withCustomImage:[UIImage imageNamed:@"AppIcon"]
+                   withCustomImage:[UIImage imageNamed:@""]
                withDoneButtonTitle:nil
                         andButtons:nil];
             
@@ -161,7 +161,7 @@
              [alert showAlertInView:self
                           withTitle:@"Shado Sport"
                        withSubtitle:[responseDict valueForKey:@"message"]
-                    withCustomImage:[UIImage imageNamed:@"AppIcon"]
+                    withCustomImage:[UIImage imageNamed:@""]
                 withDoneButtonTitle:nil
                          andButtons:nil];
              
@@ -182,7 +182,7 @@
              [alert showAlertInView:self
                           withTitle:@"Shado Sport"
                        withSubtitle:[responseDict valueForKey:@"message"]
-                    withCustomImage:[UIImage imageNamed:@"AppIcon"]
+                    withCustomImage:[UIImage imageNamed:@""]
                 withDoneButtonTitle:nil
                          andButtons:nil];
 
@@ -201,7 +201,7 @@
              [alert showAlertInView:self
                           withTitle:@"Shado Sport"
                        withSubtitle:[responseDict valueForKey:@"message"]
-                    withCustomImage:[UIImage imageNamed:@"AppIcon"]
+                    withCustomImage:[UIImage imageNamed:@""]
                 withDoneButtonTitle:nil
                          andButtons:nil];
              

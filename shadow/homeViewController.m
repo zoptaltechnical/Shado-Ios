@@ -15,8 +15,10 @@
 #define FOOTER_IDENTIFIER @"WaterfallFooter"
 @interface homeViewController ()
 {
+    NSMutableArray *gethomeListingArray,*myHomePosts,*myHomeTeam;
     NSArray*sliderAllImages,*PostAllImages;
-    NSString *secondCell;
+    NSString *secondCell,*teamString;
+    NSString *teamIdStrg;
 }
 @property (nonatomic, strong) NSArray *cellSizes;
 @property (nonatomic, strong) NSArray *cats;
@@ -27,19 +29,28 @@
 
 - (void)viewDidLoad
 {
+    teamIdStrg=@"";
+    gethomeListingArray=[[NSMutableArray alloc]init];
+    myHomePosts=[[NSMutableArray alloc]init];
+    myHomeTeam=[[NSMutableArray alloc]init];
+    teamString=@"team";
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
     [self.view addSubview:self.collectionView];
 
     [super viewDidLoad];
     sliderAllImages=[[NSArray alloc]init];
     PostAllImages=[[NSArray alloc]init];
-    sliderAllImages=@[@"img_team_logo",@"img_team_logo1",@"img_team_logo2",@"img_team_logo3",@"img_team_logo4",@"img_team_logo5" ,@"img_team_logo",@"img_team_logo1",@"img_team_logo2",@"img_team_logo3",@"img_team_logo4",@"img_team_logo5",@"img_team_logo",@"img_team_logo1",@"img_team_logo2",@"img_team_logo3",@"img_team_logo4",@"img_team_logo5"];
+ sliderAllImages=@[@"img_team_logo",@"img_team_logo1",@"img_team_logo2",@"img_team_logo3",@"img_team_logo4",@"img_team_logo5" ,@"img_team_logo",@"img_team_logo1",@"img_team_logo2",@"img_team_logo3",@"img_team_logo4",@"img_team_logo5",@"img_team_logo",@"img_team_logo1",@"img_team_logo2",@"img_team_logo3",@"img_team_logo4",@"img_team_logo5"];
     PostAllImages=@[@"img_post",@"img_post0",@"img_post",@"img_post0",@"img_post",@"img_post0" ,@"img_post"];
-    
+     [self getHomeListing:teamIdStrg];
     [self intialFrontValue];
     
 }
+-(void)viewWillAppear:(BOOL)animated
+{
+   
 
+}
 -(void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -88,7 +99,7 @@
             forSupplementaryViewOfKind:CHTCollectionElementKindSectionFooter
                    withReuseIdentifier:FOOTER_IDENTIFIER];
     }
-
+    
     return _collectionView;
 }
 - (void)viewDidAppear:(BOOL)animated {
@@ -128,6 +139,7 @@
 
 -(IBAction)allBtnPressed:(id)sender
 {
+    teamString=@"all";
     [allLine setHidden:NO];
     allLine.backgroundColor=[UIColor colorWithRed:234.0/255.0f green:33.0/255.0f blue:66.0/255.0f alpha:1];
     [allBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
@@ -135,11 +147,12 @@
     [teambtn setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
     fanLine.backgroundColor=[UIColor whiteColor];
     [fanBtn setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
-    
+    [self getHomeListing:teamIdStrg];
     
 }
 -(IBAction)teamBtnPressed:(id)sender
 {
+    teamString=@"team";
     [teamLine setHidden:NO];
     teamLine.backgroundColor=[UIColor colorWithRed:234.0/255.0f green:33.0/255.0f blue:66.0/255.0f alpha:1];
     [teambtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
@@ -148,10 +161,12 @@
     [allBtn setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
     [fanLine setHidden:YES];
     [fanBtn setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+   [self getHomeListing:teamIdStrg];
 }
 
 -(IBAction)fanbtnPressed:(id)sender
 {
+    teamString=@"fan";
     [fanLine setHidden:NO];
     fanLine.backgroundColor=[UIColor colorWithRed:234.0/255.0f green:33.0/255.0f blue:66.0/255.0f alpha:1];
     [fanBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
@@ -160,7 +175,7 @@
     [teambtn setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
     [allLine setHidden:YES];
     [allBtn setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
-    
+ [self getHomeListing:teamIdStrg];
 }
 - (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
     [super willAnimateRotationToInterfaceOrientation:toInterfaceOrientation duration:duration];
@@ -181,11 +196,11 @@
 {
     if(collectionView == sliderCollectionView)
     {
-        return [sliderAllImages count];
+        return [myHomeTeam count];
     }
     else if(collectionView == _collectionView)
     {
-        return CELL_COUNT;
+        return [myHomePosts count];
     }
     else
     {
@@ -198,23 +213,36 @@
     if(collectionView == sliderCollectionView)
     {
         HomeCollectionViewCell* cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"homeCellID" forIndexPath:indexPath];
-        
-        [cell.userProfilePic setImage:[UIImage imageNamed:[sliderAllImages objectAtIndex:indexPath.row]]];
+        [cell.userProfilePic sd_setImageWithURL:[NSURL URLWithString:[[myHomeTeam  objectAtIndex:indexPath.row]valueForKey:@"logo"] ] placeholderImage:[UIImage imageNamed:@""] options:SDWebImageRefreshCached];
+        cell.userProfilePic.layer.cornerRadius = cell.userProfilePic.frame.size.width/2;
+        cell.userProfilePic.clipsToBounds = YES;
+         cell.userProfilePic.layer.borderWidth = 1.0f;
+    cell.userProfilePic.layer.borderColor=[UIColor darkGrayColor].CGColor;
         return cell;
     }
     else if(collectionView == _collectionView)
     {
         CHTCollectionViewWaterfallCell *cell =
-        (CHTCollectionViewWaterfallCell *)[collectionView dequeueReusableCellWithReuseIdentifier:CELL_IDENTIFIER
-                                                                                    forIndexPath:indexPath];
-        cell.imageView.image = [UIImage imageNamed:self.cats[indexPath.item % 4]];
-       
+        (CHTCollectionViewWaterfallCell *)[collectionView dequeueReusableCellWithReuseIdentifier:CELL_IDENTIFIER   forIndexPath:indexPath];
 
-        
-//        HomePostCollectionViewCell* cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"HomePostCellID" forIndexPath:indexPath];
+
+
+      NSString *mediaType = [NSString stringWithFormat:@"%@",[[myHomePosts  objectAtIndex:indexPath.row]valueForKey:@"media_type"]];
+        if ([mediaType isEqualToString:@"picture"])
+        {
+            [cell.imageView sd_setImageWithURL:[NSURL URLWithString:[[myHomePosts  objectAtIndex:indexPath.row]valueForKey:@"media_url"] ] placeholderImage:[UIImage imageNamed:@""] options:SDWebImageRefreshCached];
+
+
+        }
+        else
+        {
+             [cell.imageView sd_setImageWithURL:[NSURL URLWithString:[[myHomePosts  objectAtIndex:indexPath.row]valueForKey:@"media_thumb"] ] placeholderImage:[UIImage imageNamed:@""] options:SDWebImageRefreshCached];
+
+        }
+
+
          cell.imageView.layer.cornerRadius =8;
          cell.imageView.clipsToBounds = YES;
-//        [ cell.imageView setImage:[UIImage imageNamed:[PostAllImages objectAtIndex:indexPath.row]]];
         return cell;
     }
     else
@@ -226,8 +254,33 @@
 {
     if(collectionView == _collectionView)
     {
-    HomeDetailViewController *tabBarController = [self.storyboard instantiateViewControllerWithIdentifier:@"HomeDetailViewController"];
-    [self.navigationController pushViewController:tabBarController animated:YES];
+        if ([[NSString stringWithFormat:@"%@",teamIdStrg]length]>0) {
+            HomeDetailViewController *tabBarController = [self.storyboard instantiateViewControllerWithIdentifier:@"HomeDetailViewController"];
+            tabBarController.teamStrg=teamString;
+             tabBarController.idStrg=teamIdStrg;
+           
+            [self.navigationController presentViewController:tabBarController animated:YES completion:nil];
+        }
+        else{
+            HomeDetailViewController *tabBarController = [self.storyboard instantiateViewControllerWithIdentifier:@"HomeDetailViewController"];
+            tabBarController.teamStrg=teamString;
+            
+            // tabBarController.dicData=[myHomeTeam objectAtIndex:indexPath.row];
+            [self.navigationController presentViewController:tabBarController animated:YES completion:nil];
+        }
+        
+        
+//    HomeDetailViewController *tabBarController = [self.storyboard instantiateViewControllerWithIdentifier:@"HomeDetailViewController"];
+//        tabBarController.idStrg=[NSString stringWithFormat:@"%@",[[myHomePosts objectAtIndex:indexPath.row]valueForKey:@"team_id"]];
+//        tabBarController.teamStrg=teamString;
+//        tabBarController.dicData=[myHomePosts objectAtIndex:indexPath.row];
+//
+//        [self.navigationController presentViewController:tabBarController animated:YES completion:nil];
+    }
+    else
+    {
+        teamIdStrg=[NSString stringWithFormat:@"%@",[[myHomeTeam objectAtIndex:indexPath.row]valueForKey:@"id"]];
+        [self getHomeListing:teamIdStrg];
     }
     
 }
@@ -235,55 +288,92 @@
 {
     if(collectionView == _collectionView)
     {
-        //return [self.cellSizes[indexPath.item % 4] CGSizeValue];
-
-
-
-        if (indexPath.row==0)
-        {
-            return CGSizeMake(140.f,180.f);
-        }
-        else if (indexPath.row==1)
-        {
-            return CGSizeMake(140.f, 280.f);
-        }
-        
-        else if (indexPath.row==2)
-        {
-            return CGSizeMake(140.f, 280.f);
-        }
-        else if (indexPath.row==3)
-        {
-            return CGSizeMake(170.f, 180.f);
-        }
-        else if (indexPath.row==4)
-        {
-            return CGSizeMake(140.f, 260.f);
-        }
-        else if (indexPath.row==5)
-        {
-            return CGSizeMake(140.f, 280.f);
-        }
-        else
-        {
-            return CGSizeMake(140.f, 220.f);
-        }
+       
+            return CGSizeMake([[NSString stringWithFormat:@"%@",[[myHomePosts objectAtIndex:indexPath.row ] valueForKey:@"width"]] floatValue],[[[myHomePosts objectAtIndex:indexPath.row ] valueForKey:@"height"] floatValue]);
     }
-
-    else if (collectionView == sliderCollectionView)
-        {
-            return CGSizeMake(80, 80);
-           
-
-        }
     else
-    {
-        
-        return [self.cellSizes[indexPath.item % 4] CGSizeValue];
-    }
+        {
+            return CGSizeMake(80,80);
+        }
+//    else
+//    {
+//
+//        return [self.cellSizes[indexPath.item % 4] CGSizeValue];
+//    }
 
 }
-#pragma mark - Navigation
+#pragma mark -Home Get listing Api
+-(void)getHomeListing:(NSString *)idStrng
+{
+[MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    NSDictionary* MyProfileInfo= @{
+                                @"access_token":[Utility valueForKey:access_token],
+                                @"list_type":teamString,
+                                @"filter_team_id":idStrng,
+                                };
+    
+
+McomLOG(@"%@",MyProfileInfo);
+[API myHomeListingWithInfo:[MyProfileInfo mutableCopy] completionHandler:^(NSDictionary *responseDict,NSError *error)
+ {
+     [MBProgressHUD hideHUDForView:self.view animated:YES];
+     NSDictionary *dict_response = [[NSDictionary alloc]initWithDictionary:responseDict];
+     if ([dict_response[@"code"] isEqualToString:@"201"])
+     {
+         FCAlertView *alert = [[FCAlertView alloc] init];
+         alert.bounceAnimations = YES;
+         alert.animateAlertInFromTop = YES;
+         alert.avoidCustomImageTint = YES;
+         alert.detachButtons = YES;
+         alert.blurBackground = YES;
+         
+         [alert showAlertInView:self
+                      withTitle:@"Shado Sport"
+                   withSubtitle:[responseDict valueForKey:@"message"]
+                withCustomImage:[UIImage imageNamed:@""]
+            withDoneButtonTitle:nil
+                     andButtons:nil];
+     }
+     
+     
+     else if ([dict_response[@"code"] isEqualToString:@"200"])
+     {
+         gethomeListingArray=[responseDict valueForKey:@"home_listing"];
+         NSLog(@"all data %@",gethomeListingArray);
+         myHomePosts=[gethomeListingArray valueForKey:@"posts"];
+         NSLog(@"post %@",myHomePosts);
+         [_collectionView reloadData];
+         
+          myHomeTeam=[gethomeListingArray valueForKey:@"teams"];
+           NSLog(@"team slider list%@",myHomeTeam);
+         [sliderCollectionView reloadData];
+         //teamIdStrg=@"";
+     }
+     
+     
+     else
+     {
+         FCAlertView *alert = [[FCAlertView alloc] init];
+         alert.bounceAnimations = YES;
+         alert.animateAlertInFromTop = YES;
+         alert.avoidCustomImageTint = YES;
+         alert.detachButtons = YES;
+         alert.blurBackground = YES;
+         
+         [alert showAlertInView:self
+                      withTitle:@"Shado Sport"
+                   withSubtitle:[responseDict valueForKey:@"message"]
+                withCustomImage:[UIImage imageNamed:@""]
+            withDoneButtonTitle:nil
+                     andButtons:nil];
+         
+     }
+     
+     
+ }];
+
+
+}
 
 
 

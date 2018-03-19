@@ -8,19 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HomeDetailViewController : UIViewController
+@interface HomeDetailViewController : UIViewController<CZPickerViewDataSource, CZPickerViewDelegate>
 {
     
-    IBOutlet UIButton *teamBtn;
-    IBOutlet UILabel *teamLineLabel;
-    IBOutlet UIButton *fanBtn;
-    IBOutlet UILabel *fanLineLabel;
    
-    IBOutlet UIButton *profileBtn;
-    IBOutlet UIButton *allBtn;
     
-    IBOutlet UILabel *allLineLabel;
+    __weak IBOutlet UITableView *homeDetailTableview;
+    IBOutlet UIButton *profileBtn;
+    
     IBOutlet UIButton *backButton;
   
 }
+@property (nonatomic,strong)NSString *idStrg,*temaStrg;
+@property (nonatomic,strong)NSString *teamStrg;
+@property (nonatomic,strong)NSDictionary *dicData;
+
 @end

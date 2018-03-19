@@ -765,7 +765,7 @@ NSString *const LLSimpleCameraErrorDomain = @"LLSimpleCameraErrorDomain";
 {
     [super viewWillLayoutSubviews];
     
-    self.preview.frame = CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height - 100);
+    self.preview.frame = CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height );
     
     CGRect bounds = self.preview.bounds;
     self.captureVideoPreviewLayer.bounds = bounds;

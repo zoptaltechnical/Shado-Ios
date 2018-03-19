@@ -11,7 +11,9 @@
 @interface giftViewController ()
 
 {
+    NSMutableArray *getTeamArray,*getCompanignArray;
     NSArray*sliderAllImages;
+    NSString *teamId;
     NSString*stringButton;
 }
 @end
@@ -21,13 +23,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
    
-    
+    getCompanignArray=[[NSMutableArray alloc]init];
+    getTeamArray=[[NSMutableArray alloc]init];
     
 sliderAllImages=@[@"img_team_logo",@"img_team_logo1",@"img_team_logo2",@"img_team_logo3",@"img_team_logo4",@"img_team_logo5" ,@"img_team_logo",@"img_team_logo1",@"img_team_logo2",@"img_team_logo3",@"img_team_logo4",@"img_team_logo5",@"img_team_logo",@"img_team_logo1",@"img_team_logo2",@"img_team_logo3",@"img_team_logo4",@"img_team_logo5"];
     // Do any additional setup after loading the view.
 }
 -(void)viewWillAppear:(BOOL)animated
 {
+    [self getTeamApi];
+    [self getCampaignListingApi:teamId];
     stringButton=@"Campanign";
     [campaignBtn setTitleColor:[UIColor colorWithRed:236.0f/255.0f green:36.0f/255.0f blue:64.0f/255.0f alpha:1.0] forState:UIControlStateNormal];
     campaignBtn.backgroundColor=[UIColor colorWithRed:229.0f/255.0f green:229.0f/255.0f blue:229.0f/255.0f alpha:1.0] ;
@@ -48,7 +53,7 @@ sliderAllImages=@[@"img_team_logo",@"img_team_logo1",@"img_team_logo2",@"img_tea
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
     
-        return [sliderAllImages count] ;
+        return [getTeamArray count] ;
     
     }
 
@@ -56,22 +61,26 @@ sliderAllImages=@[@"img_team_logo",@"img_team_logo1",@"img_team_logo2",@"img_tea
 {
     
         GiftSliderCollectionViewCell* cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"giftCellID" forIndexPath:indexPath];
-        cell.userProfilePic.layer.cornerRadius =8;
-        cell.userProfilePic.clipsToBounds = YES;
-        [cell.userProfilePic setImage:[UIImage imageNamed:[sliderAllImages objectAtIndex:indexPath.row]]];
+    cell.userProfilePic.layer.cornerRadius = cell.userProfilePic.frame.size.width/2;
+    cell.userProfilePic.clipsToBounds = YES;
+    cell.userProfilePic.layer.borderWidth = 1.0f;
+    cell.userProfilePic.layer.borderColor=[UIColor darkGrayColor].CGColor;
+    [cell.userProfilePic sd_setImageWithURL:[NSURL URLWithString:[[getTeamArray  objectAtIndex:indexPath.row]valueForKey:@"logo"] ] placeholderImage:[UIImage imageNamed:@""] options:SDWebImageRefreshCached];
+
         return cell;
             return cell;
     
 }
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(nonnull NSIndexPath *)indexPath
 {
-    
+    teamId=[NSString stringWithFormat:@"%@",[[getTeamArray objectAtIndex:indexPath.row]valueForKey:@"id"]];
+    [self getCampaignListingApi:teamId];
     
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section;
 {
    
-    return 8;
+    return [getCompanignArray count];
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -82,8 +91,111 @@ sliderAllImages=@[@"img_team_logo",@"img_team_logo1",@"img_team_logo2",@"img_tea
     {
         cell = [[GiftTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:MyIdentifier];
     }
+    cell.userPic.layer.cornerRadius = cell.userPic.frame.size.width/2;
+    cell.userPic.clipsToBounds = YES;
+    cell.userPic.layer.borderWidth = 1.0f;
+    cell.userPic.layer.borderColor=[UIColor darkGrayColor].CGColor;
+    if ([[[getCompanignArray  objectAtIndex:indexPath.row]valueForKey:@"team_icon"]length]>0) {
+          [cell.userPic sd_setImageWithURL:[NSURL URLWithString:[[getCompanignArray  objectAtIndex:indexPath.row]valueForKey:@"team_icon"] ] placeholderImage:[UIImage imageNamed:@""] options:SDWebImageRefreshCached];
+    }
+    else{
+        cell.userPic.image =[UIImage imageNamed:@""];
+    }
+ 
+     if ([[[getCompanignArray  objectAtIndex:indexPath.row]valueForKey:@"campaign_img"]length]>0)
+     {
+     [cell.coverPic sd_setImageWithURL:[NSURL URLWithString:[[getCompanignArray  objectAtIndex:indexPath.row]valueForKey:@"campaign_img"] ] placeholderImage:[UIImage imageNamed:@""] options:SDWebImageRefreshCached];
+    
+     }
+     else{
+         cell.coverPic.image =[UIImage imageNamed:@""];
+     }
+    
+    if ([[[getCompanignArray  objectAtIndex:indexPath.row]valueForKey:@"team_name"]length]>0)
+    {
+        cell.nameLabel.text=[NSString stringWithFormat:@"%@",[[getCompanignArray  objectAtIndex:indexPath.row]valueForKey:@"team_name"]];
+    }
+    else{
+        cell.nameLabel.text=@"";
+    }
+    if ([[[getCompanignArray  objectAtIndex:indexPath.row]valueForKey:@"campaign_title"]length]>0)
+    {
+        cell.countryNameLbel.text=[NSString stringWithFormat:@"%@",[[getCompanignArray  objectAtIndex:indexPath.row]valueForKey:@"campaign_title"]];
+    }
+    else{
+        cell.countryNameLbel.text=@"";
+    }
+   int distanceValue=[[NSString stringWithFormat:@"%@",[[getCompanignArray  objectAtIndex:indexPath.row]valueForKey:@"campaign_achieved"]] intValue];
+    [cell.shiftslider setValue:distanceValue animated:YES];
+
        [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
     return  cell;
+}
+#pragma mark
+#pragma mark Get TeamApi
+#pragma mark
+-(void)getTeamApi
+{
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    NSDictionary* Info= @{
+                          @"access_token":[Utility valueForKey:access_token],
+                          
+                          };
+    
+    
+    McomLOG(@"%@",Info);
+    [API getTeamWithInfo:[Info mutableCopy] completionHandler:^(NSDictionary *responseDict,NSError *error)
+     {
+         [MBProgressHUD hideHUDForView:self.view animated:YES];
+         NSDictionary *dict_response = [[NSDictionary alloc]initWithDictionary:responseDict];
+         if ([dict_response[@"code"] isEqualToString:@"201"])
+         {
+             FCAlertView *alert = [[FCAlertView alloc] init];
+             alert.bounceAnimations = YES;
+             alert.animateAlertInFromTop = YES;
+             alert.avoidCustomImageTint = YES;
+             alert.detachButtons = YES;
+             alert.blurBackground = YES;
+             
+             [alert showAlertInView:self
+                          withTitle:@"Shado Sport"
+                       withSubtitle:[responseDict valueForKey:@"message"]
+                    withCustomImage:[UIImage imageNamed:@""]
+                withDoneButtonTitle:nil
+                         andButtons:nil];
+         }
+         
+         
+         else if ([dict_response[@"code"] isEqualToString:@"200"])
+         {
+             getTeamArray=[responseDict valueForKey:@"data"];
+             [giftCollectionView reloadData];
+             
+         }
+         
+         
+         else
+         {
+             FCAlertView *alert = [[FCAlertView alloc] init];
+             alert.bounceAnimations = YES;
+             alert.animateAlertInFromTop = YES;
+             alert.avoidCustomImageTint = YES;
+             alert.detachButtons = YES;
+             alert.blurBackground = YES;
+             
+             [alert showAlertInView:self
+                          withTitle:@"Shado Sport"
+                       withSubtitle:[responseDict valueForKey:@"message"]
+                    withCustomImage:[UIImage imageNamed:@""]
+                withDoneButtonTitle:nil
+                         andButtons:nil];
+             
+         }
+         
+         
+     }];
+    
+    
 }
 
 
@@ -92,7 +204,7 @@ sliderAllImages=@[@"img_team_logo",@"img_team_logo1",@"img_team_logo2",@"img_tea
     if ([stringButton isEqualToString:@"Campanign"])
     {
         GiftDetailViewController *secondView = [self.storyboard instantiateViewControllerWithIdentifier:@"GiftDetailViewController"];
-        
+        secondView.giftcampaignDict = [getCompanignArray objectAtIndex:indexPath.row];
         [self.navigationController pushViewController:secondView animated:YES];
 
     }
@@ -103,7 +215,82 @@ sliderAllImages=@[@"img_team_logo",@"img_team_logo1",@"img_team_logo2",@"img_tea
         [self.navigationController pushViewController:secondView animated:YES];
     }
    }
-
+#pragma mark
+#pragma mark Get campaign Api
+#pragma mark
+-(void)getCampaignListingApi:(NSString *)teamIdStrng
+{
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    NSDictionary* Info;
+    if (teamIdStrng==0)
+    {
+        Info= @{
+                              @"access_token":[Utility valueForKey:access_token],
+                              @"filter_team_id":@"",
+                              };
+    }
+    else
+    {
+  Info= @{
+                          @"access_token":[Utility valueForKey:access_token],
+                          @"filter_team_id":teamIdStrng,
+                          };
+    }
+    
+    McomLOG(@"%@",Info);
+    [API getCampaignListingWithInfo:[Info mutableCopy] completionHandler:^(NSDictionary *responseDict,NSError *error)
+     {
+         [MBProgressHUD hideHUDForView:self.view animated:YES];
+         NSDictionary *dict_response = [[NSDictionary alloc]initWithDictionary:responseDict];
+         if ([dict_response[@"code"] isEqualToString:@"201"])
+         {
+             FCAlertView *alert = [[FCAlertView alloc] init];
+             alert.bounceAnimations = YES;
+             alert.animateAlertInFromTop = YES;
+             alert.avoidCustomImageTint = YES;
+             alert.detachButtons = YES;
+             alert.blurBackground = YES;
+             
+             [alert showAlertInView:self
+                          withTitle:@"Shado Sport"
+                       withSubtitle:[responseDict valueForKey:@"message"]
+                    withCustomImage:[UIImage imageNamed:@""]
+                withDoneButtonTitle:nil
+                         andButtons:nil];
+         }
+         
+         
+         else if ([dict_response[@"code"] isEqualToString:@"200"])
+         {
+             getCompanignArray=[responseDict valueForKey:@"data"];
+             [giftTableview reloadData];
+             
+         }
+         
+         
+         else
+         {
+             FCAlertView *alert = [[FCAlertView alloc] init];
+             alert.bounceAnimations = YES;
+             alert.animateAlertInFromTop = YES;
+             alert.avoidCustomImageTint = YES;
+             alert.detachButtons = YES;
+             alert.blurBackground = YES;
+             
+             [alert showAlertInView:self
+                          withTitle:@"Shado Sport"
+                       withSubtitle:[responseDict valueForKey:@"message"]
+                    withCustomImage:[UIImage imageNamed:@""]
+                withDoneButtonTitle:nil
+                         andButtons:nil];
+             
+         }
+         
+         
+     }];
+    
+    
+}
 - (IBAction)persoanlProfileBtnPressed:(id)sender {
     
 
@@ -124,6 +311,9 @@ sliderAllImages=@[@"img_team_logo",@"img_team_logo1",@"img_team_logo2",@"img_tea
     
     
      stringButton=@"Campanign";
+    teamId=@"";
+    [self getCampaignListingApi:teamId];
+    
     [campaignBtn setTitleColor:[UIColor colorWithRed:236.0f/255.0f green:36.0f/255.0f blue:64.0f/255.0f alpha:1.0] forState:UIControlStateNormal];
     campaignBtn.backgroundColor=[UIColor colorWithRed:229.0f/255.0f green:229.0f/255.0f blue:229.0f/255.0f alpha:1.0] ;
     

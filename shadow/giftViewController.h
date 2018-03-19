@@ -11,8 +11,10 @@
 @interface giftViewController : UIViewController
 
 {
+    __weak IBOutlet UITableView *giftTableview;
     IBOutlet UIButton *merchandiseBtn;
     
+    __weak IBOutlet UICollectionView *giftCollectionView;
     IBOutlet UIButton *persoanlProfileBtn;
     IBOutlet UIButton *campaignBtn;
 }

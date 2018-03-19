@@ -10,6 +10,11 @@
 		0DE8B8358EB5B8EA14D23CA9 /* libPods-shadoUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E3A037012FD7014F49538E7F /* libPods-shadoUITests.a */; };
 		11356622341FD8A218CE10F5 /* libPods-shado.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 985FFB9BE13887992946AF4D /* libPods-shado.a */; };
 		629F8BA03B4F0C8DDB2E2E36 /* libPods-shadoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BD5252AD3F3DE081CD0F004 /* libPods-shadoTests.a */; };
+		EA0F4C7B20402EC000D0F05A /* StatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0F4C7A20402EC000D0F05A /* StatsViewController.m */; };
+		EA0F4C7F204031E600D0F05A /* MyTeamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0F4C7E204031E600D0F05A /* MyTeamViewController.m */; };
+		EA0F4C82204036ED00D0F05A /* MyTeamTableViewTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0F4C81204036ED00D0F05A /* MyTeamTableViewTableViewCell.m */; };
+		EA0F4C852040370C00D0F05A /* searchTeamTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0F4C842040370C00D0F05A /* searchTeamTableViewCell.m */; };
+		EA0F4C882040377A00D0F05A /* SearchTeamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0F4C872040377A00D0F05A /* SearchTeamViewController.m */; };
 		EA33FC702015E34F009F7D2B /* GiftMerchandiseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA33FC6F2015E34F009F7D2B /* GiftMerchandiseViewController.m */; };
 		EA33FC732015E6C8009F7D2B /* GiftMerchandiseCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA33FC722015E6C8009F7D2B /* GiftMerchandiseCollectionViewCell.m */; };
 		EA4E135A202C810300F03B7D /* FCAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA4E1359202C810300F03B7D /* FCAlertView.m */; };
@@ -59,7 +64,6 @@
 		EA992EA91FE3F0FA00A47BE4 /* SYTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA992EA61FE3F0FA00A47BE4 /* SYTabBarController.m */; };
 		EAA0798A1FE3B3F0008132F0 /* homeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA079891FE3B3F0008132F0 /* homeViewController.m */; };
 		EAA079901FE3DC43008132F0 /* HomeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA0798F1FE3DC43008132F0 /* HomeCollectionViewCell.m */; };
-		EAA079931FE3E3A6008132F0 /* HomePostCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA079921FE3E3A6008132F0 /* HomePostCollectionViewCell.m */; };
 		EAB278652010977200EE460E /* PersonalProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAB278642010977200EE460E /* PersonalProfile.storyboard */; };
 		EAB2786B2010A05C00EE460E /* personalProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB2786A2010A05C00EE460E /* personalProfileViewController.m */; };
 		EAB2786F2010A6C500EE460E /* CreateCampaignViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB2786E2010A6C500EE460E /* CreateCampaignViewController.m */; };
@@ -73,6 +77,8 @@
 		EAB2789B2010CDEF00EE460E /* NewCreateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB2789A2010CDEF00EE460E /* NewCreateViewController.m */; };
 		EABDD16F1FE2460600E0EB32 /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EABDD16E1FE2460600E0EB32 /* SignInViewController.m */; };
 		EABDD1731FE2588100E0EB32 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EABDD1721FE2588100E0EB32 /* SignUpViewController.m */; };
+		EAC8DE2A2046705900AEEEBB /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAC8DE292046705900AEEEBB /* AVFoundation.framework */; };
+		EACA9643203AD941002282D5 /* CameraPostDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EACA9642203AD941002282D5 /* CameraPostDetailViewController.m */; };
 		EAD29F052036AA32000467F9 /* CameraVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAD29F042036AA32000467F9 /* CameraVideoViewController.m */; };
 		EAD29F0C2036D472000467F9 /* UIImage+FixOrientation.m in Sources */ = {isa = PBXBuildFile; fileRef = EAD29F072036D472000467F9 /* UIImage+FixOrientation.m */; };
 		EAD29F0D2036D472000467F9 /* LLSimpleCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = EAD29F092036D472000467F9 /* LLSimpleCamera.m */; };
@@ -108,6 +114,10 @@
 		EADE29462018878100796AC2 /* cat2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EADE29422018878100796AC2 /* cat2.jpg */; };
 		EADE29472018878100796AC2 /* cat3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EADE29432018878100796AC2 /* cat3.jpg */; };
 		EADE29482018878100796AC2 /* cat4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EADE29442018878100796AC2 /* cat4.jpg */; };
+		FA71510B2051491600C777B6 /* HomePostCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7151092051491500C777B6 /* HomePostCollectionViewCell.m */; };
+		FAAB29112050F63F006E303A /* ChatTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FAAB29102050F63F006E303A /* ChatTableViewCell.m */; };
+		FAAB29142050F933006E303A /* chatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAAB29132050F933006E303A /* chatViewController.m */; };
+		FAC5AF36204FCD74009EA664 /* CZPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC5AF35204FCD73009EA664 /* CZPickerView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -137,6 +147,17 @@
 		9BD5252AD3F3DE081CD0F004 /* libPods-shadoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-shadoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A31B4BCA70EF3C1B1CC6FCC3 /* Pods-shadoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-shadoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-shadoUITests/Pods-shadoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		E3A037012FD7014F49538E7F /* libPods-shadoUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-shadoUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA0F4C7420402E6700D0F05A /* shado-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "shado-Bridging-Header.h"; sourceTree = "<group>"; };
+		EA0F4C7920402EC000D0F05A /* StatsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StatsViewController.h; sourceTree = "<group>"; };
+		EA0F4C7A20402EC000D0F05A /* StatsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StatsViewController.m; sourceTree = "<group>"; };
+		EA0F4C7D204031E600D0F05A /* MyTeamViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyTeamViewController.h; sourceTree = "<group>"; };
+		EA0F4C7E204031E600D0F05A /* MyTeamViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyTeamViewController.m; sourceTree = "<group>"; };
+		EA0F4C80204036ED00D0F05A /* MyTeamTableViewTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyTeamTableViewTableViewCell.h; sourceTree = "<group>"; };
+		EA0F4C81204036ED00D0F05A /* MyTeamTableViewTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyTeamTableViewTableViewCell.m; sourceTree = "<group>"; };
+		EA0F4C832040370C00D0F05A /* searchTeamTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = searchTeamTableViewCell.h; sourceTree = "<group>"; };
+		EA0F4C842040370C00D0F05A /* searchTeamTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = searchTeamTableViewCell.m; sourceTree = "<group>"; };
+		EA0F4C862040377A00D0F05A /* SearchTeamViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchTeamViewController.h; sourceTree = "<group>"; };
+		EA0F4C872040377A00D0F05A /* SearchTeamViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchTeamViewController.m; sourceTree = "<group>"; };
 		EA33FC6E2015E34F009F7D2B /* GiftMerchandiseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GiftMerchandiseViewController.h; sourceTree = "<group>"; };
 		EA33FC6F2015E34F009F7D2B /* GiftMerchandiseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GiftMerchandiseViewController.m; sourceTree = "<group>"; };
 		EA33FC712015E6C8009F7D2B /* GiftMerchandiseCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GiftMerchandiseCollectionViewCell.h; sourceTree = "<group>"; };
@@ -230,8 +251,6 @@
 		EAA079891FE3B3F0008132F0 /* homeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = homeViewController.m; sourceTree = "<group>"; };
 		EAA0798E1FE3DC43008132F0 /* HomeCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeCollectionViewCell.h; path = ../HomeCollectionViewCell.h; sourceTree = "<group>"; };
 		EAA0798F1FE3DC43008132F0 /* HomeCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeCollectionViewCell.m; path = ../HomeCollectionViewCell.m; sourceTree = "<group>"; };
-		EAA079911FE3E3A6008132F0 /* HomePostCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomePostCollectionViewCell.h; path = ../HomePostCollectionViewCell.h; sourceTree = "<group>"; };
-		EAA079921FE3E3A6008132F0 /* HomePostCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomePostCollectionViewCell.m; path = ../HomePostCollectionViewCell.m; sourceTree = "<group>"; };
 		EAB278642010977200EE460E /* PersonalProfile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PersonalProfile.storyboard; sourceTree = "<group>"; };
 		EAB278692010A05C00EE460E /* personalProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = personalProfileViewController.h; sourceTree = "<group>"; };
 		EAB2786A2010A05C00EE460E /* personalProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = personalProfileViewController.m; sourceTree = "<group>"; };
@@ -258,6 +277,9 @@
 		EABDD1711FE2588100E0EB32 /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
 		EABDD1721FE2588100E0EB32 /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
 		EABDD1741FE25F4A00E0EB32 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		EAC8DE292046705900AEEEBB /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		EACA9641203AD941002282D5 /* CameraPostDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraPostDetailViewController.h; sourceTree = "<group>"; };
+		EACA9642203AD941002282D5 /* CameraPostDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraPostDetailViewController.m; sourceTree = "<group>"; };
 		EAD29F032036AA32000467F9 /* CameraVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraVideoViewController.h; sourceTree = "<group>"; };
 		EAD29F042036AA32000467F9 /* CameraVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraVideoViewController.m; sourceTree = "<group>"; };
 		EAD29F062036D472000467F9 /* UIImage+FixOrientation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+FixOrientation.h"; sourceTree = "<group>"; };
@@ -318,6 +340,15 @@
 		EADE29422018878100796AC2 /* cat2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cat2.jpg; sourceTree = "<group>"; };
 		EADE29432018878100796AC2 /* cat3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cat3.jpg; sourceTree = "<group>"; };
 		EADE29442018878100796AC2 /* cat4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cat4.jpg; sourceTree = "<group>"; };
+		FA7151092051491500C777B6 /* HomePostCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePostCollectionViewCell.m; sourceTree = "<group>"; };
+		FA71510A2051491600C777B6 /* HomePostCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePostCollectionViewCell.h; sourceTree = "<group>"; };
+		FAAB290F2050F63F006E303A /* ChatTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChatTableViewCell.h; sourceTree = "<group>"; };
+		FAAB29102050F63F006E303A /* ChatTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatTableViewCell.m; sourceTree = "<group>"; };
+		FAAB29122050F933006E303A /* chatViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = chatViewController.h; sourceTree = "<group>"; };
+		FAAB29132050F933006E303A /* chatViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = chatViewController.m; sourceTree = "<group>"; };
+		FAC5AF33204FCD73009EA664 /* CZPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZPicker.h; sourceTree = "<group>"; };
+		FAC5AF34204FCD73009EA664 /* CZPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZPickerView.h; sourceTree = "<group>"; };
+		FAC5AF35204FCD73009EA664 /* CZPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZPickerView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -325,6 +356,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAC8DE2A2046705900AEEEBB /* AVFoundation.framework in Frameworks */,
 				EA992E9C1FE3EFCF00A47BE4 /* UIKit.framework in Frameworks */,
 				11356622341FD8A218CE10F5 /* libPods-shado.a in Frameworks */,
 			);
@@ -360,6 +392,15 @@
 				96BE495AC6781F2EBB936A4A /* Pods-shadoUITests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		EA0F4C7C20402ECB00D0F05A /* My Stats */ = {
+			isa = PBXGroup;
+			children = (
+				EA0F4C7920402EC000D0F05A /* StatsViewController.h */,
+				EA0F4C7A20402EC000D0F05A /* StatsViewController.m */,
+			);
+			name = "My Stats";
 			sourceTree = "<group>";
 		};
 		EA50F0EB20205244005F041B /* MY Merchandise */ = {
@@ -409,6 +450,10 @@
 				EA5659181FECEF2D0056F537 /* HomeDetailViewController.m */,
 				EA56591C1FED075B0056F537 /* HomeDetailTableViewCell.h */,
 				EA56591D1FED075B0056F537 /* HomeDetailTableViewCell.m */,
+				FAAB29122050F933006E303A /* chatViewController.h */,
+				FAAB29132050F933006E303A /* chatViewController.m */,
+				FAAB290F2050F63F006E303A /* ChatTableViewCell.h */,
+				FAAB29102050F63F006E303A /* ChatTableViewCell.m */,
 			);
 			name = "Home Detail View controller";
 			sourceTree = "<group>";
@@ -424,8 +469,8 @@
 				EAA079891FE3B3F0008132F0 /* homeViewController.m */,
 				EAA0798E1FE3DC43008132F0 /* HomeCollectionViewCell.h */,
 				EAA0798F1FE3DC43008132F0 /* HomeCollectionViewCell.m */,
-				EAA079911FE3E3A6008132F0 /* HomePostCollectionViewCell.h */,
-				EAA079921FE3E3A6008132F0 /* HomePostCollectionViewCell.m */,
+				FA71510A2051491600C777B6 /* HomePostCollectionViewCell.h */,
+				FA7151092051491500C777B6 /* HomePostCollectionViewCell.m */,
 			);
 			name = "Home View Controller";
 			sourceTree = "<group>";
@@ -506,8 +551,7 @@
 				EA5C5C241FE0E7DD009879D8 /* ViewController.h */,
 				EA5C5C251FE0E7DD009879D8 /* ViewController.m */,
 				EA5C5C271FE0E7DD009879D8 /* Main.storyboard */,
-				EAD29F032036AA32000467F9 /* CameraVideoViewController.h */,
-				EAD29F042036AA32000467F9 /* CameraVideoViewController.m */,
+				EACA9644203AD94B002282D5 /* Camera Section */,
 				EA6F0D9E2021A999002FAA52 /* profile view controller */,
 				EAB2786C2010A06200EE460E /* Personal Profile */,
 				EA5A33E220075FAC006E765C /* SignIn Section */,
@@ -640,6 +684,7 @@
 		EA992E9A1FE3EFCF00A47BE4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EAC8DE292046705900AEEEBB /* AVFoundation.framework */,
 				EA992E9B1FE3EFCF00A47BE4 /* UIKit.framework */,
 				985FFB9BE13887992946AF4D /* libPods-shado.a */,
 				9BD5252AD3F3DE081CD0F004 /* libPods-shadoTests.a */,
@@ -664,16 +709,37 @@
 		EAB2786C2010A06200EE460E /* Personal Profile */ = {
 			isa = PBXGroup;
 			children = (
+				EA0F4C7D204031E600D0F05A /* MyTeamViewController.h */,
+				EA0F4C7E204031E600D0F05A /* MyTeamViewController.m */,
 				EAB278642010977200EE460E /* PersonalProfile.storyboard */,
+				EA0F4C862040377A00D0F05A /* SearchTeamViewController.h */,
+				EA0F4C872040377A00D0F05A /* SearchTeamViewController.m */,
+				EA0F4C80204036ED00D0F05A /* MyTeamTableViewTableViewCell.h */,
+				EA0F4C81204036ED00D0F05A /* MyTeamTableViewTableViewCell.m */,
+				EA0F4C832040370C00D0F05A /* searchTeamTableViewCell.h */,
+				EA0F4C842040370C00D0F05A /* searchTeamTableViewCell.m */,
 				EA50F0EC20205253005F041B /* personal Profile Info */,
 				EA50F0ED20205269005F041B /* My Campaign */,
 				EA50F0EB20205244005F041B /* MY Merchandise */,
+				EA0F4C7420402E6700D0F05A /* shado-Bridging-Header.h */,
+				EA0F4C7C20402ECB00D0F05A /* My Stats */,
 			);
 			name = "Personal Profile";
 			path = ..;
 			sourceTree = "<group>";
 		};
-		EAD664DF1FE262010038CA24 /* Extra Files */ = {
+		EACA9644203AD94B002282D5 /* Camera Section */ = {
+			isa = PBXGroup;
+			children = (
+				EAD29F032036AA32000467F9 /* CameraVideoViewController.h */,
+				EAD29F042036AA32000467F9 /* CameraVideoViewController.m */,
+				EACA9641203AD941002282D5 /* CameraPostDetailViewController.h */,
+				EACA9642203AD941002282D5 /* CameraPostDetailViewController.m */,
+			);
+			name = "Camera Section";
+			sourceTree = "<group>";
+		};
+		EACA9645203AD974002282D5 /* Custom Camera */ = {
 			isa = PBXGroup;
 			children = (
 				EAD29F262036FE54000467F9 /* VideoViewController.h */,
@@ -691,8 +757,25 @@
 				EAD29F132036D489000467F9 /* cancel.png */,
 				EAD29F142036D489000467F9 /* cancel@2x.png */,
 				EAD29F152036D489000467F9 /* cancel@3x.png */,
+			);
+			name = "Custom Camera";
+			sourceTree = "<group>";
+		};
+		EACA9646203AD98C002282D5 /* FC alert view */ = {
+			isa = PBXGroup;
+			children = (
 				EA4E1358202C810300F03B7D /* FCAlertView.h */,
 				EA4E1359202C810300F03B7D /* FCAlertView.m */,
+			);
+			name = "FC alert view";
+			sourceTree = "<group>";
+		};
+		EAD664DF1FE262010038CA24 /* Extra Files */ = {
+			isa = PBXGroup;
+			children = (
+				FAC5AF37204FCD79009EA664 /* CZ picker view */,
+				EACA9645203AD974002282D5 /* Custom Camera */,
+				EACA9646203AD98C002282D5 /* FC alert view */,
 				EA6F0D7F20218B86002FAA52 /* MBProgressHub */,
 				EA6F0D8320218BAF002FAA52 /* RunThread  */,
 				EADE292E2018739B00796AC2 /* CHT CollectionView */,
@@ -783,6 +866,16 @@
 			path = "CHT CollectionView";
 			sourceTree = "<group>";
 		};
+		FAC5AF37204FCD79009EA664 /* CZ picker view */ = {
+			isa = PBXGroup;
+			children = (
+				FAC5AF33204FCD73009EA664 /* CZPicker.h */,
+				FAC5AF34204FCD73009EA664 /* CZPickerView.h */,
+				FAC5AF35204FCD73009EA664 /* CZPickerView.m */,
+			);
+			name = "CZ picker view";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -860,7 +953,8 @@
 					EA5C5C1A1FE0E7DD009879D8 = {
 						CreatedOnToolsVersion = 8.3.1;
 						DevelopmentTeam = TQ2L8PNXPU;
-						ProvisioningStyle = Automatic;
+						LastSwiftMigration = 0920;
+						ProvisioningStyle = Manual;
 					};
 					EA5C5C331FE0E7DD009879D8 = {
 						CreatedOnToolsVersion = 8.3.1;
@@ -962,9 +1056,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-shado/Pods-shado-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlacePicker/Frameworks/GooglePlacePicker.framework/Resources/GooglePlacePicker.bundle",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlacePicker.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1099,12 +1200,15 @@
 				EA6F0D7E20218B82002FAA52 /* MBProgressHUD.m in Sources */,
 				EADE292D201866DB00796AC2 /* SearchDetailFollowViewController.m in Sources */,
 				EA6F0DA42021BCEB002FAA52 /* changePasswordViewController.m in Sources */,
+				EA0F4C7F204031E600D0F05A /* MyTeamViewController.m in Sources */,
 				EADE291F20184BFF00796AC2 /* SearchDetailViewController.m in Sources */,
 				EAD664FD1FE27E9C0038CA24 /* Utility.m in Sources */,
 				EA6F0D8220218BAB002FAA52 /* RunOnMainThread.m in Sources */,
+				FA71510B2051491600C777B6 /* HomePostCollectionViewCell.m in Sources */,
 				EABDD16F1FE2460600E0EB32 /* SignInViewController.m in Sources */,
 				EA992EA81FE3F0FA00A47BE4 /* SYTabBar.m in Sources */,
 				EA5A33EC200791C0006E765C /* GiftDetailViewController.m in Sources */,
+				FAAB29112050F63F006E303A /* ChatTableViewCell.m in Sources */,
 				EABDD1731FE2588100E0EB32 /* SignUpViewController.m in Sources */,
 				EA7860C720174E2A00D62B01 /* BKCardExpiryField.m in Sources */,
 				EA5659191FECEF2D0056F537 /* HomeDetailViewController.m in Sources */,
@@ -1130,8 +1234,10 @@
 				EA33FC732015E6C8009F7D2B /* GiftMerchandiseCollectionViewCell.m in Sources */,
 				EA7860CD20174E2A00D62B01 /* BKForwardingTextField.m in Sources */,
 				EAD29F0C2036D472000467F9 /* UIImage+FixOrientation.m in Sources */,
+				EACA9643203AD941002282D5 /* CameraPostDetailViewController.m in Sources */,
 				EAB2788F2010BB2E00EE460E /* AbstractActionSheetPicker.m in Sources */,
-				EAA079931FE3E3A6008132F0 /* HomePostCollectionViewCell.m in Sources */,
+				FAC5AF36204FCD74009EA664 /* CZPickerView.m in Sources */,
+				FAAB29142050F933006E303A /* chatViewController.m in Sources */,
 				EAB278912010BB2E00EE460E /* NSDate+TCUtils.m in Sources */,
 				EA56591E1FED075B0056F537 /* HomeDetailTableViewCell.m in Sources */,
 				EADE29402018741700796AC2 /* CHTCollectionViewWaterfallHeader.m in Sources */,
@@ -1150,6 +1256,9 @@
 				EAB278902010BB2E00EE460E /* ActionSheetDatePicker.m in Sources */,
 				EA5C5C231FE0E7DD009879D8 /* AppDelegate.m in Sources */,
 				EAD664E91FE262010038CA24 /* TPKeyboardAvoidingCollectionView.m in Sources */,
+				EA0F4C852040370C00D0F05A /* searchTeamTableViewCell.m in Sources */,
+				EA0F4C7B20402EC000D0F05A /* StatsViewController.m in Sources */,
+				EA0F4C882040377A00D0F05A /* SearchTeamViewController.m in Sources */,
 				EA6F0DA12021AB4A002FAA52 /* ProfileViewController.m in Sources */,
 				EA7860C820174E2A00D62B01 /* BKCardNumberField.m in Sources */,
 				EA50F0EA2020523A005F041B /* CreateMerchandiseViewController.m in Sources */,
@@ -1162,6 +1271,7 @@
 				EAB278722010B69100EE460E /* campaignUploadViewController.m in Sources */,
 				EA992EA71FE3F0FA00A47BE4 /* MainTabController.m in Sources */,
 				EAA079901FE3DC43008132F0 /* HomeCollectionViewCell.m in Sources */,
+				EA0F4C82204036ED00D0F05A /* MyTeamTableViewTableViewCell.m in Sources */,
 				EA7860CB20174E2A00D62B01 /* BKCardPatternInfo.m in Sources */,
 				EAD29F242036D675000467F9 /* UIImage+Crop.m in Sources */,
 				EAD29F252036D675000467F9 /* UIImage+Resize.m in Sources */,
@@ -1316,17 +1426,22 @@
 			baseConfigurationReference = 2F9E2381CD1A6107A5F62286 /* Pods-shado.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Anthony Han (YJLHM63AYW)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Anthony Han (YJLHM63AYW)";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = TQ2L8PNXPU;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = PrefixHeader.pch;
 				INFOPLIST_FILE = shadow/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zoptal.songBook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "cba90c65-a50e-40d7-b921-498dbaab43d1";
+				PROVISIONING_PROFILE_SPECIFIER = songBookDevelopment;
+				SWIFT_OBJC_BRIDGING_HEADER = "shado-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -1335,17 +1450,21 @@
 			baseConfigurationReference = 2323151AF4572A18368ABEE4 /* Pods-shado.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Anthony Han (YJLHM63AYW)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Anthony Han (YJLHM63AYW)";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = TQ2L8PNXPU;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = PrefixHeader.pch;
 				INFOPLIST_FILE = shadow/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zoptal.songBook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "cba90c65-a50e-40d7-b921-498dbaab43d1";
+				PROVISIONING_PROFILE_SPECIFIER = songBookDevelopment;
+				SWIFT_OBJC_BRIDGING_HEADER = "shado-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

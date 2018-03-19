@@ -41,4 +41,6 @@
        IBOutlet UIButton *otherAmtBtn;
 }
 - (IBAction)backBtnPressed:(id)sender;
+@property(nonatomic,strong)NSDictionary *giftcampaignDict;
 @end
+

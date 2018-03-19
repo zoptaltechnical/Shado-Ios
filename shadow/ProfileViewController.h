@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface ProfileViewController : UIViewController
+#import <GooglePlaces/GooglePlaces.h>
+#import <GoogleMaps/GoogleMaps.h>
+@interface ProfileViewController : UIViewController<GMSAutocompleteViewControllerDelegate>
 {
     
     IBOutlet UIButton *profileBtn;

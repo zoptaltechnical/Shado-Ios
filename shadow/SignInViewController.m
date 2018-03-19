@@ -52,7 +52,7 @@
         [alert showAlertInView:self
                      withTitle:@"Shado Sport"
                   withSubtitle:@"Please enter your email address!"
-               withCustomImage:[UIImage imageNamed:@"AppIcon"]
+               withCustomImage:[UIImage imageNamed:@""]
            withDoneButtonTitle:nil
                     andButtons:nil];
         
@@ -70,7 +70,7 @@
         [alert showAlertInView:self
                      withTitle:@"Shado Sport"
                   withSubtitle:@"Please enter your valid email address!"
-               withCustomImage:[UIImage imageNamed:@"AppIcon"]
+               withCustomImage:[UIImage imageNamed:@""]
            withDoneButtonTitle:nil
                     andButtons:nil];
     }
@@ -88,7 +88,7 @@
         [alert showAlertInView:self
                      withTitle:@"Shado Sport"
                   withSubtitle:@"Please enter Password!"
-               withCustomImage:[UIImage imageNamed:@"AppIcon"]
+               withCustomImage:[UIImage imageNamed:@""]
            withDoneButtonTitle:nil
                     andButtons:nil];
     }
@@ -152,7 +152,7 @@
              [alert showAlertInView:self
                           withTitle:@"Shado"
                        withSubtitle:[responseDict valueForKey:@"message"]
-                    withCustomImage:[UIImage imageNamed:@"AppIcon"]
+                    withCustomImage:[UIImage imageNamed:@""]
                 withDoneButtonTitle:nil
                          andButtons:nil];
 

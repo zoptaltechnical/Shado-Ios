@@ -18,7 +18,16 @@
     [super viewDidLoad];
     
     [self intialValues];
+    [self callDetailListing];
     // Do any additional setup after loading the view.
+}
+-(void)callDetailListing
+{
+    NSLog(@"giftDetail %@",_giftcampaignDict);
+    
+    
+    
+    
 }
 -(void)intialValues
 {

@@ -174,7 +174,7 @@
         [alert showAlertInView:self
                      withTitle:@"Shado Sport"
                   withSubtitle:@"Please enter your username."
-               withCustomImage:[UIImage imageNamed:@"AppIcon"]
+               withCustomImage:[UIImage imageNamed:@""]
            withDoneButtonTitle:nil
                     andButtons:nil];
         
@@ -192,7 +192,7 @@
         [alert showAlertInView:self
                      withTitle:@"Shado Sport"
                   withSubtitle:@"Please enter your email."
-               withCustomImage:[UIImage imageNamed:@"AppIcon"]
+               withCustomImage:[UIImage imageNamed:@""]
            withDoneButtonTitle:nil
                     andButtons:nil];
         
@@ -211,7 +211,7 @@
         [alert showAlertInView:self
                      withTitle:@"Shado Sport"
                   withSubtitle:@"Please enter a valid email."
-               withCustomImage:[UIImage imageNamed:@"AppIcon"]
+               withCustomImage:[UIImage imageNamed:@""]
            withDoneButtonTitle:nil
                     andButtons:nil];
         
@@ -231,7 +231,7 @@
         [alert showAlertInView:self
                      withTitle:@"Shado Sport"
                   withSubtitle:@"Please enter your first name."
-               withCustomImage:[UIImage imageNamed:@"AppIcon"]
+               withCustomImage:[UIImage imageNamed:@""]
            withDoneButtonTitle:nil
                     andButtons:nil];
         
@@ -249,7 +249,7 @@
         [alert showAlertInView:self
                      withTitle:@"Shado Sport"
                   withSubtitle:@"Please enter your password."
-               withCustomImage:[UIImage imageNamed:@"AppIcon"]
+               withCustomImage:[UIImage imageNamed:@""]
            withDoneButtonTitle:nil
                     andButtons:nil];
         
@@ -355,17 +355,14 @@
     [dict setValue:phnNumTxtFld.text forKey:@"phone"];
     [dict setValue:@"IOS" forKey:@"device_type"];
     [dict setValue:@"12345678" forKey:@"device_token"];
-    // add params (all params are strings)profile_pic
-    for (NSString *param in dict) {
+    for (NSString *param in dict)
+    {
         [body appendData:[[NSString stringWithFormat:@"--%@\r\n", boundary] dataUsingEncoding:NSUTF8StringEncoding]];
         
         [body appendData:[[NSString stringWithFormat:@"Content-Disposition: form-data; name=\"%@\"\r\n\r\n", param] dataUsingEncoding:NSUTF8StringEncoding]];
         
         [body appendData:[[NSString stringWithFormat:@"%@\r\n", [dict objectForKey:param]] dataUsingEncoding:NSUTF8StringEncoding]];
     }
-    
-    
-    //Assuming data is not nil we add this to the multipart form
     if (imageBtnBool)
     {
         [body appendData:[[NSString stringWithFormat:@"--%@\r\n", boundary] dataUsingEncoding:NSUTF8StringEncoding]];
@@ -417,11 +414,10 @@
                                                   [[NSUserDefaults standardUserDefaults] setObject:[dic objectForKey:@"register_data"]forKey:@"loginData"];
                                                   [[NSUserDefaults standardUserDefaults] synchronize];
                                                   [[NSUserDefaults standardUserDefaults] setValue:@"Yes" forKey:@"LoggedIn"];
+                                                  UINavigationController *tabBarController = [self.storyboard instantiateViewControllerWithIdentifier:@"MainTabControllerID"];
+                                                  [KAppdelegate.window setRootViewController:tabBarController];
                                                   {
-                                                      //                                                            SignUpShiftRequirmentViewController *secondView = [self.storyboard instantiateViewControllerWithIdentifier:@"SignUpShiftRequirmentViewController"];
-                                                      //                                                            secondView.firstnameString=firstNameTextfield.text;
-                                                      //                                                            secondView.lastnameString=lastNameTextfield.text;
-                                                      //                                                            [self.navigationController pushViewController:secondView animated:YES];
+                                                      
                                                   }
                                                   
                                                   

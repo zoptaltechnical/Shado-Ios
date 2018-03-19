@@ -11,9 +11,11 @@
 @interface CameraVideoViewController : UIViewController
 {
     
+    __weak IBOutlet UIView *camView;
     __weak IBOutlet UIView *bottomView;
     __weak IBOutlet UIButton *videoBtn;
     __weak IBOutlet UIButton *photoBtn;
     __weak IBOutlet UIButton *libraryBtn;
 }
+- (IBAction)btnVideoPress:(id)sender;
 @end

@@ -9,6 +9,7 @@
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch
 #import "AppDelegate.h"
+#import "CZPickerView.h"
 #import "Utility.h"
 #import "ApiMaster.h"
 #import "MBProgressHUD.h"
@@ -22,8 +23,12 @@
 #import "UIImageView+WebCache.h"
 #import "SDWebImageCompat.h"
 #import "SDImageCache.h"
-
-
+#import "SearchTeamViewController.h"
+#import "MyTeamTableViewTableViewCell.h"
+#import "MyTeamViewController.h"
+#import "MyTeamTableViewTableViewCell.h"
+#import "SearchTeamViewController.h"
+#import "StatsViewController.h"
 #import "SignInViewController.h"
 #import "SignUpViewController.h"
 #import "forgotPasswordViewController.h"
@@ -32,6 +37,7 @@
 #import "HomeCollectionViewCell.h"
 #import "HomePostCollectionViewCell.h"
 #import "HomeDetailViewController.h"
+#import "chatViewController.h"
 #import "PersonalProfileCollectionViewCell.h"
 #import "personalProfileViewController.h"
 #import "CreateCampaignViewController.h"
@@ -63,6 +69,9 @@
 #import "NotificationViewController.h"
 #import "NotificationTableViewCell.h"
 
+#import "CameraPostDetailViewController.h"
+
+
 #import "AbstractActionSheetPicker.h"
 #import "ActionSheetDatePicker.h"
 #import "CHTCollectionViewWaterfallCell.h"
@@ -70,6 +79,7 @@
 #import "CHTCollectionViewWaterfallHeader.h"
 #import "CHTCollectionViewWaterfallFooter.h"
 #import "BKCardNumberField.h"
+#import "RunOnMainThread.h"
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 

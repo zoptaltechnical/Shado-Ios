@@ -14,5 +14,6 @@
 @property (strong, nonatomic) IBOutlet UIImageView *userPic;
 @property (strong, nonatomic) IBOutlet UILabel *countryNameLbel;
 @property (strong, nonatomic) IBOutlet UILabel *addressLabel;
+@property (weak, nonatomic) IBOutlet UISlider *shiftslider;
 
 @end
